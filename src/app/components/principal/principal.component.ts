@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./principal.component.scss']
 })
 export class PrincipalComponent {
-
+  ex:string ="Luis Alberto"
 }
