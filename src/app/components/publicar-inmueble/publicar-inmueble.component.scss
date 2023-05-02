@@ -1,0 +1,45 @@
+.formulario{
+    padding: 5%;
+}
+.formField{
+    margin: 1%;
+}
+.subTitulo{
+    color: #00C9D1;
+}
+.divisor{
+ margin: 5px;
+}
+.check{
+    background-color: #f0f0f0;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 12px;
+    border-radius: 5%;
+}
+#contenedorImg{
+    display: flex;
+    flex-wrap: wrap;
+}
+#objImg{
+    display: inline-block;
+    width: 25%;
+    box-sizing: border-box;
+    margin: 10px;
+}
+.imagen{
+    height: 200px;
+    background-color: #BEED3B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addImagen{
+    height: 200px;
+    width: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

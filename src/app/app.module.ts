@@ -10,7 +10,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { PropertyCardComponent } from './components/property-card/property-card.component';
-import { VisualizeItemComponent } from './components/visualize-item/visualize-item.component'
+import { VisualizeItemComponent } from './components/visualize-item/visualize-item.component';
+import { PublicarInmuebleComponent } from './components/publicar-inmueble/publicar-inmueble.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { VisualizeItemComponent } from './components/visualize-item/visualize-it
     NavbarComponent,
     PrincipalComponent,
     PropertyCardComponent,
-    VisualizeItemComponent
+    VisualizeItemComponent,
+    PublicarInmuebleComponent
   ],
   imports: [
     BrowserModule,
