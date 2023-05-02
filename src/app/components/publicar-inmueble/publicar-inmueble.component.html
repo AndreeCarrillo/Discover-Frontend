@@ -1,0 +1,171 @@
+<form class="formulario">
+
+    
+    <div class="divisor">
+        <div class="subTitulo"><h2>Dirección</h2></div>
+        <mat-form-field class="formField">
+            <mat-label>Dirección</mat-label>
+            <input matInput formControlName="direccion" placeholder="Ingrese dirección del inmueble">   
+        </mat-form-field>
+
+        <mat-form-field class="formField">
+            <mat-label>Superficie</mat-label>
+            <input matInput formControlName="superficie" placeholder="Ingrese superfie">
+            <span matTextSuffix> m²</span>
+        </mat-form-field>
+    </div>
+
+    <div class="divisor">
+        <mat-form-field class="formField">
+            <mat-label>¿Cómo defines tu espacio?</mat-label> 
+            <mat-select>
+                <mat-option value="one">First option</mat-option>
+                <mat-option value="two">Second option</mat-option>
+              </mat-select>
+        </mat-form-field>
+    
+        <mat-form-field class="formField">
+            <mat-label>Tipo de Alojamiento</mat-label> 
+            <mat-select>
+                <mat-option value="one">First option</mat-option>
+                <mat-option value="two">Second option</mat-option>
+              </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="divisor">
+        <div class="subTitulo"><h2>Ubicación</h2></div>
+        <mat-form-field class="formField">
+            <mat-label>Departamento</mat-label>
+            <input matInput formControlName="departamento" placeholder="Ingrese el departamento">   
+        </mat-form-field>
+
+        <mat-form-field class="formField">
+            <mat-label>Provincia</mat-label>
+            <input matInput formControlName="provincia" placeholder="Ingrese la provincia">   
+        </mat-form-field>
+
+        <mat-form-field class="formField">
+            <mat-label>Distrito</mat-label>
+            <input matInput formControlName="distrito" placeholder="Ingrese el distrito">   
+        </mat-form-field>
+    </div>
+
+    <div class="divisor">
+        <mat-form-field class="formField">
+            <mat-label>Huespedes</mat-label>
+            <input matInput type="number" formControlName="huespedes" placeholder="Número de Huespedes">   
+        </mat-form-field>
+
+        <mat-form-field class="formField">
+            <mat-label>Habitaciones</mat-label>
+            <input matInput type="number" formControlName="habitaciones" placeholder="Número de Habitaciones">   
+        </mat-form-field>
+
+        <mat-form-field class="formField">
+            <mat-label>Baños</mat-label>
+            <input matInput type="number" formControlName="banios" placeholder="Número de Baños">   
+        </mat-form-field>
+    </div>
+
+    <div class="divisor">
+        <mat-form-field class="formField">
+            <mat-label>Tiempo de Antiguedad</mat-label> 
+            <mat-select>
+                <mat-option value="one">First option</mat-option>
+                <mat-option value="two">Second option</mat-option>
+              </mat-select>
+        </mat-form-field>
+    </div>
+
+
+    <div class="divisor">
+        <div class="subTitulo"><h2>Servicios</h2></div>
+        <mat-checkbox class="check">Wi-Fi</mat-checkbox>
+        <mat-checkbox class="check">Cocina</mat-checkbox>
+        <mat-checkbox class="check">Lavadora</mat-checkbox>
+        <mat-checkbox class="check">Zona de Trabajo</mat-checkbox>
+        <mat-checkbox class="check">Estacionamiento</mat-checkbox> <br>
+        <mat-checkbox class="check">Aire Acondicionado</mat-checkbox>
+        <mat-checkbox class="check">TV</mat-checkbox>
+        <mat-checkbox class="check">Estacionamiento de pago en las instalaciones</mat-checkbox>
+    </div>
+    
+    <div class="divisor">
+        <div class="subTitulo"><h2>Comodidades</h2></div>
+        <mat-checkbox class="check">Piscina</mat-checkbox>
+        <mat-checkbox class="check">Terraza</mat-checkbox>
+        <mat-checkbox class="check">Parrilla</mat-checkbox>
+        <mat-checkbox class="check">Zona de comida al aire libre</mat-checkbox>
+        <mat-checkbox class="check">Jacuzzi</mat-checkbox> <br>
+        <mat-checkbox class="check">Lugar para hacer fogata</mat-checkbox>
+        <mat-checkbox class="check">Mesa de billar</mat-checkbox>
+        <mat-checkbox class="check">Chimenea interior</mat-checkbox>
+        <mat-checkbox class="check">Piano</mat-checkbox>  <br>
+        <mat-checkbox class="check">Equipo para hacer ejercicio</mat-checkbox>
+        <mat-checkbox class="check">Acceso al lago</mat-checkbox>
+        <mat-checkbox class="check">Acceso a la playa</mat-checkbox>
+        <mat-checkbox class="check">Ducha exterior</mat-checkbox>
+    </div>
+
+    <div class="divisor">
+        <div class="subTitulo"><h2>Elementos de seguridad</h2></div>
+        <mat-checkbox class="check">Detector de humo</mat-checkbox>
+        <mat-checkbox class="check">Botiquin de primeros auxilios</mat-checkbox>
+        <mat-checkbox class="check">Extintor de incendios</mat-checkbox>
+    </div>
+
+    <div class="divisor">
+        <div class="subTitulo"><h2>Fotos</h2></div>
+        <div id="contenedorImg">
+            <div id="objImg">
+                <mat-card class="imagen">
+                    <mat-card-content>Seleccione una imagen</mat-card-content>
+                </mat-card>
+            </div>
+            
+            <div id="objImg">
+                <mat-card class="imagen">
+                    <mat-card-content>Seleccione una imagen</mat-card-content>
+                </mat-card>
+            </div>
+
+            <div id="objImg">
+                <mat-card class="addImagen">
+                    <mat-card-content>+</mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+
+    <div class="divisor">
+        <div class="subTitulo"><h2>Caracteristicas</h2></div>
+        <mat-checkbox class="check">Tranquilo</mat-checkbox>
+        <mat-checkbox class="check">Ideal para familias</mat-checkbox>
+        <mat-checkbox class="check">Excepcional</mat-checkbox> <br>
+        <mat-checkbox class="check">Central</mat-checkbox>
+        <mat-checkbox class="check">Espacioso</mat-checkbox>
+        <mat-checkbox class="check">Elegante</mat-checkbox>
+    </div>
+
+    <div class="divisor">
+        <div class="subTitulo"><h2>Descripción</h2></div>
+        <mat-form-field class="formField" appearance="fill" id="descripcion">
+            <mat-label>Descripción</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+    </div>
+
+    <div class="divisor">
+        <div class="subTitulo"><h2>Precio</h2></div>
+        <mat-form-field class="formField">
+            <mat-label>Precio</mat-label>
+            <input matInput type="number" formControlName="huespedes" placeholder="Costo en soles">
+            <span matTextPrefix>S/.&nbsp;</span>
+            <span matTextSuffix>.00</span>  
+        </mat-form-field>
+    </div>
+
+    <button mat-stroked-button class="boton">Publicar Inmueble</button>
+    
+</form>
