@@ -13,6 +13,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSliderModule} from '@angular/material/slider';
+
 
 @NgModule({
   declarations: [],
@@ -30,7 +32,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatGridListModule,
     MatAutocompleteModule,
     MatSelectModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSliderModule
   ],
   exports: [
     MatToolbarModule,
@@ -45,7 +48,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatGridListModule,
     MatAutocompleteModule,
     MatSelectModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSliderModule
   ]
 })
 export class MaterialModule { }
