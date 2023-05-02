@@ -1,0 +1,133 @@
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
+<body>
+  <main>
+    <h1>Property's Name <!--Pa cambiar con el ts--></h1>
+    <div class="start-property">
+      <span class="star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg>
+        </span>
+        <p>&nbsp;·&nbsp;<span class="cant-reviews">4.7 <!--Pa cambiar con el ts--></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ubication">Lima, barranco <!--Pa cambiar con el ts--></span></p>
+    </div>
+    <div class="photos-property">
+      <mat-grid-list cols="4" rowHeight="100px">
+        <mat-grid-tile class="grid-photo"
+            *ngFor="let photo of photos"
+            [colspan]="photo.cols"
+            [rowspan]="photo.rows"
+            [style.background]="photo.color"
+            [style.background-image]="photo.image"
+            [style.background-size]="photo.size"
+            [style.background-repeat]="photo.repeat"
+            [style.background-position]="photo.position">
+          {{photo.text}}
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+    <div class="mid-property">
+      <div class="container1">
+      <h1><span class="price">S/. 1,934 <!--Pa cambiar con el ts--></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+      <div class="stars">
+        <span class="star">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>
+        </span>
+        <span class="star">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>
+        </span>
+        <span class="star">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>
+        </span>
+        <span class="star">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>
+        </span>
+      </div>
+      </div>
+      <div class="container2">
+        <p>Tranquilo · Espacioso · Central <!--Pa cambiar con el ts--></p>
+      </div>
+    </div>
+    <div class="main-features">
+      <div class="features_guests"><span class="material-symbols-outlined">group</span><p>&nbsp;<span>4</span>&nbsp;&nbsp;huésped(s)</p></div><!--Pa cambiar con el ts-->
+      <div class="features_bedrooms"><span class="material-symbols-outlined">bed</span><p>&nbsp;<span>2</span>&nbsp;&nbsp;dormitorio(s)</p></div><!--Pa cambiar con el ts-->
+      <div class="features_bathrooms"><span class="material-symbols-outlined">wc</span><p>&nbsp;<span>1</span>&nbsp;&nbsp;baño(s)</p></div><!--Pa cambiar con el ts-->
+      <div class="features_area"><span class="material-symbols-outlined">home</span><p>&nbsp;<span>130</span>&nbsp;&nbsp;m2</p></div><!--Pa cambiar con el ts-->
+    </div>
+    <div class="description">
+      <h2>Descripción</h2>
+      <p><span>Hermoso departamento semi nuevo ubicado en una zona turística de barranco, donde podrá encontrar varias zonas de relajo y parques seguros. Además, el departamento cuenta con internet de alta velocidad y una cocina equipada totalmente.
+      <!--Pa cambiar con el ts--></span></p>
+    </div>
+    <div class="features">
+      <h1>Qué ofrece este inmueble</h1>
+      <div class="features-container">
+        <div><h4><span class="material-symbols-outlined">wifi<!--Pa cambiar con el ts--></span>&nbsp;<span><!--Pa cambiar con el ts-->&nbsp;&nbsp;Acceso WIFI</span></h4></div>
+        <div><h4><span class="material-symbols-outlined">wifi<!--Pa cambiar con el ts--></span>&nbsp;<span><!--Pa cambiar con el ts-->&nbsp;&nbsp;Acceso WIFI</span></h4></div>
+        <div><h4><span class="material-symbols-outlined">wifi<!--Pa cambiar con el ts--></span>&nbsp;<span><!--Pa cambiar con el ts-->&nbsp;&nbsp;Acceso WIFI</span></h4></div>
+        <div><h4><span class="material-symbols-outlined">wifi<!--Pa cambiar con el ts--></span>&nbsp;<span><!--Pa cambiar con el ts-->&nbsp;&nbsp;Acceso WIFI</span></h4></div>
+        <div><h4><span class="material-symbols-outlined">wifi<!--Pa cambiar con el ts--></span>&nbsp;<span><!--Pa cambiar con el ts-->&nbsp;&nbsp;Acceso WIFI</span></h4></div>
+        <div><h4><span class="material-symbols-outlined">wifi<!--Pa cambiar con el ts--></span>&nbsp;<span><!--Pa cambiar con el ts-->&nbsp;&nbsp;Acceso WIFI</span></h4></div>
+      </div>
+    </div>
+    <div class="map-google">
+      <h1>Ubicación</h1>
+      <div class="map-container">
+        <!--Pa cambiar con el ts-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.7439963434617!2d-77.010172026006!3d-12.197814744729307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9e0f449b10f%3A0x876705c16ffc17d7!2sUPC%20Campus%20Villa!5e0!3m2!1ses!2spe!4v1682997082705!5m2!1ses!2spe" width="900" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="contact">
+      <h1>Contacto</h1>
+      <div class="contact-data">
+        <div class="contact-photo">
+          <img src='https://i.postimg.cc/m1QWhRpB/file.jpg'  alt='foto_perfil'/><!--Pa cambiar con el ts-->
+        </div>
+        <div class="contact-info">
+          <h3><span>Andre Camilo<!--Pa cambiar con el ts--></span></h3>
+         <p>Fecha de registro en la aplicación:&nbsp;<span>30<!--Pa cambiar con el ts--></span>&nbsp;de&nbsp;<span>agosto<!--Pa cambiar con el ts--></span>&nbsp;del&nbsp;<span>2023<!--Pa cambiar con el ts--></span></p>
+         <p class="contact-phone"><span class="material-symbols-outlined">phone</span>&nbsp;<span>01-2739863</span><!--Pa cambiar con el ts--></p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="coments">
+    <h1>Reseñas de la comunidad</h1>
+    <h2><span>4.2</span>&nbsp;&nbsp;·&nbsp;&nbsp;<span>12</span>&nbsp;&nbsp;reseñas</h2>
+    <div class="coment-container">
+
+      <mat-card class="card-comment">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>HappyMonkey</mat-card-title>
+          <mat-card-subtitle><span>4.7</span>/5</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            Dale a tu cuerpo alegría, Macarena
+            Que tu cuerpo es pa' darle alegría y cosa buena
+            Dale a tu cuerpo alegría, Macarena
+            Eh, Macarena (¡Ay!)
+          </p>
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+    <div class="comment-add">
+      <h4>¿Has estado en este inmueble y quieres dar tu opinión sobre él?</h4>
+      <button mat-raised-button color="warn">AGREGAR RESEÑA</button>
+    </div>
+  </div>
+</body>
