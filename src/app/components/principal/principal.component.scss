@@ -25,3 +25,10 @@ margin: 15px;
 .example-margin {
     width: 100%;
 }
+
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

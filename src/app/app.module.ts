@@ -9,14 +9,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PrincipalComponent } from './components/principal/principal.component';
-import { PropertyCardComponent } from './components/property-card/property-card.component'
+import { PropertyCardComponent } from './components/property-card/property-card.component';
+import { VisualizeItemComponent } from './components/visualize-item/visualize-item.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     PrincipalComponent,
-    PropertyCardComponent
+    PropertyCardComponent,
+    VisualizeItemComponent
   ],
   imports: [
     BrowserModule,
