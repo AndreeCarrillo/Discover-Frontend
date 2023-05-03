@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatStepperModule} from '@angular/material/stepper';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,7 +13,8 @@ import { PropertyCardComponent } from './components/property-card/property-card.
 import { VisualizeItemComponent } from './components/visualize-item/visualize-item.component';
 import { PublicarInmuebleComponent } from './components/publicar-inmueble/publicar-inmueble.component';
 import { MakeOpinionComponent } from './components/make-opinion/make-opinion.component'
-
+import {FormBuilder, Validators} from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,10 @@ import { MakeOpinionComponent } from './components/make-opinion/make-opinion.com
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatStepperModule,
+    NgbModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

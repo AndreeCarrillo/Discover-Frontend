@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+<script src="make-opinion.component.js" defer></script>
 <app-navbar></app-navbar>
 <div class="searcher-container"></div>
 
@@ -5,11 +7,61 @@
     <a  class="back-button">
         <span class="back-icon">&#x2190;</span>
         Regresar
-    </a>
-    <h2 class="title">Registra tu reseña del inmueble rentado</h2>
-    <form class="form-opinion">
         
-        <label>Nombre del usuario</label>
+    </a>
+
+    <h2 class="title">Registra tu reseña del inmueble rentado</h2>
+    
+    <form class="form-opinion">
+        <div class="user-info">
+            <img class="nav-perfil" src="{{img}}" alt="Imagen de perfil del usuario">
+            <div class="user-info-text">
+                <label>Nombre del usuario</label>
+                <h2 class="sub-title">Escribe tu reseña</h2>
+            </div>
+        </div>
+        <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+            <mat-step [stepControl]="firstFormGroup">
+              <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Escribe tu comentario...</ng-template>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Ingrese su comentario...</mat-label>
+                    <textarea matInput ></textarea>
+                </mat-form-field>
+                <div>
+                  <button mat-button matStepperNext>Siguiente</button>
+                </div>
+              </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup">
+              <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>Calificación</ng-template>
+                <p>¿Cúanta puntuación le pones a este inmueble?</p>
+                <ngb-rating [max]="5"></ngb-rating>
+                <p>Ubicación</p>
+                <ngb-rating [max]="5"></ngb-rating>
+                <p>Instalaciones</p>
+                <ngb-rating [max]="5"></ngb-rating>
+                <p>Seguridad</p>
+                <ngb-rating [max]="5"></ngb-rating>
+                <div>
+                  <button mat-button matStepperPrevious>Anterior</button>
+                  <button mat-button matStepperNext>Siguiente</button>
+                </div>
+              </form>
+            </mat-step>
+            <mat-step>
+              <ng-template matStepLabel>Hecho</ng-template>
+              <p>Estas seguro que quieres enviar esta reseña?</p>
+              <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button >Enviar</button>
+              </div>
+            </mat-step>
+        </mat-stepper>
+
+        
+        
     </form>
 
 
