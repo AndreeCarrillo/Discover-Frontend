@@ -919,7 +919,7 @@
     ],
     "Resena":[
         {
-            "id_reseña": 1,
+            "id": 1,
             "id_inmueble": 1,
             "id_user": 1,
             "calificacion": 4,
@@ -927,7 +927,7 @@
             "link_foto": "https://i.postimg.cc/52GWnbtW/pousada-casa-do-molino.jpg"
         },
         {
-            "id_reseña": 2,
+            "id": 2,
             "id_inmueble": 4,
             "id_user": 3,
             "calificacion": 5,
@@ -935,7 +935,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 3,
+            "id": 3,
             "id_inmueble": 6,
             "id_user": 20,
             "calificacion": 3,
@@ -943,7 +943,7 @@
             "link_foto": "https://i.postimg.cc/qRTY5RVS/interior-de-la-cocina-vac-a-91263131.jpg"
         },
         {
-            "id_reseña": 4,
+            "id": 4,
             "id_inmueble": 2,
             "id_user": 5,
             "calificacion": 5,
@@ -951,14 +951,14 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 5,
+            "id": 5,
             "id_inmueble": 8,
             "id_user": 11,
             "calificacion": 4,
             "observaciones": "El inmueble era amplio y limpio. La ubicación era conveniente, pero el ruido de la calle era un poco molesto durante la noche.",
             "link_foto": "https://i.postimg.cc/D0CM0PJ3/tipos-de-muebles-para-sala.webp"
         },{
-            "id_reseña": 6,
+            "id": 6,
             "id_inmueble": 14,
             "id_user": 8,
             "calificacion": 3,
@@ -966,7 +966,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 7,
+            "id": 7,
             "id_inmueble": 14,
             "id_user": 10,
             "calificacion": 4,
@@ -974,7 +974,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 8,
+            "id": 8,
             "id_inmueble": 12,
             "id_user": 19,
             "calificacion": 4,
@@ -982,7 +982,7 @@
             "link_foto": "https://i.postimg.cc/QMpY139b/maneras-volver-sala-estar-acogedora.webp"
         },
         {
-            "id_reseña": 9,
+            "id": 9,
             "id_inmueble": 14,
             "id_user": 17,
             "calificacion": 5,
@@ -990,7 +990,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 10,
+            "id": 10,
             "id_inmueble": 16,
             "id_user": 1,
             "calificacion": 3,
@@ -998,7 +998,7 @@
             "link_foto": "https://i.postimg.cc/4Nm8wtHn/mejor-puerta-para-casa-1.jpg"
         },
         {
-            "id_reseña": 11,
+            "id": 11,
             "id_inmueble": 15,
             "id_user": 17,
             "calificacion": 4,
@@ -1006,7 +1006,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 12,
+            "id": 12,
             "id_inmueble": 17,
             "id_user": 6,
             "calificacion": 5,
@@ -1014,7 +1014,7 @@
             "link_foto": "https://i.postimg.cc/MG8dWFPj/thread-21950169-15070763766771596119.png"
         },
         {
-            "id_reseña": 13,
+            "id": 13,
             "id_inmueble": 13,
             "id_user": 12,
             "calificacion": 5,
@@ -1022,7 +1022,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 14,
+            "id": 14,
             "id_inmueble": 12,
             "id_user": 6,
             "calificacion": 4,
@@ -1030,7 +1030,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 15,
+            "id": 15,
             "id_inmueble": 18,
             "id_user": 6,
             "calificacion": 3,
@@ -1038,7 +1038,7 @@
             "link_foto": "https://i.postimg.cc/Kz0NDvZn/estacionamiento-856838.jpg"
         },
         {
-            "id_reseña": 16,
+            "id": 16,
             "id_inmueble": 9,
             "id_user": 19,
             "calificacion": 4,
@@ -1046,14 +1046,14 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 17,
+            "id": 17,
             "id_inmueble": 12,
             "id_user": 7,
             "calificacion": 5,
             "observaciones": "Disfrutamos mucho de nuestra estancia en este inmueble. La ubicación era excelente y el anfitrión fue muy amable y servicial. El inmueble estaba muy limpio y bien equipado.",
             "link_foto": ""
         },{
-            "id_reseña": 18,
+            "id": 18,
             "id_inmueble": 20,
             "id_user": 5,
             "calificacion": 4,
@@ -1061,7 +1061,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 19,
+            "id": 19,
             "id_inmueble": 11,
             "id_user": 11,
             "calificacion": 5,
@@ -1069,7 +1069,7 @@
             "link_foto": "https://i.postimg.cc/abcdef/sample-photo-19.jpg"
         },
         {
-            "id_reseña": 20,
+            "id": 20,
             "id_inmueble": 8,
             "id_user": 5,
             "calificacion": 4,
@@ -1117,7 +1117,7 @@
             "link_foto": "hhttps://i.postimg.cc/B67T1Ygp/348446570.webp"
         },
         {
-            "id_reseña": 26,
+            "id": 26,
             "id_inmueble": 14,
             "id_user": 3,
             "calificacion": 4,
@@ -1125,7 +1125,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 27,
+            "id": 27,
             "id_inmueble": 5,
             "id_user": 19,
             "calificacion": 5,
@@ -1133,7 +1133,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 28,
+            "id": 28,
             "id_inmueble": 11,
             "id_user": 6,
             "calificacion": 3,
@@ -1141,7 +1141,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 29,
+            "id": 29,
             "id_inmueble": 20,
             "id_user": 15,
             "calificacion": 4,
@@ -1149,7 +1149,7 @@
             "link_foto": "https://i.postimg.cc/JzQPzQ96/como-pintar-departamento-forma-correcta.jpg"
         },
         {
-            "id_reseña": 30,
+            "id": 30,
             "id_inmueble": 3,
             "id_user": 9,
             "calificacion": 4,
@@ -1157,7 +1157,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 31,
+            "id": 31,
             "id_inmueble": 17,
             "id_user": 4,
             "calificacion": 5,
@@ -1165,7 +1165,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 32,
+            "id": 32,
             "id_inmueble": 8,
             "id_user": 13,
             "calificacion": 3,
@@ -1173,7 +1173,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 33,
+            "id": 33,
             "id_inmueble": 12,
             "id_user": 11,
             "calificacion": 4,
@@ -1181,7 +1181,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 34,
+            "id": 34,
             "id_inmueble": 4,
             "id_user": 20,
             "calificacion": 5,
@@ -1189,7 +1189,7 @@
             "link_foto": "https://i.postimg.cc/667jfnvq/venta-de-departamento-cajamarca-groenlandia-3-dormitorios-4-ba-os-2030093660989036323.jpg"
         },
         {
-            "id_reseña": 35,
+            "id": 35,
             "id_inmueble": 9,
             "id_user": 7,
             "calificacion": 4,
@@ -1197,7 +1197,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 36,
+            "id": 36,
             "id_inmueble": 1,
             "id_user": 18,
             "calificacion": 3,
@@ -1205,7 +1205,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 37,
+            "id": 37,
             "id_inmueble": 15,
             "id_user": 5,
             "calificacion": 5,
@@ -1213,7 +1213,7 @@
             "link_foto": "https://i.postimg.cc/mrXjQgZ7/ey-Jid-WNr-ZXQi-Oi-Jwcm-Qtb-Glmd-Wxs-Y29ubm-Vjd-C1i-YWNr-ZW5k-LWIy-Yi1pb-WFn-ZXMi-LCJr-ZXki-Oi-Jwcm9w-ZXJ0a-WVz-L2-U5-OTM2-Mz-Jk.jpg"
         },
         {
-            "id_reseña": 38,
+            "id": 38,
             "id_inmueble": 6,
             "id_user": 14,
             "calificacion": 4,
@@ -1221,7 +1221,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 39,
+            "id": 39,
             "id_inmueble": 19,
             "id_user": 2,
             "calificacion": 4,
@@ -1229,7 +1229,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 40,
+            "id": 40,
             "id_inmueble": 10,
             "id_user": 16,
             "calificacion": 3,
@@ -1237,7 +1237,7 @@
             "link_foto": "https://i.postimg.cc/B6zFv8Sw/que-es-un-departamento-duplex.jpg"
         },
         {
-            "id_reseña": 41,
+            "id": 41,
             "id_inmueble": 18,
             "id_user": 1,
             "calificacion": 5,
@@ -1245,7 +1245,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 42,
+            "id": 42,
             "id_inmueble": 2,
             "id_user": 17,
             "calificacion": 4,
@@ -1253,7 +1253,7 @@
             "link_foto": "https://i.postimg.cc/6pVCh5cy/venta-de-un-departamento-DEV358951660704964-13.jpg"
         },
         {
-            "id_reseña": 43,
+            "id": 43,
             "id_inmueble": 16,
             "id_user": 8,
             "calificacion": 4,
@@ -1261,7 +1261,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 44,
+            "id": 44,
             "id_inmueble": 13,
             "id_user": 10,
             "calificacion": 5,

@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnChanges, SimpleChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { inmueble } from 'src/app/models/inmuebles.interface';
+import { resena } from 'src/app/models/resena.interface';
 import { usuario } from 'src/app/models/usuario.interface';
 import { InmuebleService } from 'src/app/services/inmueble.service';
+import { ReseñaService } from 'src/app/services/reseña.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { __values } from 'tslib';
 
@@ -43,18 +45,34 @@ export class PrincipalComponent implements OnInit{
     "desde S/5000 hasta S/10000",
     "desde S/10000",
   ];
-  properties!: inmueble[];
+  properties: inmueble[] = [];
+  reseñas: resena[]=[];
 
   random_numbers:number[] = []
-  usermain!:usuario
+  usermain:usuario = {
+    "id": 0,
+    "nombre": "",
+    "apellido_paterno":  "",
+    "apellido_materno":  "",
+    "dni":  "",
+    "telefono":  "",
+    "correo":  "",
+    "password":  "",
+    "link_foto_dni":  "",
+    "link_foto_perfil":  "",
+    "fecha_nacimiento":  "",
+    "fecha_inscripcion":  ""
+  }
 
-  constructor(private userservice:UsuarioService ,private inmuebleservices:InmuebleService, private activedrouter:ActivatedRoute){
+  constructor(private reseñaservice:ReseñaService,private userservice:UsuarioService ,private inmuebleservices:InmuebleService, private activedrouter:ActivatedRoute){
   }
 
   ngOnInit(){
     this.load_properties()
+    this.loadreseñas()
     this.loadusersesion()
     this.define_randoms_values()
+    this.define_calification_per_property()
   }
   load_properties(){
     this.inmuebleservices.getInmuebles().subscribe({
@@ -67,20 +85,43 @@ export class PrincipalComponent implements OnInit{
     })
   }
   loadusersesion(){
-    this.userservice.getUsuario(18).subscribe({
-      next: (data)=>{
-        this.usermain=data;
-      },
-      error: (err) => {
-        console.log(err);
-      },
-    });
-  }
+        this.userservice.getUsuario(18).subscribe({
+        next: (data)=>{
+          this.usermain=data;
+        },
+        error: (err) => {
+          console.log(err);
+        },
+      });
+    }
   define_randoms_values(){
     for(let i=0;i<3;i++){
       let randomNum = Math.floor(Math.random() * 19);
       console.log(randomNum)
       this.random_numbers.push(randomNum);
     }
+  }
+  loadreseñas(){
+    this.reseñaservice.get_reseñas().subscribe({
+      next: (data)=>{
+        this.reseñas=data;
+      },
+      error: (err)=>{
+        console.log(err);
+      }
+    })
+  }
+  define_calification_per_property(){
+    this.properties.forEach((property)=>{
+      let cont = 0
+      let sum = 0
+      this.reseñas.forEach((resena)=>{
+        if(resena.id_inmueble=property.id){
+          cont++;
+          sum = sum + resena.calificacion;
+        }
+      })
+      property.calificacion=(sum/cont);
+    })
   }
 }

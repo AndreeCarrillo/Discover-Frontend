@@ -14,4 +14,5 @@ export interface inmueble {
     "latitud": "",
     "longitud": "",
     "caracteristicas_inmueble": number[]
+    "calificacion": number
 }
