@@ -13,7 +13,7 @@
             "link_foto_perfil": "https://i.postimg.cc/15qXG7wn/Screenshot-2023-05-01-220937.jpg",
             "fecha_nacimiento": "1986-02-18",
             "fecha_inscripcion": "2023-04-01"
-            
+
         },
         {
             "id": 2,
@@ -284,7 +284,7 @@
     ],
     "inmuebles":[
         {
-            "id_inmueble": 1,
+            "id": 1,
             "id_propietario": 13,
             "id_ubigeo": 150101,
             "direccion": "Jirón de la Unión 456, Cercado de Lima",
@@ -301,7 +301,7 @@
             "caracteristicas_inmueble":[1,4,7,11,13,15,17,22]
         },
         {
-            "id_inmueble": 2,
+            "id": 2,
             "id_propietario": 7,
             "id_ubigeo": 150102,
             "direccion": "Calle Los Delfines 123, Urb. Santa Rosa",
@@ -316,7 +316,7 @@
             "caracteristicas_inmueble":[3,5,8,10,13,22,25,27]
         },
         {
-            "id_inmueble": 3,
+            "id": 3,
             "id_propietario": 19,
             "id_ubigeo": 150103,
             "direccion": "Av. Separadora Industrial 345, Salamanca",
@@ -331,7 +331,7 @@
             "caracteristicas_inmueble":[3,4,5,13,15,24,26,28]
         },
         {
-            "id_inmueble": 4,
+            "id": 4,
             "id_propietario": 2,
             "id_ubigeo": 150104,
             "direccion": "Calle San Martín 567",
@@ -346,7 +346,7 @@
             "caracteristicas_inmueble":[1,2,3,11,13,27,30]
         },
         {
-            "id_inmueble": 5,
+            "id": 5,
             "id_propietario": 16,
             "id_ubigeo": 150105,
             "direccion": "Av. Bolivia 789",
@@ -361,7 +361,7 @@
             "caracteristicas_inmueble":[1,6,7,11,14,25,26]
         },
         {
-            "id_inmueble": 6,
+            "id": 6,
             "id_propietario": 10,
             "id_ubigeo": 150106,
             "direccion": "Av. San Juan 321, Urb. Santo Domingo",
@@ -376,7 +376,7 @@
             "caracteristicas_inmueble":[3,4,5,7,12,21,22,30]
         },
         {
-            "id_inmueble": 7,
+            "id": 7,
             "id_propietario": 4,
             "id_ubigeo": 150107,
             "direccion": "Jirón Los Laureles 112",
@@ -391,7 +391,7 @@
             "caracteristicas_inmueble":[1,4,7,17,18,20,24]
         },
         {
-            "id_inmueble": 8,
+            "id": 8,
             "id_propietario": 11,
             "id_ubigeo": 150108,
             "direccion": "Calle Los Pinos 123, Urb. La Campiña",
@@ -404,9 +404,9 @@
             "link_fotos": ["https://i.postimg.cc/K8dQMxXp/339288566.jpg","https://i.postimg.cc/fLMccb8C/346415581.jpg","https://i.postimg.cc/cCbfGB0k/361164698.webp"],
             "descripcion": "Moderno departamento de estreno con 2 dormitorios y 2 baños en edificio con piscina, gimnasio y zona de parrillas. Ubicado cerca de centros comerciales y parques.",
             "caracteristicas_inmueble":[4,5,7,15,21,24,28]
-        },  
-        {   
-            "id_inmueble": 9,
+        },
+        {
+            "id": 9,
             "id_propietario": 6,
             "id_ubigeo": 150109,
             "direccion": "Av. Nueva Toledo 431",
@@ -419,9 +419,9 @@
             "link_fotos": ["https://i.postimg.cc/43Wd0NJB/363145161.webp","https://i.postimg.cc/1zmckHFP/363145172.webp","https://i.postimg.cc/ZRg8yzMK/363145169.webp"],
             "descripcion": "Acogedor departamento de 1 dormitorio y 1 baño, perfecto para parejas o profesionales. Cuenta con una cocina abierta y un pequeño balcón. Cerca de tiendas y transporte público.",
             "caracteristicas_inmueble":[3,6,7,8,15,16,20,21]
-        },  
-        {   
-            "id_inmueble": 10,
+        },
+        {
+            "id": 10,
             "id_propietario": 18,
             "id_ubigeo": 150110,
             "direccion": "Calle Los Alpes 145, Urb. Santa Luzmila",
@@ -434,9 +434,9 @@
             "link_fotos": ["https://i.postimg.cc/W1XJkPDL/273805402.webp","https://i.postimg.cc/3N5yT8qp/273805399.webp","https://i.postimg.cc/hPnJZGTR/273805396.webp"],
             "descripcion": "Espaciosa casa de dos pisos con 5 dormitorios, 4 baños y un amplio jardín. Ideal para familias numerosas o grupos de amigos. Ubicada en una tranquila calle residencial.",
             "caracteristicas_inmueble":[2,5,7,14,18,19,24,25,26,28]
-        },  
+        },
         {
-            "id_inmueble": 11,
+            "id": 11,
             "id_propietario": 3,
             "id_ubigeo": 150111,
             "direccion": "Av. Riva Agüero 678",
@@ -451,7 +451,7 @@
             "caracteristicas_inmueble":[3,4,7,10,13,15,17]
         },
         {
-            "id_inmueble": 12,
+            "id": 12,
             "id_propietario": 15,
             "id_ubigeo": 150112,
             "direccion": "Av. Carlos Izaguirre 987",
@@ -466,7 +466,7 @@
             "caracteristicas_inmueble":[8,11,15,21,22,27,29]
         },
         {
-            "id_inmueble": 13,
+            "id": 13,
             "id_propietario": 8,
             "id_ubigeo": 150113,
             "direccion": "Calle San Felipe 890",
@@ -481,7 +481,7 @@
             "caracteristicas_inmueble":[4,5,9,11,13,22,27]
         },
         {
-            "id_inmueble": 14,
+            "id": 14,
             "id_propietario": 9,
             "id_ubigeo": 1501014,
             "direccion": "Calle Los Alamos 135, Urb. Las Praderas",
@@ -496,7 +496,7 @@
             "caracteristicas_inmueble":[2,3,4,7,21,25,27,30]
         },
         {
-            "id_inmueble": 15,
+            "id": 15,
             "id_propietario": 5,
             "id_ubigeo":150115 ,
             "direccion": "Av. Manco Cápac 543",
@@ -511,7 +511,7 @@
             "caracteristicas_inmueble":[3,4,5,13,14,22,25]
         },
         {
-            "id_inmueble": 16,
+            "id": 16,
             "id_propietario": 1,
             "id_ubigeo": 150116,
             "direccion": "Calle Los Olivos 321",
@@ -526,7 +526,7 @@
             "caracteristicas_inmueble":[4,5,6,7,11,13,17,21,23,28]
         },
         {
-            "id_inmueble": 17,
+            "id": 17,
             "id_propietario": 14,
             "id_ubigeo": 150117,
             "direccion": "Calle Los Nogales 654, Urb. El Trébol",
@@ -541,7 +541,7 @@
             "caracteristicas_inmueble":[7,8,13,15,17,24,27]
         },
         {
-            "id_inmueble": 18,
+            "id": 18,
             "id_propietario": 20,
             "id_ubigeo": 150118,
             "direccion": "Av. Central 432, San Antonio",
@@ -556,7 +556,7 @@
             "caracteristicas_inmueble":[3,4,9,12,14,15,17,21,25,28]
         },
         {
-            "id_inmueble": 19,
+            "id": 19,
             "id_propietario": 12,
             "id_ubigeo": 150119,
             "direccion": "Av. Lurín 785",
@@ -571,7 +571,7 @@
             "caracteristicas_inmueble":[4,6,7,9,11,13,15,17,24,26,28,30]
         },
         {
-            "id_inmueble": 20,
+            "id": 20,
             "id_propietario": 7,
             "id_ubigeo": "150120",
             "direccion": "Calle Gonzales Prada 678",
@@ -653,7 +653,7 @@
                 {"id":6,"nombre":"Aire acondicionado"},
                 {"id":7,"nombre":"TV"},
                 {"id":8,"nombre":"Estacionamiento de pago en las instalaciones"}
-            ]  
+            ]
         },
         {
             "tipo": "Comodidades",
@@ -671,7 +671,7 @@
                 {"id":19,"nombre":"Acceso al lago"},
                 {"id":20,"nombre":"Acceso a la playa"},
                 {"id":21,"nombre":"Ducha exterior"}
-            ]  
+            ]
         },
         {
             "tipo": "Elementos de seguridad",
@@ -679,8 +679,8 @@
                 {"id":22,"nombre":"Detector de humo"},
                 {"id":23,"nombre":"Botiquin de primeros auxilios"},
                 {"id":24,"nombre":"Extintor de incendios"}
-                
-            ]  
+
+            ]
         },
         {
             "tipo": "Caracteristicas del inmueble",
@@ -691,8 +691,8 @@
                 {"id":28,"nombre":"Central"},
                 {"id":29,"nombre":"Espacioso"},
                 {"id":30,"nombre":"Elegante"}
-                
-            ]  
+
+            ]
         }
     ],
     "Alquiler":[
@@ -1268,7 +1268,7 @@
             "observaciones": "El departamento era espacioso y tenía una excelente vista. La ubicación era perfecta para explorar la ciudad. El anfitrión fue atento y siempre estuvo disponible para ayudarnos.",
             "link_foto": ""
         }
-        
-        
-    ] 
+
+
+    ]
 }

@@ -25,3 +25,15 @@ margin: 15px;
 .example-margin {
     width: 100%;
 }
+
+.main{
+  display: flex;
+}
+.filters{
+  width: calc(100%/2.5);
+}
+.cards{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
