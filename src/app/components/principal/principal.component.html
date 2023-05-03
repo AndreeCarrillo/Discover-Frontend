@@ -1,4 +1,3 @@
-<app-navbar></app-navbar>
 <div class="searcher-container d-flex align-items-center justify-content-center flex-column">
     <h1 class="searcher-tittle">Bienvenido {{ex}} a Discover</h1>
     <input type="text" style="border-radius: 20px;" class="form-control w-75" id="exampleFormControlInput1" placeholder="Ingrese departamento, distrito o provincia">
@@ -6,10 +5,11 @@
 
 <!--<app-property-card></app-property-card>-->
 
-<div>
-    <div >
-        <h2 style="text-align: center; font-weight: bold; color: #00C9D1;">Filtra tus <br>características</h2>
+  <div class="main">
+    <div class="filters">
         <div style="background-color: #48484812; padding: 20px; border-radius: 15px;" class="d-flex flex-column">
+          <h2 style="text-align: center; font-weight: bold; color: #00C9D1;">Filtra tus <br>características</h2>
+
             <mat-form-field appearance="fill">
                 <mat-label>Tipo de inmueble</mat-label>
                 <mat-select [(value)]="property_Filter">
@@ -35,7 +35,7 @@
                     class="example-margin"
                     color="primary"
                     [disabled]=false
-                    [max]=100
+                    [max]=20
                     [min]=0
                     [step]=1
                     [discrete]=true
@@ -50,7 +50,7 @@
                     class="example-margin"
                     color="primary"
                     [disabled]=false
-                    [max]=40
+                    [max]=20
                     [min]=0
                     [step]=1
                     [discrete]=true
@@ -65,7 +65,7 @@
                     class="example-margin"
                     color="primary"
                     [disabled]=false
-                    [max]=20
+                    [max]=10
                     [min]=0
                     [step]=1
                     [discrete]=true
@@ -78,7 +78,7 @@
                 <mat-select multiple [(value)]="services_Filter">
                     <mat-option *ngFor="let service of services_array" [value]="service">{{service}}</mat-option>
                 </mat-select>
-            </mat-form-field>   
+            </mat-form-field>
             <mat-form-field appearance="fill">
                 <mat-label>Comodidades</mat-label>
                 <mat-select multiple [(value)]="modcons_Filter">
@@ -98,8 +98,15 @@
                     {{price}}
                 </mat-option>
                 </mat-select>
-            </mat-form-field>       
+            </mat-form-field>
         </div>
     </div>
+    <div class="cards">
+      <app-property-card></app-property-card>
+      <app-property-card></app-property-card>
+      <app-property-card></app-property-card>
+    </div>
 </div>
+
+
 
