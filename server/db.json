@@ -1,0 +1,1274 @@
+{
+    "usuario":[
+        {
+            "id": 1,
+            "nombre": "Vanessa",
+            "apellido_paterno": "Castillo",
+            "apellido_materno": "Gomes",
+            "dni": "43451826",
+            "telefono": "901023352",
+            "correo": "vanessa.castillo@gmail.com",
+            "contraseña": "vanessa_2kamx",
+            "link_foto_dni": "https://i.postimg.cc/6QN9f9wF/documento-identidad-peru-vanessa.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/15qXG7wn/Screenshot-2023-05-01-220937.jpg",
+            "fecha_nacimiento": "1986-02-18",
+            "fecha_inscripcion": "2023-04-01"
+
+        },
+        {
+            "id": 2,
+            "nombre": "Carlos",
+            "apellido_paterno": "Rodríguez",
+            "apellido_materno": "Salas",
+            "dni": "23456789",
+            "telefono": "901012352",
+            "correo": "carlos.rodriguez@outlook.com",
+            "contraseña": "Carlos1234",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/nL8PsrZ9/hombre-foto.jpg",
+            "fecha_nacimiento": "1985-05-15",
+            "fecha_inscripcion": "2023-04-02"
+        },
+        {
+            "id": 3,
+            "nombre": "Fernanda",
+            "apellido_paterno": "Gómez",
+            "apellido_materno": "Vargas",
+            "dni": "34567890",
+            "telefono": "345678921",
+            "correo": "fernanda.gomez@yahoo.com",
+            "contraseña": "Fernanda1234",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/BZc4JWTC/retrato-de-joven-feliz-positivo-sonriendo-c-mara-166576783.jpg",
+            "fecha_nacimiento": "1992-08-30",
+            "fecha_inscripcion": "2023-04-05"
+        },
+        {
+            "id": 4,
+            "nombre": "Miguel",
+            "apellido_paterno": "Sánchez",
+            "apellido_materno": "Ortiz",
+            "dni": "12345696",
+            "telefono": "923457822",
+            "correo": "miguel.sanchez@outlook.com",
+            "contraseña": "Miguel1234",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/qqgLDH4d/inline-image-preview.jpg",
+            "fecha_nacimiento": "1980-12-20",
+            "fecha_inscripcion": "2023-04-29"
+        },
+        {
+            "id": 5,
+            "nombre": "María",
+            "apellido_paterno": "Fernández",
+            "apellido_materno": "Castañeda",
+            "dni": "12345697",
+            "telefono": "912345792",
+            "correo": "maria.fernandez@gmail.com",
+            "contraseña": "Maria1234",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/1zZvmdcp/photo-1659332589233-3637f89be936.jpg",
+            "fecha_nacimiento": "1995-10-10",
+            "fecha_inscripcion": "2023-04-30"
+        },
+        {
+            "id": 6,
+            "nombre": "Juan",
+            "apellido_paterno": "Pérez",
+            "apellido_materno": "Paz",
+            "dni": "12345678",
+            "telefono": "987654321",
+            "correo": "juan.perez@gmail.com",
+            "contraseña": "Juan1234",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/zXb7nNxC/istockphoto-1212501093-640x640.jpg",
+            "fecha_nacimiento": "1995-10-15",
+            "fecha_inscripcion": "2022-01-01"
+        },
+        {
+            "id": 7,
+            "nombre": "María",
+            "apellido_paterno": "López",
+            "apellido_materno": "Vásquez",
+            "dni": "87654321",
+            "telefono": "765432109",
+            "correo": "maria.lopez@example.com",
+            "contraseña": "Maria5678",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/zDcZzJLK/women-i-am-young-girls-beautiful.jpg",
+            "fecha_nacimiento": "1990-02-12",
+            "fecha_inscripcion": "2022-03-15"
+        },
+        {
+            "id": 8,
+            "nombre": "Pedro",
+            "apellido_paterno": "Ramírez",
+            "apellido_materno": "Gutiérrez",
+            "dni": "98765432",
+            "telefono": "876543210",
+            "correo": "pedro.ramirez@example.com",
+            "contraseña": "Pedro9012",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/6Q0f9pQX/happy-smile-face.jpg",
+            "fecha_nacimiento": "1985-05-20",
+            "fecha_inscripcion": "2022-05-10"
+        },
+        {
+            "id": 9,
+            "nombre": "Luis",
+            "apellido_paterno": "Gonzales",
+            "apellido_materno": "Vargas",
+            "dni": "34567891",
+            "telefono": "987654321",
+            "correo": "luis.gonzales@example.com",
+            "contraseña": "Luis4567",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/Rh37Q1LS/pexels-photo-6421292.jpg",
+            "fecha_nacimiento": "1988-07-20",
+            "fecha_inscripcion": "2022-06-05"
+        },
+        {
+            "id": 10,
+            "nombre": "Mónica",
+            "apellido_paterno": "Díaz",
+            "apellido_materno": "López",
+            "dni": "45678912",
+            "telefono": "987654321",
+            "correo": "monica.diaz@example.com",
+            "contraseña": "Monica8910",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/q7k2ZHxZ/concepto-de-bienestar-y-personas-cierre-una-atractiva-rubia-sonriendo-con-dientes-blancos-mirando-la.jpg",
+            "fecha_nacimiento": "1993-02-18",
+            "fecha_inscripcion": "2022-09-01"
+        },
+        {
+            "id": 11,
+            "nombre": "Jorge",
+            "apellido_paterno": "Flores",
+            "apellido_materno": "Castro",
+            "dni": "56789123",
+            "telefono": "947654321",
+            "correo": "jorge.flores@example.com",
+            "contraseña": "Jorge2345",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://example.com/foto_perfil.jpg",
+            "fecha_nacimiento": "1998-11-28",
+            "fecha_inscripcion": "2022-10-15"
+        },
+        {
+            "id": 12,
+            "nombre": "Carmen",
+            "apellido_paterno": "Guzmán",
+            "apellido_materno": "Ramírez",
+            "dni": "67891234",
+            "telefono": "987624321",
+            "correo": "carmen.guzman@example.com",
+            "contraseña": "Carmen3456",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/44K21pdH/personas-reales-feliz-chica-natural-sonriendo-y-mirando-t-mido-la-c-mara-ruboriz-ndose-de-halagos-pi.jpg",
+            "fecha_nacimiento": "1980-06-05",
+            "fecha_inscripcion": "2022-12-01"
+        },
+        {
+            "id": 13,
+            "nombre": "Antonio",
+            "apellido_paterno": "Vega",
+            "apellido_materno": "López",
+            "dni": "78912345",
+            "telefono": "907654817",
+            "correo": "antonio.vega@example.com",
+            "contraseña": "Antonio7890",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/j5n6yQXs/joven-dispara-con-su-c-mara-retrato-de-un-asi-tico-gracioso-tomando-fotos-disparando-fot-grafo-casua.jpg",
+            "fecha_nacimiento": "1991-03-14",
+            "fecha_inscripcion": "2023-01-15"
+        },
+        {
+            "id": 14,
+            "nombre": "Sofía",
+            "apellido_paterno": "Mendoza",
+            "apellido_materno": "Gómez",
+            "dni": "89123456",
+            "telefono": "917653021",
+            "correo": "sofia.mendoza@example.com",
+            "contraseña": "Sofia5678",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/Y9vRbwpB/portrait-people-cute-girl-smile.jpg",
+            "fecha_nacimiento": "1997-09-20",
+            "fecha_inscripcion": "2023-03-01"
+        },
+        {
+            "id": 15,
+            "nombre": "Miguel",
+            "apellido_paterno": "Castillo",
+            "apellido_materno": "Hernández",
+            "dni": "91234567",
+            "telefono": "985657311",
+            "correo": "miguel.castillo@example.com",
+            "contraseña": "Miguel1234",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/Gm3kX1Qg/man-person-portrait-sitting-smile-smiling-wear-looking-at-camera-one-person-real-people.jpg",
+            "fecha_nacimiento": "1992-12-10",
+            "fecha_inscripcion": "2023-04-15"
+        },
+        {
+            "id": 16,
+            "nombre": "Laura",
+            "apellido_paterno": "Martínez",
+            "apellido_materno": "Vargas",
+            "dni": "34567891",
+            "telefono": "957354001",
+            "correo": "laura.martinez@example.com",
+            "contraseña": "Laura5678",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpgg",
+            "link_foto_perfil": "https://i.postimg.cc/9McV7JV9/female-indian-young-girl-woman-people.jpg",
+            "fecha_nacimiento": "1987-03-05",
+            "fecha_inscripcion": "2023-06-01"
+        },
+        {
+            "id": 17,
+            "nombre": "Lorena",
+            "apellido_paterno": "Hernández",
+            "apellido_materno": "Sánchez",
+            "dni": "45678912",
+            "telefono": "922654321",
+            "correo": "lorena.hernandez@example.com",
+            "contraseña": "Lorena9012",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/zXxLXHCp/istockphoto-1443543154-170667a.jpg",
+            "fecha_nacimiento": "1995-08-02",
+            "fecha_inscripcion": "2023-08-15"
+        },
+        {
+            "id": 18,
+            "nombre": "Javier",
+            "apellido_paterno": "González",
+            "apellido_materno": "Morales",
+            "dni": "56789123",
+            "telefono": "917654451",
+            "correo": "javier.gonzalez@example.com",
+            "contraseña": "Javier3456",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/0yJ8Rzcz/pexels-photo-5215015.jpg",
+            "fecha_nacimiento": "1984-11-12",
+            "fecha_inscripcion": "2023-10-12"
+        },
+        {
+            "id": 19,
+            "nombre": "Marisol",
+            "apellido_paterno": "Sánchez",
+            "apellido_materno": "López",
+            "dni": "67891234",
+            "telefono": "981234321",
+            "correo": "marisol.sanchez@example.com",
+            "contraseña": "Marisol1234",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/J01nRRt9/sonriente-mujer-bonita-joven-mirando-camara-tocar-cara-1262-15253.jpg",
+            "fecha_nacimiento": "1990-06-18",
+            "fecha_inscripcion": "2023-11-01"
+        },
+        {
+            "id": 20,
+            "nombre": "Gustavo",
+            "apellido_paterno": "García",
+            "apellido_materno": "Pérez",
+            "dni": "78912345",
+            "telefono": "987111321",
+            "correo": "gustavo.garcia@example.com",
+            "contraseña": "Gustavo5678",
+            "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
+            "link_foto_perfil": "https://i.postimg.cc/SRNywVv4/person-smiling.jpg",
+            "fecha_nacimiento": "1982-09-28",
+            "fecha_inscripcion": "2023-12-15"
+        }
+    ],
+    "inmuebles":[
+        {
+            "id": 1,
+            "id_propietario": 13,
+            "id_ubigeo": 150101,
+            "direccion": "Jirón de la Unión 456, Cercado de Lima",
+            "precio": 1200,
+            "n_dormitorios": 3,
+            "n_baños": 2,
+            "n_huespedes": 5,
+            "m2_cuadrados": 100,
+            "tiempo_antiguedad": "Más de 10 años",
+            "link_fotos": ["https://i.postimg.cc/x8VHg1jq/367345008.webp","https://i.postimg.cc/zXZwJ0rK/367345011.webp","https://i.postimg.cc/9fRzwHPM/367345009.webp"],
+            "descripcion": "Amplio departamento de 3 dormitorios y 2 baños, ideal para una familia. Ubicada en un vecindario tranquilo y seguro. Cerca de parques y escuelas.",
+            "latitud":"",
+            "longitud":"",
+            "caracteristicas_inmueble":[1,4,7,11,13,15,17,22]
+        },
+        {
+            "id": 2,
+            "id_propietario": 7,
+            "id_ubigeo": 150102,
+            "direccion": "Calle Los Delfines 123, Urb. Santa Rosa",
+            "precio": 750,
+            "n_dormitorios": 2,
+            "n_baños": 1,
+            "n_huespedes": 3,
+            "m2_cuadrados": 70,
+            "tiempo_antiguedad": "Menos de 1 año",
+            "link_fotos": ["https://i.postimg.cc/KvM9f1Zr/360288971.webp","https://i.postimg.cc/T1WctsXY/360288974.jpg","https://i.postimg.cc/mZvxTfkj/360288970.webp"],
+            "descripcion": "Moderno departamento de estreno con 2 dormitorios y 1 baño. Excelente ubicación, cerca de centros comerciales y transporte público.",
+            "caracteristicas_inmueble":[3,5,8,10,13,22,25,27]
+        },
+        {
+            "id": 3,
+            "id_propietario": 19,
+            "id_ubigeo": 150103,
+            "direccion": "Av. Separadora Industrial 345, Salamanca",
+            "precio": 2000,
+            "n_dormitorios": 4,
+            "n_baños": 3,
+            "n_huespedes": 6,
+            "m2_cuadrados": 150,
+            "tiempo_antiguedad": "Más de 20 años",
+            "link_fotos": ["https://i.postimg.cc/258M0C9k/364654991.jpg","https://i.postimg.cc/qRNYdjdW/364654992.jpg","https://i.postimg.cc/wTXrH1Sx/364654996.webp"],
+            "descripcion": "Hermosa casa de dos pisos con 4 dormitorios, 3 baños y amplios espacios. Jardín privado y garaje para 2 autos. Ideal para familias grandes.",
+            "caracteristicas_inmueble":[3,4,5,13,15,24,26,28]
+        },
+        {
+            "id": 4,
+            "id_propietario": 2,
+            "id_ubigeo": 150104,
+            "direccion": "Calle San Martín 567",
+            "precio": 900,
+            "n_dormitorios": 1,
+            "n_baños": 1,
+            "n_huespedes": 2,
+            "m2_cuadrados": 50,
+            "tiempo_antiguedad": "Estreno",
+            "link_fotos": ["https://i.postimg.cc/FRkP6zy4/345316152.webp","https://i.postimg.cc/L5MV0T4t/345316147.webp","https://i.postimg.cc/htG1whn5/345316151.webp"],
+            "descripcion": "Acogedor departamento de estreno con 1 dormitorio y 1 baño. Cuenta con una cocina moderna y una terraza con vista a la ciudad. Ideal para parejas o profesionales.",
+            "caracteristicas_inmueble":[1,2,3,11,13,27,30]
+        },
+        {
+            "id": 5,
+            "id_propietario": 16,
+            "id_ubigeo": 150105,
+            "direccion": "Av. Bolivia 789",
+            "precio": 1300,
+            "n_dormitorios": 3,
+            "n_baños": 2,
+            "n_huespedes": 4,
+            "m2_cuadrados": 110,
+            "tiempo_antiguedad": "Más de 5 años",
+            "link_fotos": ["https://i.postimg.cc/50JHhkv2/367715337.webp","https://i.postimg.cc/bJqJCScG/367715330.webp","https://i.postimg.cc/ZKXqkMzz/345316140.jpg"],
+            "descripcion": "Bonito departamento de 3 dormitorios y 2 baños, ubicado en una zona residencial tranquila. Cuenta con áreas comunes como piscina y zona de parrillas.",
+            "caracteristicas_inmueble":[1,6,7,11,14,25,26]
+        },
+        {
+            "id": 6,
+            "id_propietario": 10,
+            "id_ubigeo": 150106,
+            "direccion": "Av. San Juan 321, Urb. Santo Domingo",
+            "precio": 1800,
+            "n_dormitorios": 4,
+            "n_baños": 3,
+            "n_huespedes": 7,
+            "m2_cuadrados": 140,
+            "tiempo_antiguedad": "Más de 40 años",
+            "link_fotos": ["https://i.postimg.cc/rstv5gn5/367556046.webp","https://i.postimg.cc/qRtkZsDv/367556044.webp","https://i.postimg.cc/NGmt9fWS/367556038.webp"],
+            "descripcion": "Casa de dos pisos con 4 dormitorios y 3 baños, en un barrio histórico. Cuenta con un amplio jardín y espacios acogedores. Perfecta para familias que disfrutan de la arquitectura clásica.",
+            "caracteristicas_inmueble":[3,4,5,7,12,21,22,30]
+        },
+        {
+            "id": 7,
+            "id_propietario": 4,
+            "id_ubigeo": 150107,
+            "direccion": "Jirón Los Laureles 112",
+            "precio": 2200,
+            "n_dormitorios": 4,
+            "n_baños": 3,
+            "n_huespedes": 8,
+            "m2_cuadrados": 180,
+            "tiempo_antiguedad": "Más de 10 años",
+            "link_fotos": ["https://i.postimg.cc/3xSQ5yv4/367321952.webp","https://i.postimg.cc/cCMPD6WJ/367321961.webp","https://i.postimg.cc/9FbvZ418/367321956.webp"],
+            "descripcion": "Amplia casa de dos pisos con 4 dormitorios, 3 baños y un estudio. Espacios luminosos y cómodos. Ubicada en una zona residencial con vigilancia 24/7.",
+            "caracteristicas_inmueble":[1,4,7,17,18,20,24]
+        },
+        {
+            "id": 8,
+            "id_propietario": 11,
+            "id_ubigeo": 150108,
+            "direccion": "Calle Los Pinos 123, Urb. La Campiña",
+            "precio": 1500,
+            "n_dormitorios": 2,
+            "n_baños": 2,
+            "n_huespedes": 3,
+            "m2_cuadrados": 90,
+            "tiempo_antiguedad": "Menos de 1 año",
+            "link_fotos": ["https://i.postimg.cc/K8dQMxXp/339288566.jpg","https://i.postimg.cc/fLMccb8C/346415581.jpg","https://i.postimg.cc/cCbfGB0k/361164698.webp"],
+            "descripcion": "Moderno departamento de estreno con 2 dormitorios y 2 baños en edificio con piscina, gimnasio y zona de parrillas. Ubicado cerca de centros comerciales y parques.",
+            "caracteristicas_inmueble":[4,5,7,15,21,24,28]
+        },
+        {
+            "id": 9,
+            "id_propietario": 6,
+            "id_ubigeo": 150109,
+            "direccion": "Av. Nueva Toledo 431",
+            "precio": 850,
+            "n_dormitorios": 1,
+            "n_baños": 1,
+            "n_huespedes": 2,
+            "m2_cuadrados": 45,
+            "tiempo_antiguedad": "Más de 2 años",
+            "link_fotos": ["https://i.postimg.cc/43Wd0NJB/363145161.webp","https://i.postimg.cc/1zmckHFP/363145172.webp","https://i.postimg.cc/ZRg8yzMK/363145169.webp"],
+            "descripcion": "Acogedor departamento de 1 dormitorio y 1 baño, perfecto para parejas o profesionales. Cuenta con una cocina abierta y un pequeño balcón. Cerca de tiendas y transporte público.",
+            "caracteristicas_inmueble":[3,6,7,8,15,16,20,21]
+        },
+        {
+            "id": 10,
+            "id_propietario": 18,
+            "id_ubigeo": 150110,
+            "direccion": "Calle Los Alpes 145, Urb. Santa Luzmila",
+            "precio": 2800,
+            "n_dormitorios": 5,
+            "n_baños": 4,
+            "n_huespedes": 10,
+            "m2_cuadrados": 200,
+            "tiempo_antiguedad": "Más de 20 años",
+            "link_fotos": ["https://i.postimg.cc/W1XJkPDL/273805402.webp","https://i.postimg.cc/3N5yT8qp/273805399.webp","https://i.postimg.cc/hPnJZGTR/273805396.webp"],
+            "descripcion": "Espaciosa casa de dos pisos con 5 dormitorios, 4 baños y un amplio jardín. Ideal para familias numerosas o grupos de amigos. Ubicada en una tranquila calle residencial.",
+            "caracteristicas_inmueble":[2,5,7,14,18,19,24,25,26,28]
+        },
+        {
+            "id": 11,
+            "id_propietario": 3,
+            "id_ubigeo": 150111,
+            "direccion": "Av. Riva Agüero 678",
+            "precio": 1100,
+            "n_dormitorios": 3,
+            "n_baños": 2,
+            "n_huespedes": 5,
+            "m2_cuadrados": 95,
+            "tiempo_antiguedad": "Más de 5 años",
+            "link_fotos": ["https://i.postimg.cc/XJwj9w2G/243716601.jpg","https://i.postimg.cc/7h9qWqrq/243716590.jpg","https://i.postimg.cc/W1hs5RWP/243716589.jpg"],
+            "descripcion": "Cómodo casa de 3 dormitorios y 2 baños, ideal para familias. Cuenta con una amplia sala y comedor. Ubicado cerca de colegios y áreas verdes.",
+            "caracteristicas_inmueble":[3,4,7,10,13,15,17]
+        },
+        {
+            "id": 12,
+            "id_propietario": 15,
+            "id_ubigeo": 150112,
+            "direccion": "Av. Carlos Izaguirre 987",
+            "precio": 1600,
+            "n_dormitorios": 3,
+            "n_baños": 3,
+            "n_huespedes": 6,
+            "m2_cuadrados": 120,
+            "tiempo_antiguedad": "Estreno",
+            "link_fotos": ["https://i.postimg.cc/BQw0LYq7/361633141.jpg","https://i.postimg.cc/CxBVjG5h/361633140.jpg","https://i.postimg.cc/0N7R497h/361633142.jpg"],
+            "descripcion": "Exclusiva casa de estreno con 3 dormitorios y 3 baños. Acabados de lujo, cocina moderna y vista panorámica. Edificio con gimnasio, piscina y seguridad 24/7.",
+            "caracteristicas_inmueble":[8,11,15,21,22,27,29]
+        },
+        {
+            "id": 13,
+            "id_propietario": 8,
+            "id_ubigeo": 150113,
+            "direccion": "Calle San Felipe 890",
+            "precio": 700,
+            "n_dormitorios": 1,
+            "n_baños": 1,
+            "n_huespedes": 2,
+            "m2_cuadrados": 40,
+            "tiempo_antiguedad": "Más de 10 años",
+            "link_fotos": ["https://i.postimg.cc/XNsMmHyN/367737000.webp","https://i.postimg.cc/mrYJw8ss/367737013.jpg","https://i.postimg.cc/Y98Vc00D/367737015.jpg"],
+            "descripcion": "Departamento acogedor de 1 dormitorio y 1 baño, ideal para estudiantes o profesionales solteros. Cerca de universidades y servicios básicos.",
+            "caracteristicas_inmueble":[4,5,9,11,13,22,27]
+        },
+        {
+            "id": 14,
+            "id_propietario": 9,
+            "id_ubigeo": 1501014,
+            "direccion": "Calle Los Alamos 135, Urb. Las Praderas",
+            "precio": 1900,
+            "n_dormitorios": 4,
+            "n_baños": 3,
+            "n_huespedes": 7,
+            "m2_cuadrados": 160,
+            "tiempo_antiguedad": "Más de 40 años",
+            "link_fotos": ["https://i.postimg.cc/pdJc8rfV/364365708.jpg","https://i.postimg.cc/gcTS3fZh/364365675.jpg","https://i.postimg.cc/J4HTxPN2/364365700.jpg"],
+            "descripcion": "Encantadora casa de estilo clásico con 4 dormitorios y 3 baños. Espacios amplios y luminosos, con techos altos y detalles arquitectónicos únicos. Ideal para amantes de lo vintage.",
+            "caracteristicas_inmueble":[2,3,4,7,21,25,27,30]
+        },
+        {
+            "id": 15,
+            "id_propietario": 5,
+            "id_ubigeo":150115 ,
+            "direccion": "Av. Manco Cápac 543",
+            "precio": 1400,
+            "n_dormitorios": 3,
+            "n_baños": 2,
+            "n_huespedes": 5,
+            "m2_cuadrados": 105,
+            "tiempo_antiguedad": "Más de 50 años",
+            "link_fotos": ["https://i.postimg.cc/J4HTxPN2/364365700.jpg","https://i.postimg.cc/1tYHcqfS/367132600.jpg","https://i.postimg.cc/cHjz1j7f/367132599.jpg"],
+            "descripcion": "Casa con encanto de 3 dormitorios y 2 baños en un tranquilo barrio residencial. Cuenta con un jardín y un patio trasero. Perfecta para familias que buscan un hogar con carácter y personalidad.",
+            "caracteristicas_inmueble":[3,4,5,13,14,22,25]
+        },
+        {
+            "id": 16,
+            "id_propietario": 1,
+            "id_ubigeo": 150116,
+            "direccion": "Calle Los Olivos 321",
+            "precio": 1000,
+            "n_dormitorios": 2,
+            "n_baños": 1,
+            "n_huespedes": 4,
+            "m2_cuadrados": 75,
+            "tiempo_antiguedad": "Menos de 1 año",
+            "link_fotos": ["https://i.postimg.cc/Nj4P2L7s/357173625.jpg","https://i.postimg.cc/259cTJKg/357173631.webp","https://i.postimg.cc/Y0YdrSCw/357173633.webp"],
+            "descripcion": "Departamento moderno de estreno con 2 dormitorios y 1 baño. Ubicado en un edificio con áreas comunes, como gimnasio y terraza. Cerca de centros comerciales y transporte público.",
+            "caracteristicas_inmueble":[4,5,6,7,11,13,17,21,23,28]
+        },
+        {
+            "id": 17,
+            "id_propietario": 14,
+            "id_ubigeo": 150117,
+            "direccion": "Calle Los Nogales 654, Urb. El Trébol",
+            "precio": 2400,
+            "n_dormitorios": 5,
+            "n_baños": 4,
+            "n_huespedes": 8,
+            "m2_cuadrados": 210,
+            "tiempo_antiguedad": "Más de 20 años",
+            "link_fotos": ["https://i.postimg.cc/zvxVRCBw/359977702.jpg","https://i.postimg.cc/QMcCqGCd/359971433.webp"],
+            "descripcion": "Casa espaciosa de 5 dormitorios y 4 baños, ideal para familias numerosas. Cuenta con una sala de estar, comedor y un amplio jardín. Ubicada en un vecindario seguro y tranquilo.",
+            "caracteristicas_inmueble":[7,8,13,15,17,24,27]
+        },
+        {
+            "id": 18,
+            "id_propietario": 20,
+            "id_ubigeo": 150118,
+            "direccion": "Av. Central 432, San Antonio",
+            "precio": 950,
+            "n_dormitorios": 2,
+            "n_baños": 1,
+            "n_huespedes": 3,
+            "m2_cuadrados": 65,
+            "tiempo_antiguedad": "Más de 2 años",
+            "link_fotos": ["https://i.postimg.cc/wx4qLT2k/366593944.jpg","https://i.postimg.cc/3xmYsjTL/366593940.jpg","https://i.postimg.cc/9fBVMWzZ/366593930.jpg"],
+            "descripcion": "Confortable departamento de 2 dormitorios y 1 baño en una ubicación céntrica. A pocos minutos de tiendas, restaurantes y parques. Ideal para parejas o pequeñas familias.",
+            "caracteristicas_inmueble":[3,4,9,12,14,15,17,21,25,28]
+        },
+        {
+            "id": 19,
+            "id_propietario": 12,
+            "id_ubigeo": 150119,
+            "direccion": "Av. Lurín 785",
+            "precio": 1800,
+            "n_dormitorios": 4,
+            "n_baños": 3,
+            "n_huespedes": 6,
+            "m2_cuadrados": 150,
+            "tiempo_antiguedad": "Más de 5 años",
+            "link_fotos": ["https://i.postimg.cc/zGCYtJC6/362152449.jpg","https://i.postimg.cc/d11MVrbc/362152453.webp","https://i.postimg.cc/sX0kQ1zQ/362152456.webp"],
+            "descripcion": "Amplia casa de 4 dormitorios y 3 baños en una tranquila zona residencial. Cuenta con una espaciosa sala de estar, comedor y jardín. Perfecta para familias que buscan comodidad y seguridad.",
+            "caracteristicas_inmueble":[4,6,7,9,11,13,15,17,24,26,28,30]
+        },
+        {
+            "id": 20,
+            "id_propietario": 7,
+            "id_ubigeo": "150120",
+            "direccion": "Calle Gonzales Prada 678",
+            "precio": 1200,
+            "n_dormitorios": 3,
+            "n_baños": 2,
+            "n_huespedes": 4,
+            "m2_cuadrados": 100,
+            "tiempo_antiguedad": "Estreno",
+            "link_fotos": ["https://i.postimg.cc/CKMMbZ3m/364014549.webp","https://i.postimg.cc/FKqt17Nf/364014536.jpg","https://i.postimg.cc/m2S0CdTW/364014535.jpg"],
+            "descripcion": "Moderno y elegante departamento de estreno con 3 dormitorios y 2 baños. Cuenta con una amplia cocina y un balcón con vista al parque. Edificio con áreas comunes y seguridad 24/7.",
+            "caracteristicas_inmueble":[2,6,7,8,11,13,16,19,25,28,29]
+        }
+    ],
+    "departamentos": [
+        {
+          "nombre": "Lima",
+          "provincias": [
+            {
+              "nombre": "Lima",
+              "distritos": [
+                {"nombre": "Lima","ubigeo": 150101},
+                {"nombre": "Ancon","ubigeo":150102},
+                {"nombre": "Ate","ubigeo":150103},
+                {"nombre": "Barranco","ubigeo":150104},
+                {"nombre": "Breña","ubigeo":150105},
+                {"nombre": "Carabayllo","ubigeo":150106},
+                {"nombre": "Chaclacayo","ubigeo":150107},
+                {"nombre": "Chorrillos","ubigeo":150108},
+                {"nombre": "Cieneguilla","ubigeo":150109},
+                {"nombre": "Comas","ubigeo":150110},
+                {"nombre": "El Agustino","ubigeo":150111},
+                {"nombre": "Independencia","ubigeo":150112},
+                {"nombre": "Jesus Maria","ubigeo":150113},
+                {"nombre": "La Molina","ubigeo":1501014},
+                {"nombre": "La Victoria","ubigeo":150115},
+                {"nombre": "Lince","ubigeo":150116},
+                {"nombre": "Los Olivos","ubigeo":150117},
+                {"nombre": "Lurigancho","ubigeo":150118},
+                {"nombre": "Lurin","ubigeo":150119},
+                {"nombre": "Magdalena del Mar","ubigeo":150120},
+                {"nombre": "Miraflores","ubigeo":150121},
+                {"nombre": "Pachacamac","ubigeo":150122},
+                {"nombre": "Pucusana","ubigeo":150123},
+                {"nombre": "Pueblo Libre","ubigeo":150124},
+                {"nombre": "Puente Piedra","ubigeo":150125},
+                {"nombre": "Punta Hermosa","ubigeo":150126},
+                {"nombre": "Punta Negra","ubigeo":150127},
+                {"nombre": "Rimac","ubigeo":150128},
+                {"nombre": "San Bartolo","ubigeo":150129},
+                {"nombre": "San Borja","ubigeo":150130},
+                {"nombre": "San Isidro","ubigeo":150131},
+                {"nombre": "San Juan de Lurigancho","ubigeo":150132},
+                {"nombre": "San Juan de Miraflores","ubigeo":150133},
+                {"nombre": "San Luis","ubigeo":150134},
+                {"nombre": "San Martin de Porres","ubigeo":150135},
+                {"nombre": "San Miguel","ubigeo":150136},
+                {"nombre": "Santa Anita","ubigeo":150137},
+                {"nombre": "Santa Maria del Mar","ubigeo":150138},
+                {"nombre": "Santa Rosa","ubigeo":150139},
+                {"nombre": "Santiago de Surco","ubigeo":150140},
+                {"nombre": "Surquillo","ubigeo":150141},
+                {"nombre": "Villa El Salvador","ubigeo":150142},
+                {"nombre": "Villa Maria del Triunfo","ubigeo":150143}
+              ]
+            }
+          ]
+        }
+    ],
+    "Caracteristicas":[
+        {
+            "tipo": "Servicios",
+            "items":[
+                {"id":1,"nombre":"Wi-fi"},
+                {"id":2,"nombre":"Cocina"},
+                {"id":3,"nombre":"Lavadora"},
+                {"id":4,"nombre":"Zona de trabajo"},
+                {"id":5,"nombre":"Estacionamiento"},
+                {"id":6,"nombre":"Aire acondicionado"},
+                {"id":7,"nombre":"TV"},
+                {"id":8,"nombre":"Estacionamiento de pago en las instalaciones"}
+            ]
+        },
+        {
+            "tipo": "Comodidades",
+            "items":[
+                {"id":9,"nombre":"Piscina"},
+                {"id":10,"nombre":"Terraza"},
+                {"id":11,"nombre":"Parrilla"},
+                {"id":12,"nombre":"Zona de comida al aire libre"},
+                {"id":13,"nombre":"Jacuzzi"},
+                {"id":14,"nombre":"Lugar para hacer fogata"},
+                {"id":15,"nombre":"Mesa de billar"},
+                {"id":16,"nombre":"Chimenea interior"},
+                {"id":17,"nombre":"Piano"},
+                {"id":18,"nombre":"Equipo para hacer trabajo"},
+                {"id":19,"nombre":"Acceso al lago"},
+                {"id":20,"nombre":"Acceso a la playa"},
+                {"id":21,"nombre":"Ducha exterior"}
+            ]
+        },
+        {
+            "tipo": "Elementos de seguridad",
+            "items":[
+                {"id":22,"nombre":"Detector de humo"},
+                {"id":23,"nombre":"Botiquin de primeros auxilios"},
+                {"id":24,"nombre":"Extintor de incendios"}
+
+            ]
+        },
+        {
+            "tipo": "Caracteristicas del inmueble",
+            "items":[
+                {"id":25,"nombre":"Tranquilo"},
+                {"id":26,"nombre":"Ideal para familias"},
+                {"id":27,"nombre":"Excepcional"},
+                {"id":28,"nombre":"Central"},
+                {"id":29,"nombre":"Espacioso"},
+                {"id":30,"nombre":"Elegante"}
+
+            ]
+        }
+    ],
+    "Alquiler":[
+        {
+            "id_alquiler": 1,
+            "id_inmueble": 1,
+            "id_user": 1
+        },
+        {
+            "id_alquiler": 2,
+            "id_inmueble": 4,
+            "id_user": 3
+        },
+        {
+            "id_alquiler": 3,
+            "id_inmueble": 6,
+            "id_user": 20
+        },
+        {
+            "id_alquiler": 4,
+            "id_inmueble": 2,
+            "id_user": 5
+        },
+        {
+            "id_alquiler": 5,
+            "id_inmueble": 8,
+            "id_user": 11
+        },
+        {
+            "id_alquiler": 6,
+            "id_inmueble": 14,
+            "id_user": 8
+        },
+        {
+            "id_alquiler": 7,
+            "id_inmueble": 14,
+            "id_user": 10
+        },
+        {
+            "id_alquiler": 8,
+            "id_inmueble": 12,
+            "id_user": 19
+        },
+        {
+            "id_alquiler": 9,
+            "id_inmueble": 14,
+            "id_user": 17
+        },
+        {
+            "id_alquiler": 10,
+            "id_inmueble": 16,
+            "id_user": 1
+        },
+        {
+            "id_alquiler": 11,
+            "id_inmueble": 15,
+            "id_user": 17
+        },
+        {
+            "id_alquiler": 12,
+            "id_inmueble": 17,
+            "id_user": 6
+        },
+        {
+            "id_alquiler": 13,
+            "id_inmueble": 13,
+            "id_user": 12
+        },
+        {
+            "id_alquiler": 14,
+            "id_inmueble": 12,
+            "id_user": 6
+        },
+        {
+            "id_alquiler": 15,
+            "id_inmueble": 18,
+            "id_user": 6
+        },
+        {
+            "id_alquiler": 16,
+            "id_inmueble": 9,
+            "id_user": 19
+        },
+        {
+            "id_alquiler": 17,
+            "id_inmueble": 12,
+            "id_user": 7
+        },
+        {
+            "id_alquiler": 18,
+            "id_inmueble": 20,
+            "id_user": 5
+        },
+        {
+            "id_alquiler": 19,
+            "id_inmueble": 11,
+            "id_user": 11
+        },
+        {
+            "id_alquiler": 20,
+            "id_inmueble": 8,
+            "id_user": 5
+        },
+        {
+            "id_alquiler": 21,
+            "id_inmueble": 13,
+            "id_user": 5
+        },
+        {
+            "id_alquiler": 22,
+            "id_inmueble": 3,
+            "id_user": 17
+        },
+        {
+            "id_alquiler": 23,
+            "id_inmueble": 6,
+            "id_user": 9
+        },
+        {
+            "id_alquiler": 24,
+            "id_inmueble": 20,
+            "id_user": 16
+        },
+        {
+            "id_alquiler": 25,
+            "id_inmueble": 15,
+            "id_user": 9
+        },
+        {
+            "id_alquiler": 26,
+            "id_inmueble": 14,
+            "id_user": 3
+        },
+        {
+            "id_alquiler": 27,
+            "id_inmueble": 5,
+            "id_user": 19
+        },
+        {
+            "id_alquiler": 28,
+            "id_inmueble": 11,
+            "id_user": 6
+        },
+        {
+            "id_alquiler": 29,
+            "id_inmueble": 20,
+            "id_user": 15
+        },
+        {
+            "id_alquiler": 30,
+            "id_inmueble": 3,
+            "id_user": 9
+        },
+        {
+            "id_alquiler": 31,
+            "id_inmueble": 17,
+            "id_user": 4
+        },
+        {
+            "id_alquiler": 32,
+            "id_inmueble": 8,
+            "id_user": 13
+        },
+        {
+            "id_alquiler": 33,
+            "id_inmueble": 12,
+            "id_user": 11
+        },
+        {
+            "id_alquiler": 34,
+            "id_inmueble": 4,
+            "id_user": 20
+        },
+        {
+            "id_alquiler": 35,
+            "id_inmueble": 9,
+            "id_user": 7
+        },
+        {
+            "id_alquiler": 36,
+            "id_inmueble": 1,
+            "id_user": 18
+        },
+        {
+            "id_alquiler": 37,
+            "id_inmueble": 15,
+            "id_user": 5
+        },
+        {
+            "id_alquiler": 38,
+            "id_inmueble": 6,
+            "id_user": 14
+        },
+        {
+            "id_alquiler": 39,
+            "id_inmueble": 19,
+            "id_user": 2
+        },
+        {
+            "id_alquiler": 40,
+            "id_inmueble": 10,
+            "id_user": 16
+        },
+        {
+            "id_alquiler": 41,
+            "id_inmueble": 18,
+            "id_user": 1
+        },
+        {
+            "id_alquiler": 42,
+            "id_inmueble": 2,
+            "id_user": 17
+        },
+        {
+            "id_alquiler": 43,
+            "id_inmueble": 16,
+            "id_user": 8
+        },
+        {
+            "id_alquiler": 44,
+            "id_inmueble": 13,
+            "id_user": 10
+        }
+    ],
+    "Reseña":[
+        {
+            "id_reseña": 1,
+            "id_inmueble": 1,
+            "id_user": 1,
+            "calificacion": 4,
+            "observaciones": "El inmueble estaba bien ubicado y era cómodo. La comunicación con el anfitrión fue excelente. Sin embargo, el baño podría haber estado más limpio.",
+            "link_foto": "https://i.postimg.cc/52GWnbtW/pousada-casa-do-molino.jpg"
+        },
+        {
+            "id_reseña": 2,
+            "id_inmueble": 4,
+            "id_user": 3,
+            "calificacion": 5,
+            "observaciones": "Gran experiencia en este inmueble. Las habitaciones eran amplias y la ubicación perfecta. La atención del anfitrión fue inmejorable.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 3,
+            "id_inmueble": 6,
+            "id_user": 20,
+            "calificacion": 3,
+            "observaciones": "El inmueble estaba bien en general, pero la conexión a internet era lenta y la cocina necesitaba más utensilios.",
+            "link_foto": "https://i.postimg.cc/qRTY5RVS/interior-de-la-cocina-vac-a-91263131.jpg"
+        },
+        {
+            "id_reseña": 4,
+            "id_inmueble": 2,
+            "id_user": 5,
+            "calificacion": 5,
+            "observaciones": "Pasamos un tiempo maravilloso en este inmueble. Las habitaciones eran cómodas y la cocina estaba bien equipada. La ubicación era excelente, cerca de restaurantes y tiendas.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 5,
+            "id_inmueble": 8,
+            "id_user": 11,
+            "calificacion": 4,
+            "observaciones": "El inmueble era amplio y limpio. La ubicación era conveniente, pero el ruido de la calle era un poco molesto durante la noche.",
+            "link_foto": "https://i.postimg.cc/D0CM0PJ3/tipos-de-muebles-para-sala.webp"
+        },{
+            "id_reseña": 6,
+            "id_inmueble": 14,
+            "id_user": 8,
+            "calificacion": 3,
+            "observaciones": "El inmueble tenía una excelente ubicación, pero faltaba mantenimiento en algunas áreas. La atención del anfitrión fue buena.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 7,
+            "id_inmueble": 14,
+            "id_user": 10,
+            "calificacion": 4,
+            "observaciones": "El inmueble era agradable y cómodo, pero podría haber estado un poco más limpio. La atención del anfitrión fue muy amable y atenta.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 8,
+            "id_inmueble": 12,
+            "id_user": 19,
+            "calificacion": 4,
+            "observaciones": "El inmueble estaba bien ubicado y tenía un diseño agradable. El anfitrión fue atento, pero había poco espacio para guardar nuestras pertenencias.",
+            "link_foto": "https://i.postimg.cc/QMpY139b/maneras-volver-sala-estar-acogedora.webp"
+        },
+        {
+            "id_reseña": 9,
+            "id_inmueble": 14,
+            "id_user": 17,
+            "calificacion": 5,
+            "observaciones": "Disfrutamos mucho de nuestra estancia en este inmueble. Era espacioso, cómodo y bien decorado. El anfitrión fue muy amable y siempre estuvo disponible para responder nuestras preguntas.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 10,
+            "id_inmueble": 16,
+            "id_user": 1,
+            "calificacion": 3,
+            "observaciones": "El inmueble era básico pero funcional. La ubicación era buena, pero el ruido de los vecinos era un poco molesto. El anfitrión fue atento y servicial.",
+            "link_foto": "https://i.postimg.cc/4Nm8wtHn/mejor-puerta-para-casa-1.jpg"
+        },
+        {
+            "id_reseña": 11,
+            "id_inmueble": 15,
+            "id_user": 17,
+            "calificacion": 4,
+            "observaciones": "El inmueble estaba limpio y bien cuidado, pero la conexión Wi-Fi era lenta y poco confiable. El anfitrión fue amable y atento a nuestras necesidades.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 12,
+            "id_inmueble": 17,
+            "id_user": 6,
+            "calificacion": 5,
+            "observaciones": "El inmueble era hermoso y bien mantenido. La ubicación era excelente, y el anfitrión fue muy atento y siempre estuvo disponible para ayudarnos.",
+            "link_foto": "https://i.postimg.cc/MG8dWFPj/thread-21950169-15070763766771596119.png"
+        },
+        {
+            "id_reseña": 13,
+            "id_inmueble": 13,
+            "id_user": 12,
+            "calificacion": 5,
+            "observaciones": "Nos encantó nuestra estancia en este inmueble. Estaba impecablemente limpio y bien equipado. La ubicación era perfecta, y el anfitrión fue muy servicial y atento.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 14,
+            "id_inmueble": 12,
+            "id_user": 6,
+            "calificacion": 4,
+            "observaciones": "El inmueble estaba en una ubicación conveniente y tenía todo lo necesario para nuestra estancia. Sin embargo, el ruido de la calle era un poco molesto por la noche.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 15,
+            "id_inmueble": 18,
+            "id_user": 6,
+            "calificacion": 3,
+            "observaciones": "El inmueble era cómodo pero un poco antiguo. La ubicación era buena, pero el estacionamiento era un problema. El anfitrión fue amable y atento.",
+            "link_foto": "https://i.postimg.cc/Kz0NDvZn/estacionamiento-856838.jpg"
+        },
+        {
+            "id_reseña": 16,
+            "id_inmueble": 9,
+            "id_user": 19,
+            "calificacion": 4,
+            "observaciones": "El inmueble era agradable y tenía una buena ubicación. El anfitrión fue atento y servicial. Sin embargo, la conexión Wi-Fi era irregular y el estacionamiento era limitado.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 17,
+            "id_inmueble": 12,
+            "id_user": 7,
+            "calificacion": 5,
+            "observaciones": "Disfrutamos mucho de nuestra estancia en este inmueble. La ubicación era excelente y el anfitrión fue muy amable y servicial. El inmueble estaba muy limpio y bien equipado.",
+            "link_foto": ""
+        },{
+            "id_reseña": 18,
+            "id_inmueble": 20,
+            "id_user": 5,
+            "calificacion": 4,
+            "observaciones": "El inmueble estaba en buenas condiciones y la ubicación era conveniente. Sin embargo, el ruido del tráfico fue un problema durante nuestra estancia. El anfitrión fue amable y atento.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 19,
+            "id_inmueble": 11,
+            "id_user": 11,
+            "calificacion": 5,
+            "observaciones": "Tuvimos una estancia estupenda en este inmueble. La ubicación era perfecta, cerca de tiendas y restaurantes. El anfitrión fue muy servicial y nos proporcionó todo lo que necesitábamos.",
+            "link_foto": "https://i.postimg.cc/abcdef/sample-photo-19.jpg"
+        },
+        {
+            "id_reseña": 20,
+            "id_inmueble": 8,
+            "id_user": 5,
+            "calificacion": 4,
+            "observaciones": "El inmueble era cómodo y bien ubicado. La cocina estaba bien equipada, pero el baño necesitaba una actualización. El anfitrión fue muy amable y servicial.",
+            "link_foto": ""
+        },
+        {
+            "id_resena": 21,
+            "id_inmueble": 13,
+            "id_user": 5,
+            "calificacion": 5,
+            "observaciones": "El inmueble tenía una vista increíble y estaba ubicado en un vecindario tranquilo. ¡Definitivamente lo recomendaría!",
+            "link_foto": "https://i.postimg.cc/g23HBKzc/departamento-1.webp"
+        },
+        {
+            "id_resena": 22,
+            "id_inmueble": 3,
+            "id_user": 17,
+            "calificacion": 3,
+            "observaciones": "El inmueble estaba bastante limpio, pero algunos electrodomésticos no funcionaban correctamente y la conexión Wi-Fi era inestable.",
+            "link_foto": ""
+        },
+        {
+            "id_resena": 23,
+            "id_inmueble": 6,
+            "id_user": 9,
+            "calificacion": 4,
+            "observaciones": "Disfrutamos nuestra estancia en este inmueble, aunque el estacionamiento era un poco limitado. La ubicación era excelente.",
+            "link_foto": "https://ejemplo.com/foto_resena_23.jpg"
+        },
+        {
+            "id_resena": 24,
+            "id_inmueble": 20,
+            "id_user": 16,
+            "calificacion": 5,
+            "observaciones": "El diseño del inmueble era moderno y la atención al detalle era excepcional. Nos encantó nuestra estancia.",
+            "link_foto": ""
+        },
+        {
+            "id_resena": 25,
+            "id_inmueble": 15,
+            "id_user": 9,
+            "calificacion": 4,
+            "observaciones": "El inmueble estaba en una ubicación conveniente, pero el ruido de la calle era un poco molesto por la noche. En general, una buena experiencia.",
+            "link_foto": "hhttps://i.postimg.cc/B67T1Ygp/348446570.webp"
+        },
+        {
+            "id_reseña": 26,
+            "id_inmueble": 14,
+            "id_user": 3,
+            "calificacion": 4,
+            "observaciones": "El departamento es espacioso y bien ubicado. La atención del anfitrión fue excelente. Sin embargo, el ruido de la calle era un poco molesto por las noches.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 27,
+            "id_inmueble": 5,
+            "id_user": 19,
+            "calificacion": 5,
+            "observaciones": "Nos encantó nuestra estadía en este inmueble. La vista era increíble y estaba cerca de restaurantes y tiendas. El anfitrión fue muy amable y atento.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 28,
+            "id_inmueble": 11,
+            "id_user": 6,
+            "calificacion": 3,
+            "observaciones": "El lugar estaba bien, pero la limpieza dejaba mucho que desear. Además, hubo problemas con el Wi-Fi durante nuestra estancia.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 29,
+            "id_inmueble": 20,
+            "id_user": 15,
+            "calificacion": 4,
+            "observaciones": "El inmueble era cómodo y tenía todo lo necesario para nuestra estancia. La ubicación era conveniente. Sin embargo, sería bueno agregar más utensilios de cocina.",
+            "link_foto": "https://i.postimg.cc/JzQPzQ96/como-pintar-departamento-forma-correcta.jpg"
+        },
+        {
+            "id_reseña": 30,
+            "id_inmueble": 3,
+            "id_user": 9,
+            "calificacion": 4,
+            "observaciones": "El apartamento estaba bien ubicado y tenía una decoración agradable. La comunicación con el anfitrión fue buena. Aunque el baño podría haber estado más limpio.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 31,
+            "id_inmueble": 17,
+            "id_user": 4,
+            "calificacion": 5,
+            "observaciones": "La casa era encantadora y muy espaciosa. La zona era tranquila y perfecta para nuestro grupo. El anfitrión fue muy atento y nos proporcionó información útil sobre la zona.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 32,
+            "id_inmueble": 8,
+            "id_user": 13,
+            "calificacion": 3,
+            "observaciones": "El inmueble estaba bien ubicado, pero la limpieza no era la mejor. Encontramos algunas áreas sucias y había un olor desagradable en el baño.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 33,
+            "id_inmueble": 12,
+            "id_user": 11,
+            "calificacion": 4,
+            "observaciones": "El departamento tenía una vista maravillosa y estaba cerca de restaurantes y tiendas. Sin embargo, el estacionamiento era un poco complicado.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 34,
+            "id_inmueble": 4,
+            "id_user": 20,
+            "calificacion": 5,
+            "observaciones": "La decoración del inmueble era increíble y la cocina estaba bien equipada. La ubicación era céntrica, lo que facilitó el acceso a lugares de interés turístico y restaurantes.",
+            "link_foto": "https://i.postimg.cc/667jfnvq/venta-de-departamento-cajamarca-groenlandia-3-dormitorios-4-ba-os-2030093660989036323.jpg"
+        },
+        {
+            "id_reseña": 35,
+            "id_inmueble": 9,
+            "id_user": 7,
+            "calificacion": 4,
+            "observaciones": "El departamento era acogedor y tenía una excelente vista. La comunicación con el anfitrión fue fluida. Sin embargo, el colchón de la cama podría haber sido más cómodo.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 36,
+            "id_inmueble": 1,
+            "id_user": 18,
+            "calificacion": 3,
+            "observaciones": "La ubicación era buena, pero el lugar necesitaba mejoras en la limpieza y mantenimiento. Además, el Wi-Fi no funcionaba correctamente.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 37,
+            "id_inmueble": 15,
+            "id_user": 5,
+            "calificacion": 5,
+            "observaciones": "Disfrutamos mucho de nuestra estancia en esta casa. Estaba bien amueblada y tenía un hermoso jardín. El anfitrión fue muy atento y nos proporcionó recomendaciones locales.",
+            "link_foto": "https://i.postimg.cc/mrXjQgZ7/ey-Jid-WNr-ZXQi-Oi-Jwcm-Qtb-Glmd-Wxs-Y29ubm-Vjd-C1i-YWNr-ZW5k-LWIy-Yi1pb-WFn-ZXMi-LCJr-ZXki-Oi-Jwcm9w-ZXJ0a-WVz-L2-U5-OTM2-Mz-Jk.jpg"
+        },
+        {
+            "id_reseña": 38,
+            "id_inmueble": 6,
+            "id_user": 14,
+            "calificacion": 4,
+            "observaciones": "El inmueble tenía una terraza agradable y estaba cerca de tiendas y restaurantes. La comunicación con el anfitrión fue buena. No obstante, el ruido del vecindario por las noches era un poco molesto.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 39,
+            "id_inmueble": 19,
+            "id_user": 2,
+            "calificacion": 4,
+            "observaciones": "El lugar era bastante amplio y tenía mucha luz natural. La ubicación era conveniente. Sin embargo, la conexión a internet podría haber sido mejor.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 40,
+            "id_inmueble": 10,
+            "id_user": 16,
+            "calificacion": 3,
+            "observaciones": "El apartamento estaba bien, pero le faltaba mantenimiento en algunas áreas. Además, el equipamiento de la cocina era escaso.",
+            "link_foto": "https://i.postimg.cc/B6zFv8Sw/que-es-un-departamento-duplex.jpg"
+        },
+        {
+            "id_reseña": 41,
+            "id_inmueble": 18,
+            "id_user": 1,
+            "calificacion": 5,
+            "observaciones": "La casa estaba impecablemente limpia y tenía todas las comodidades necesarias. El anfitrión fue muy atento y nos ayudó con todas nuestras dudas.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 42,
+            "id_inmueble": 2,
+            "id_user": 17,
+            "calificacion": 4,
+            "observaciones": "El apartamento tenía una buena ubicación, cerca de parques y supermercados. La comunicación con el anfitrión fue fluida. No obstante, la presión del agua en la ducha era baja.",
+            "link_foto": "https://i.postimg.cc/6pVCh5cy/venta-de-un-departamento-DEV358951660704964-13.jpg"
+        },
+        {
+            "id_reseña": 43,
+            "id_inmueble": 16,
+            "id_user": 8,
+            "calificacion": 4,
+            "observaciones": "El inmueble contaba con un diseño agradable y estaba bien ubicado. El anfitrión fue amable. Sin embargo, faltaba un poco de limpieza en el baño.",
+            "link_foto": ""
+        },
+        {
+            "id_reseña": 44,
+            "id_inmueble": 13,
+            "id_user": 10,
+            "calificacion": 5,
+            "observaciones": "El departamento era espacioso y tenía una excelente vista. La ubicación era perfecta para explorar la ciudad. El anfitrión fue atento y siempre estuvo disponible para ayudarnos.",
+            "link_foto": ""
+        }
+
+
+    ]
+}
