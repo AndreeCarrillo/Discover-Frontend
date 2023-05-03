@@ -6,7 +6,7 @@ export interface usuario {
     "dni": string
     "telefono": string
     "correo": string
-    "contraseña": string,
+    "password": string,
     "link_foto_dni": string
     "link_foto_perfil": string
     "fecha_nacimiento": string

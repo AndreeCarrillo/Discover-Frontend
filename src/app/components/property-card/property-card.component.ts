@@ -26,7 +26,7 @@ export class PropertyCardComponent implements OnInit{
     this.loadUbigeo()
   }
   loadUser(){
-    this.usuarioservice.getusersbyid(this.property.id_propietario).subscribe({
+    this.usuarioservice.getUsuario(this.property.id_propietario).subscribe({
       next: (data)=>{
         this.user=data;
       },

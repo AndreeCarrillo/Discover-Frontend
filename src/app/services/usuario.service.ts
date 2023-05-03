@@ -7,11 +7,24 @@ import { usuario } from '../models/usuario.interface';
 })
 export class UsuarioService {
 
-  resource_principal: string ="http://localhost:3000/"
-  resource_user: string = "usuario"
+  ruta_servidor: string = "http://localhost:3000";
+  recurso: string = "usuario";
 
   constructor(private http:HttpClient) { }
-  getusersbyid(id: number){
-    return this.http.get<usuario>(this.resource_principal + this.resource_user + "/" + id);
+
+  getUsuarios(){
+    return this.http.get<usuario[]>(this.ruta_servidor +"/"+ this.recurso);
+  }
+  getUsuario(id:number){
+    return this.http.get<usuario>(this.ruta_servidor +"/"+ this.recurso + '/' + id);
+  }
+  addUsuario(usuario:usuario){
+    return this.http.post(this.ruta_servidor +"/"+ this.recurso, usuario);
+  }
+  updateUsuario(usuario:usuario){
+    return this.http.put(this.ruta_servidor +"/"+ this.recurso+"/"+usuario.id, usuario);
+  }
+  deleteUsuario(id:number){
+    return this.http.delete(this.ruta_servidor +"/"+ this.recurso + '/' + id);
   }
 }

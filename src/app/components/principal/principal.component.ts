@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { inmueble } from 'src/app/models/inmuebles.interface';
 import { usuario } from 'src/app/models/usuario.interface';
-import { InmueblesService } from 'src/app/services/inmuebles.service';
+import { InmuebleService } from 'src/app/services/inmueble.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { __values } from 'tslib';
 
@@ -48,7 +48,7 @@ export class PrincipalComponent implements OnInit{
   random_numbers:number[] = []
   usermain!:usuario
 
-  constructor(private userservice:UsuarioService ,private inmuebleservices:InmueblesService, private activedrouter:ActivatedRoute){
+  constructor(private userservice:UsuarioService ,private inmuebleservices:InmuebleService, private activedrouter:ActivatedRoute){
   }
 
   ngOnInit(){
@@ -57,7 +57,7 @@ export class PrincipalComponent implements OnInit{
     this.define_randoms_values()
   }
   load_properties(){
-    this.inmuebleservices.get_properties().subscribe({
+    this.inmuebleservices.getInmuebles().subscribe({
       next:(data)=>{
         this.properties=data;
       },
@@ -67,7 +67,7 @@ export class PrincipalComponent implements OnInit{
     })
   }
   loadusersesion(){
-    this.userservice.getusersbyid(18).subscribe({
+    this.userservice.getUsuario(18).subscribe({
       next: (data)=>{
         this.usermain=data;
       },
