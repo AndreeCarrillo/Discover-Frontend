@@ -1890,6 +1890,14 @@
       "observaciones": "No me gusta",
       "link_foto": "https://i.postimg.cc/k5mRVLnk/84459.png",
       "id": 52
+    },
+    {
+      "id_inmueble": 8,
+      "id_user": 19,
+      "calificacion": 3,
+      "observaciones": "holahola",
+      "link_foto": "https://i.postimg.cc/k5mRVLnk/84459.png",
+      "id": 53
     }
   ]
 }

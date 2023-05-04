@@ -5,6 +5,7 @@ import { PropertyCardComponent } from './components/property-card/property-card.
 import { PublicarInmuebleComponent } from './components/publicar-inmueble/publicar-inmueble.component';
 import { VisualizeItemComponent } from './components/visualize-item/visualize-item.component';
 import { MakeOpinionComponent } from './components/make-opinion/make-opinion.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -13,7 +14,7 @@ import { MakeOpinionComponent } from './components/make-opinion/make-opinion.com
 const routes: Routes = [
   {
     path:"",
-    component: PrincipalComponent
+    component: LoginComponent
   },
 
 
@@ -21,7 +22,7 @@ const routes: Routes = [
     path:"visualizar/:id",
   component:VisualizeItemComponent
   },
-  { path: '', component:PrincipalComponent },
+
   { path:'home', component:PrincipalComponent},
 
   { path: 'property-card', component:PropertyCardComponent },
