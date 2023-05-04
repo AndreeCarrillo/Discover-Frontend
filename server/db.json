@@ -8,7 +8,7 @@
             "dni": "43451826",
             "telefono": "901023352",
             "correo": "vanessa.castillo@gmail.com",
-            "contraseña": "vanessa_2kamx",
+            "password": "vanessa_2kamx",
             "link_foto_dni": "https://i.postimg.cc/6QN9f9wF/documento-identidad-peru-vanessa.jpg",
             "link_foto_perfil": "https://i.postimg.cc/15qXG7wn/Screenshot-2023-05-01-220937.jpg",
             "fecha_nacimiento": "1986-02-18",
@@ -23,7 +23,7 @@
             "dni": "23456789",
             "telefono": "901012352",
             "correo": "carlos.rodriguez@outlook.com",
-            "contraseña": "Carlos1234",
+            "password": "Carlos1234",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/nL8PsrZ9/hombre-foto.jpg",
             "fecha_nacimiento": "1985-05-15",
@@ -37,7 +37,7 @@
             "dni": "34567890",
             "telefono": "345678921",
             "correo": "fernanda.gomez@yahoo.com",
-            "contraseña": "Fernanda1234",
+            "password": "Fernanda1234",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/BZc4JWTC/retrato-de-joven-feliz-positivo-sonriendo-c-mara-166576783.jpg",
             "fecha_nacimiento": "1992-08-30",
@@ -51,7 +51,7 @@
             "dni": "12345696",
             "telefono": "923457822",
             "correo": "miguel.sanchez@outlook.com",
-            "contraseña": "Miguel1234",
+            "password": "Miguel1234",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/qqgLDH4d/inline-image-preview.jpg",
             "fecha_nacimiento": "1980-12-20",
@@ -65,7 +65,7 @@
             "dni": "12345697",
             "telefono": "912345792",
             "correo": "maria.fernandez@gmail.com",
-            "contraseña": "Maria1234",
+            "password": "Maria1234",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/1zZvmdcp/photo-1659332589233-3637f89be936.jpg",
             "fecha_nacimiento": "1995-10-10",
@@ -79,7 +79,7 @@
             "dni": "12345678",
             "telefono": "987654321",
             "correo": "juan.perez@gmail.com",
-            "contraseña": "Juan1234",
+            "password": "Juan1234",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/zXb7nNxC/istockphoto-1212501093-640x640.jpg",
             "fecha_nacimiento": "1995-10-15",
@@ -93,7 +93,7 @@
             "dni": "87654321",
             "telefono": "765432109",
             "correo": "maria.lopez@example.com",
-            "contraseña": "Maria5678",
+            "password": "Maria5678",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/zDcZzJLK/women-i-am-young-girls-beautiful.jpg",
             "fecha_nacimiento": "1990-02-12",
@@ -107,7 +107,7 @@
             "dni": "98765432",
             "telefono": "876543210",
             "correo": "pedro.ramirez@example.com",
-            "contraseña": "Pedro9012",
+            "password": "Pedro9012",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/6Q0f9pQX/happy-smile-face.jpg",
             "fecha_nacimiento": "1985-05-20",
@@ -121,7 +121,7 @@
             "dni": "34567891",
             "telefono": "987654321",
             "correo": "luis.gonzales@example.com",
-            "contraseña": "Luis4567",
+            "password": "Luis4567",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/Rh37Q1LS/pexels-photo-6421292.jpg",
             "fecha_nacimiento": "1988-07-20",
@@ -135,7 +135,7 @@
             "dni": "45678912",
             "telefono": "987654321",
             "correo": "monica.diaz@example.com",
-            "contraseña": "Monica8910",
+            "password": "Monica8910",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/q7k2ZHxZ/concepto-de-bienestar-y-personas-cierre-una-atractiva-rubia-sonriendo-con-dientes-blancos-mirando-la.jpg",
             "fecha_nacimiento": "1993-02-18",
@@ -149,7 +149,7 @@
             "dni": "56789123",
             "telefono": "947654321",
             "correo": "jorge.flores@example.com",
-            "contraseña": "Jorge2345",
+            "password": "Jorge2345",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://example.com/foto_perfil.jpg",
             "fecha_nacimiento": "1998-11-28",
@@ -163,7 +163,7 @@
             "dni": "67891234",
             "telefono": "987624321",
             "correo": "carmen.guzman@example.com",
-            "contraseña": "Carmen3456",
+            "password": "Carmen3456",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/44K21pdH/personas-reales-feliz-chica-natural-sonriendo-y-mirando-t-mido-la-c-mara-ruboriz-ndose-de-halagos-pi.jpg",
             "fecha_nacimiento": "1980-06-05",
@@ -177,7 +177,7 @@
             "dni": "78912345",
             "telefono": "907654817",
             "correo": "antonio.vega@example.com",
-            "contraseña": "Antonio7890",
+            "password": "Antonio7890",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/j5n6yQXs/joven-dispara-con-su-c-mara-retrato-de-un-asi-tico-gracioso-tomando-fotos-disparando-fot-grafo-casua.jpg",
             "fecha_nacimiento": "1991-03-14",
@@ -191,7 +191,7 @@
             "dni": "89123456",
             "telefono": "917653021",
             "correo": "sofia.mendoza@example.com",
-            "contraseña": "Sofia5678",
+            "password": "Sofia5678",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/Y9vRbwpB/portrait-people-cute-girl-smile.jpg",
             "fecha_nacimiento": "1997-09-20",
@@ -205,7 +205,7 @@
             "dni": "91234567",
             "telefono": "985657311",
             "correo": "miguel.castillo@example.com",
-            "contraseña": "Miguel1234",
+            "password": "Miguel1234",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/Gm3kX1Qg/man-person-portrait-sitting-smile-smiling-wear-looking-at-camera-one-person-real-people.jpg",
             "fecha_nacimiento": "1992-12-10",
@@ -219,7 +219,7 @@
             "dni": "34567891",
             "telefono": "957354001",
             "correo": "laura.martinez@example.com",
-            "contraseña": "Laura5678",
+            "password": "Laura5678",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpgg",
             "link_foto_perfil": "https://i.postimg.cc/9McV7JV9/female-indian-young-girl-woman-people.jpg",
             "fecha_nacimiento": "1987-03-05",
@@ -233,7 +233,7 @@
             "dni": "45678912",
             "telefono": "922654321",
             "correo": "lorena.hernandez@example.com",
-            "contraseña": "Lorena9012",
+            "password": "Lorena9012",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/zXxLXHCp/istockphoto-1443543154-170667a.jpg",
             "fecha_nacimiento": "1995-08-02",
@@ -247,7 +247,7 @@
             "dni": "56789123",
             "telefono": "917654451",
             "correo": "javier.gonzalez@example.com",
-            "contraseña": "Javier3456",
+            "password": "Javier3456",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/0yJ8Rzcz/pexels-photo-5215015.jpg",
             "fecha_nacimiento": "1984-11-12",
@@ -261,7 +261,7 @@
             "dni": "67891234",
             "telefono": "981234321",
             "correo": "marisol.sanchez@example.com",
-            "contraseña": "Marisol1234",
+            "password": "Marisol1234",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/J01nRRt9/sonriente-mujer-bonita-joven-mirando-camara-tocar-cara-1262-15253.jpg",
             "fecha_nacimiento": "1990-06-18",
@@ -275,7 +275,7 @@
             "dni": "78912345",
             "telefono": "987111321",
             "correo": "gustavo.garcia@example.com",
-            "contraseña": "Gustavo5678",
+            "password": "Gustavo5678",
             "link_foto_dni": "https://i.postimg.cc/rstV9z0X/Screenshot-2023-05-01-220903.jpg",
             "link_foto_perfil": "https://i.postimg.cc/SRNywVv4/person-smiling.jpg",
             "fecha_nacimiento": "1982-09-28",
@@ -290,7 +290,7 @@
             "direccion": "Jirón de la Unión 456, Cercado de Lima",
             "precio": 1200,
             "n_dormitorios": 3,
-            "n_baños": 2,
+            "n_banios": 2,
             "n_huespedes": 5,
             "m2_cuadrados": 100,
             "tiempo_antiguedad": "Más de 10 años",
@@ -307,7 +307,7 @@
             "direccion": "Calle Los Delfines 123, Urb. Santa Rosa",
             "precio": 750,
             "n_dormitorios": 2,
-            "n_baños": 1,
+            "n_banios": 1,
             "n_huespedes": 3,
             "m2_cuadrados": 70,
             "tiempo_antiguedad": "Menos de 1 año",
@@ -322,7 +322,7 @@
             "direccion": "Av. Separadora Industrial 345, Salamanca",
             "precio": 2000,
             "n_dormitorios": 4,
-            "n_baños": 3,
+            "n_banios": 3,
             "n_huespedes": 6,
             "m2_cuadrados": 150,
             "tiempo_antiguedad": "Más de 20 años",
@@ -337,7 +337,7 @@
             "direccion": "Calle San Martín 567",
             "precio": 900,
             "n_dormitorios": 1,
-            "n_baños": 1,
+            "n_banios": 1,
             "n_huespedes": 2,
             "m2_cuadrados": 50,
             "tiempo_antiguedad": "Estreno",
@@ -352,7 +352,7 @@
             "direccion": "Av. Bolivia 789",
             "precio": 1300,
             "n_dormitorios": 3,
-            "n_baños": 2,
+            "n_banios": 2,
             "n_huespedes": 4,
             "m2_cuadrados": 110,
             "tiempo_antiguedad": "Más de 5 años",
@@ -367,7 +367,7 @@
             "direccion": "Av. San Juan 321, Urb. Santo Domingo",
             "precio": 1800,
             "n_dormitorios": 4,
-            "n_baños": 3,
+            "n_banios": 3,
             "n_huespedes": 7,
             "m2_cuadrados": 140,
             "tiempo_antiguedad": "Más de 40 años",
@@ -382,7 +382,7 @@
             "direccion": "Jirón Los Laureles 112",
             "precio": 2200,
             "n_dormitorios": 4,
-            "n_baños": 3,
+            "n_banios": 3,
             "n_huespedes": 8,
             "m2_cuadrados": 180,
             "tiempo_antiguedad": "Más de 10 años",
@@ -397,7 +397,7 @@
             "direccion": "Calle Los Pinos 123, Urb. La Campiña",
             "precio": 1500,
             "n_dormitorios": 2,
-            "n_baños": 2,
+            "n_banios": 2,
             "n_huespedes": 3,
             "m2_cuadrados": 90,
             "tiempo_antiguedad": "Menos de 1 año",
@@ -412,7 +412,7 @@
             "direccion": "Av. Nueva Toledo 431",
             "precio": 850,
             "n_dormitorios": 1,
-            "n_baños": 1,
+            "n_banios": 1,
             "n_huespedes": 2,
             "m2_cuadrados": 45,
             "tiempo_antiguedad": "Más de 2 años",
@@ -427,7 +427,7 @@
             "direccion": "Calle Los Alpes 145, Urb. Santa Luzmila",
             "precio": 2800,
             "n_dormitorios": 5,
-            "n_baños": 4,
+            "n_banios": 4,
             "n_huespedes": 10,
             "m2_cuadrados": 200,
             "tiempo_antiguedad": "Más de 20 años",
@@ -442,7 +442,7 @@
             "direccion": "Av. Riva Agüero 678",
             "precio": 1100,
             "n_dormitorios": 3,
-            "n_baños": 2,
+            "n_banios": 2,
             "n_huespedes": 5,
             "m2_cuadrados": 95,
             "tiempo_antiguedad": "Más de 5 años",
@@ -457,7 +457,7 @@
             "direccion": "Av. Carlos Izaguirre 987",
             "precio": 1600,
             "n_dormitorios": 3,
-            "n_baños": 3,
+            "n_banios": 3,
             "n_huespedes": 6,
             "m2_cuadrados": 120,
             "tiempo_antiguedad": "Estreno",
@@ -472,7 +472,7 @@
             "direccion": "Calle San Felipe 890",
             "precio": 700,
             "n_dormitorios": 1,
-            "n_baños": 1,
+            "n_banios": 1,
             "n_huespedes": 2,
             "m2_cuadrados": 40,
             "tiempo_antiguedad": "Más de 10 años",
@@ -487,7 +487,7 @@
             "direccion": "Calle Los Alamos 135, Urb. Las Praderas",
             "precio": 1900,
             "n_dormitorios": 4,
-            "n_baños": 3,
+            "n_banios": 3,
             "n_huespedes": 7,
             "m2_cuadrados": 160,
             "tiempo_antiguedad": "Más de 40 años",
@@ -502,7 +502,7 @@
             "direccion": "Av. Manco Cápac 543",
             "precio": 1400,
             "n_dormitorios": 3,
-            "n_baños": 2,
+            "n_banios": 2,
             "n_huespedes": 5,
             "m2_cuadrados": 105,
             "tiempo_antiguedad": "Más de 50 años",
@@ -517,7 +517,7 @@
             "direccion": "Calle Los Olivos 321",
             "precio": 1000,
             "n_dormitorios": 2,
-            "n_baños": 1,
+            "n_banios": 1,
             "n_huespedes": 4,
             "m2_cuadrados": 75,
             "tiempo_antiguedad": "Menos de 1 año",
@@ -532,7 +532,7 @@
             "direccion": "Calle Los Nogales 654, Urb. El Trébol",
             "precio": 2400,
             "n_dormitorios": 5,
-            "n_baños": 4,
+            "n_banios": 4,
             "n_huespedes": 8,
             "m2_cuadrados": 210,
             "tiempo_antiguedad": "Más de 20 años",
@@ -547,7 +547,7 @@
             "direccion": "Av. Central 432, San Antonio",
             "precio": 950,
             "n_dormitorios": 2,
-            "n_baños": 1,
+            "n_banios": 1,
             "n_huespedes": 3,
             "m2_cuadrados": 65,
             "tiempo_antiguedad": "Más de 2 años",
@@ -562,7 +562,7 @@
             "direccion": "Av. Lurín 785",
             "precio": 1800,
             "n_dormitorios": 4,
-            "n_baños": 3,
+            "n_banios": 3,
             "n_huespedes": 6,
             "m2_cuadrados": 150,
             "tiempo_antiguedad": "Más de 5 años",
@@ -577,7 +577,7 @@
             "direccion": "Calle Gonzales Prada 678",
             "precio": 1200,
             "n_dormitorios": 3,
-            "n_baños": 2,
+            "n_banios": 2,
             "n_huespedes": 4,
             "m2_cuadrados": 100,
             "tiempo_antiguedad": "Estreno",
@@ -917,9 +917,9 @@
             "id_user": 10
         }
     ],
-    "Reseña":[
+    "Resena":[
         {
-            "id_reseña": 1,
+            "id": 1,
             "id_inmueble": 1,
             "id_user": 1,
             "calificacion": 4,
@@ -927,7 +927,7 @@
             "link_foto": "https://i.postimg.cc/52GWnbtW/pousada-casa-do-molino.jpg"
         },
         {
-            "id_reseña": 2,
+            "id": 2,
             "id_inmueble": 4,
             "id_user": 3,
             "calificacion": 5,
@@ -935,7 +935,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 3,
+            "id": 3,
             "id_inmueble": 6,
             "id_user": 20,
             "calificacion": 3,
@@ -943,7 +943,7 @@
             "link_foto": "https://i.postimg.cc/qRTY5RVS/interior-de-la-cocina-vac-a-91263131.jpg"
         },
         {
-            "id_reseña": 4,
+            "id": 4,
             "id_inmueble": 2,
             "id_user": 5,
             "calificacion": 5,
@@ -951,14 +951,14 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 5,
+            "id": 5,
             "id_inmueble": 8,
             "id_user": 11,
             "calificacion": 4,
             "observaciones": "El inmueble era amplio y limpio. La ubicación era conveniente, pero el ruido de la calle era un poco molesto durante la noche.",
             "link_foto": "https://i.postimg.cc/D0CM0PJ3/tipos-de-muebles-para-sala.webp"
         },{
-            "id_reseña": 6,
+            "id": 6,
             "id_inmueble": 14,
             "id_user": 8,
             "calificacion": 3,
@@ -966,7 +966,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 7,
+            "id": 7,
             "id_inmueble": 14,
             "id_user": 10,
             "calificacion": 4,
@@ -974,7 +974,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 8,
+            "id": 8,
             "id_inmueble": 12,
             "id_user": 19,
             "calificacion": 4,
@@ -982,7 +982,7 @@
             "link_foto": "https://i.postimg.cc/QMpY139b/maneras-volver-sala-estar-acogedora.webp"
         },
         {
-            "id_reseña": 9,
+            "id": 9,
             "id_inmueble": 14,
             "id_user": 17,
             "calificacion": 5,
@@ -990,7 +990,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 10,
+            "id": 10,
             "id_inmueble": 16,
             "id_user": 1,
             "calificacion": 3,
@@ -998,7 +998,7 @@
             "link_foto": "https://i.postimg.cc/4Nm8wtHn/mejor-puerta-para-casa-1.jpg"
         },
         {
-            "id_reseña": 11,
+            "id": 11,
             "id_inmueble": 15,
             "id_user": 17,
             "calificacion": 4,
@@ -1006,7 +1006,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 12,
+            "id": 12,
             "id_inmueble": 17,
             "id_user": 6,
             "calificacion": 5,
@@ -1014,7 +1014,7 @@
             "link_foto": "https://i.postimg.cc/MG8dWFPj/thread-21950169-15070763766771596119.png"
         },
         {
-            "id_reseña": 13,
+            "id": 13,
             "id_inmueble": 13,
             "id_user": 12,
             "calificacion": 5,
@@ -1022,7 +1022,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 14,
+            "id": 14,
             "id_inmueble": 12,
             "id_user": 6,
             "calificacion": 4,
@@ -1030,7 +1030,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 15,
+            "id": 15,
             "id_inmueble": 18,
             "id_user": 6,
             "calificacion": 3,
@@ -1038,7 +1038,7 @@
             "link_foto": "https://i.postimg.cc/Kz0NDvZn/estacionamiento-856838.jpg"
         },
         {
-            "id_reseña": 16,
+            "id": 16,
             "id_inmueble": 9,
             "id_user": 19,
             "calificacion": 4,
@@ -1046,14 +1046,14 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 17,
+            "id": 17,
             "id_inmueble": 12,
             "id_user": 7,
             "calificacion": 5,
             "observaciones": "Disfrutamos mucho de nuestra estancia en este inmueble. La ubicación era excelente y el anfitrión fue muy amable y servicial. El inmueble estaba muy limpio y bien equipado.",
             "link_foto": ""
         },{
-            "id_reseña": 18,
+            "id": 18,
             "id_inmueble": 20,
             "id_user": 5,
             "calificacion": 4,
@@ -1061,7 +1061,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 19,
+            "id": 19,
             "id_inmueble": 11,
             "id_user": 11,
             "calificacion": 5,
@@ -1069,7 +1069,7 @@
             "link_foto": "https://i.postimg.cc/abcdef/sample-photo-19.jpg"
         },
         {
-            "id_reseña": 20,
+            "id": 20,
             "id_inmueble": 8,
             "id_user": 5,
             "calificacion": 4,
@@ -1117,7 +1117,7 @@
             "link_foto": "hhttps://i.postimg.cc/B67T1Ygp/348446570.webp"
         },
         {
-            "id_reseña": 26,
+            "id": 26,
             "id_inmueble": 14,
             "id_user": 3,
             "calificacion": 4,
@@ -1125,7 +1125,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 27,
+            "id": 27,
             "id_inmueble": 5,
             "id_user": 19,
             "calificacion": 5,
@@ -1133,7 +1133,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 28,
+            "id": 28,
             "id_inmueble": 11,
             "id_user": 6,
             "calificacion": 3,
@@ -1141,7 +1141,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 29,
+            "id": 29,
             "id_inmueble": 20,
             "id_user": 15,
             "calificacion": 4,
@@ -1149,7 +1149,7 @@
             "link_foto": "https://i.postimg.cc/JzQPzQ96/como-pintar-departamento-forma-correcta.jpg"
         },
         {
-            "id_reseña": 30,
+            "id": 30,
             "id_inmueble": 3,
             "id_user": 9,
             "calificacion": 4,
@@ -1157,7 +1157,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 31,
+            "id": 31,
             "id_inmueble": 17,
             "id_user": 4,
             "calificacion": 5,
@@ -1165,7 +1165,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 32,
+            "id": 32,
             "id_inmueble": 8,
             "id_user": 13,
             "calificacion": 3,
@@ -1173,7 +1173,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 33,
+            "id": 33,
             "id_inmueble": 12,
             "id_user": 11,
             "calificacion": 4,
@@ -1181,7 +1181,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 34,
+            "id": 34,
             "id_inmueble": 4,
             "id_user": 20,
             "calificacion": 5,
@@ -1189,7 +1189,7 @@
             "link_foto": "https://i.postimg.cc/667jfnvq/venta-de-departamento-cajamarca-groenlandia-3-dormitorios-4-ba-os-2030093660989036323.jpg"
         },
         {
-            "id_reseña": 35,
+            "id": 35,
             "id_inmueble": 9,
             "id_user": 7,
             "calificacion": 4,
@@ -1197,7 +1197,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 36,
+            "id": 36,
             "id_inmueble": 1,
             "id_user": 18,
             "calificacion": 3,
@@ -1205,7 +1205,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 37,
+            "id": 37,
             "id_inmueble": 15,
             "id_user": 5,
             "calificacion": 5,
@@ -1213,7 +1213,7 @@
             "link_foto": "https://i.postimg.cc/mrXjQgZ7/ey-Jid-WNr-ZXQi-Oi-Jwcm-Qtb-Glmd-Wxs-Y29ubm-Vjd-C1i-YWNr-ZW5k-LWIy-Yi1pb-WFn-ZXMi-LCJr-ZXki-Oi-Jwcm9w-ZXJ0a-WVz-L2-U5-OTM2-Mz-Jk.jpg"
         },
         {
-            "id_reseña": 38,
+            "id": 38,
             "id_inmueble": 6,
             "id_user": 14,
             "calificacion": 4,
@@ -1221,7 +1221,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 39,
+            "id": 39,
             "id_inmueble": 19,
             "id_user": 2,
             "calificacion": 4,
@@ -1229,7 +1229,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 40,
+            "id": 40,
             "id_inmueble": 10,
             "id_user": 16,
             "calificacion": 3,
@@ -1237,7 +1237,7 @@
             "link_foto": "https://i.postimg.cc/B6zFv8Sw/que-es-un-departamento-duplex.jpg"
         },
         {
-            "id_reseña": 41,
+            "id": 41,
             "id_inmueble": 18,
             "id_user": 1,
             "calificacion": 5,
@@ -1245,7 +1245,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 42,
+            "id": 42,
             "id_inmueble": 2,
             "id_user": 17,
             "calificacion": 4,
@@ -1253,7 +1253,7 @@
             "link_foto": "https://i.postimg.cc/6pVCh5cy/venta-de-un-departamento-DEV358951660704964-13.jpg"
         },
         {
-            "id_reseña": 43,
+            "id": 43,
             "id_inmueble": 16,
             "id_user": 8,
             "calificacion": 4,
@@ -1261,7 +1261,7 @@
             "link_foto": ""
         },
         {
-            "id_reseña": 44,
+            "id": 44,
             "id_inmueble": 13,
             "id_user": 10,
             "calificacion": 5,
