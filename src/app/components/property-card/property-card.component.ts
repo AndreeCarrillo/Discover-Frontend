@@ -44,7 +44,7 @@ export class PropertyCardComponent implements OnInit, OnChanges{
     "fecha_nacimiento":  "",
     "fecha_inscripcion":  ""
   }
-  ubigeo!:ubigeo[]
+  ubigeo:ubigeo[] = []
   departament!:string;
   provincia!:string;
   district!:string;
