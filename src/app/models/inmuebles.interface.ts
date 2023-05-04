@@ -14,4 +14,5 @@ export interface inmueble {
     latitud: string;
     longitud: string;
     caracteristicas_inmueble: number[];
+    calificacion:number;
 }

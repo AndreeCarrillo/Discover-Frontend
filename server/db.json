@@ -846,6 +846,44 @@
         28,
         29
       ]
+    },
+    {
+      "id": 21,
+      "id_propietario": 18,
+      "id_ubigeo": "150133",
+      "direccion": "Av. San Juan 888",
+      "precio": 2300,
+      "n_dormitorios": 2,
+      "n_banios": 2,
+      "n_huespedes": 6,
+      "m2_cuadrados": 200,
+      "tiempo_antiguedad": "Menos de 1 año",
+      "link_fotos": [
+        "https://i.postimg.cc/CKMMbZ3m/364014549.webp",
+        "https://i.postimg.cc/FKqt17Nf/364014536.jpg",
+        "https://i.postimg.cc/m2S0CdTW/364014535.jpg"
+      ],
+      "descripcion": "Muy espacioso inmueble",
+      "latitud": "",
+      "longitud": "",
+      "caracteristicas_inmueble": [
+        1,
+        3,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        18,
+        22,
+        26,
+        27,
+        29
+      ],
+      "calificacion": 0
     }
   ],
   "departamentos": [

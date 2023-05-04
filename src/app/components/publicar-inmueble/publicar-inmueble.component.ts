@@ -24,14 +24,14 @@ export class PublicarInmuebleComponent {
     //console.log('El estado del checkbox ' + id + ' es:', this.isChecked);
   }
 
-  constructor(private formBuilder:FormBuilder, private inmuebleService:InmuebleService, 
-    private router: Router, private activatedRouter: ActivatedRoute, 
+  constructor(private formBuilder:FormBuilder, private inmuebleService:InmuebleService,
+    private router: Router, private activatedRouter: ActivatedRoute,
     private snackBar:MatSnackBar) {}
 
   ngOnInit(){
     this.reactiveForm();
   }
-  
+
   reactiveForm():void {
     this.formPublicar = this.formBuilder.group({
         id:[""],
@@ -53,7 +53,7 @@ export class PublicarInmuebleComponent {
   }
 
   publicarInmueble():void {
-    
+
     const selectedIds: number[] = [];
 
     var contador: number = 1;
@@ -83,7 +83,8 @@ export class PublicarInmuebleComponent {
       descripcion: this.formPublicar.get("descripcion")!.value,
       latitud: "", //No se implementa aún
       longitud: "", //No se implementa aún
-      caracteristicas_inmueble: selectedIds
+      caracteristicas_inmueble: selectedIds,
+      calificacion:0
     }
 
     this.inmuebleService.addInmueble(inmueble).subscribe({

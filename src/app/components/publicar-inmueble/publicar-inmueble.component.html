@@ -23,29 +23,22 @@
 
     <div class="divisor">
         <mat-form-field class="formField">
-            <mat-label>¿Cómo defines tu espacio?</mat-label> 
+            <mat-label>¿Cómo defines tu espacio?</mat-label>
             <mat-select formControlName="definicion" placeholder="Ingrese la definición">
-                <mat-option value="one">First option</mat-option>
-                <mat-option value="two">Second option</mat-option>
+                <mat-option value="one">Departamento</mat-option>
+                <mat-option value="two">Casa</mat-option>
             </mat-select>
-            <!--
-            <div *ngIf="formPublicar.get('definicion')?.hasError('required') && formPublicar.get('definicion')?.touched">
-                <span style="color: red;">Este campo es obligatorio</span>
-            </div>
-            -->
+
         </mat-form-field>
 
         <mat-form-field class="formField">
-            <mat-label>Tipo de Alojamiento</mat-label> 
+            <mat-label>Tipo de Alojamiento</mat-label>
             <mat-select formControlName="tipoAlojamiento" placeholder="Ingrese el tipo de alojamiento">
-                <mat-option value="one">First option</mat-option>
-                <mat-option value="two">Second option</mat-option>
+                <mat-option value="one">Habitacion Privada</mat-option>
+                <mat-option value="two">Habitacion Compartida</mat-option>
+                <mat-option value="two">Alojamiento Entero</mat-option>
             </mat-select>
-            <!--
-            <div *ngIf="formPublicar.get('tipoAlojamiento')?.hasError('required') && formPublicar.get('tipoAlojamiento')?.touched">
-                <span style="color: red;">Este campo es obligatorio</span>
-            </div>
-            -->
+
         </mat-form-field>
     </div>
 
@@ -147,7 +140,7 @@
 
     <div class="divisor">
         <mat-form-field class="formField">
-            <mat-label>Tiempo de Antiguedad</mat-label> 
+            <mat-label>Tiempo de Antiguedad</mat-label>
             <mat-select formControlName="tiempo_antiguedad" placeholder="Ingrese el tiempo de antiguedad">
                 <mat-option value="Estreno">Estreno</mat-option>
                 <mat-option value="Menos de 1 año">Menos de 1 año</mat-option>
@@ -261,5 +254,5 @@
 
     <button mat-stroked-button class="boton" (click)="publicarInmueble()" [disabled]="formPublicar.invalid">Publicar Inmueble</button>
     <button mat-stroked-button color="warn" class="boton" (click)="volverHome()">Cancelar</button>
-    
+
 </form>
