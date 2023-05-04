@@ -8,17 +8,22 @@ import { MakeOpinionComponent } from './components/make-opinion/make-opinion.com
 
 
 
+
+
 const routes: Routes = [
   {
-    path:"user/:id",
+    path:"",
     component: PrincipalComponent
   },
+
+
   {
     path:"visualizar/:id",
   component:VisualizeItemComponent
   },
   { path: '', component:PrincipalComponent },
   { path:'home', component:PrincipalComponent},
+
   { path: 'property-card', component:PropertyCardComponent },
   { path: 'publicar', component:PublicarInmuebleComponent },
   { path: 'visualizar', component:VisualizeItemComponent },
