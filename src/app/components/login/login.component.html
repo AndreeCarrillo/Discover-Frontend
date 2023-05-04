@@ -1,0 +1,49 @@
+<main>
+    <section>
+        <div class = "imagen">
+        </div>
+    </section>
+    <section class ="mainLogin">
+        <div class = "central">
+            <img src="https://i.postimg.cc/6yPynnT5/image.png"> 
+            <h1 style="color: #00C9D1">Empieza a vivir la experiencia Discover</h1>
+            <h3 class="login_text" style="color: #BEED3B">Inicia sesión para comenzar</h3>
+
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Ingrese su correo electrónico</mat-label>
+                  <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                         placeholder="Ej. pat@example.com">
+                  <mat-hint></mat-hint>
+                  <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Por favor ingrese un correo válido
+                  </mat-error>
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+              </form>
+
+              <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Ingrese su contraseña</mat-label>
+                  <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                         placeholder="Ej. *********">
+                  <mat-hint></mat-hint>
+                  <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Por favor ingrese una contraseña válida
+                  </mat-error>
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Password is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+              </form>
+              <button class="button_in"mat-raised-button color="primary">Ingresar</button>
+              <div  class="seccionRegistro">
+                <h5 class="Cuenta_text" style="color: black;">No tienes cuenta?&nbsp;&nbsp;</h5>
+                <a><h5 style="color: #00C9D1;"> &nbsp;&nbsp;Registrate ahí</h5> </a>
+              </div>  
+        </div>
+    </section>
+    
+</main>

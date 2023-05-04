@@ -15,6 +15,8 @@ import { PublicarInmuebleComponent } from './components/publicar-inmueble/public
 import { MakeOpinionComponent } from './components/make-opinion/make-opinion.component'
 import {FormBuilder, Validators} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PropertyCardComponent,
     VisualizeItemComponent,
     PublicarInmuebleComponent,
-    MakeOpinionComponent
+    MakeOpinionComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
