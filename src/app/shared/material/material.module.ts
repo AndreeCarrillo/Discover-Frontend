@@ -14,6 +14,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSliderModule} from '@angular/material/slider';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import {MatSliderModule} from '@angular/material/slider';
     MatAutocompleteModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatSliderModule
+    MatSliderModule,
+    FormsModule
   ],
   exports: [
     MatToolbarModule,
@@ -49,7 +51,8 @@ import {MatSliderModule} from '@angular/material/slider';
     MatAutocompleteModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatSliderModule
+    MatSliderModule,
+    FormsModule
   ]
 })
 export class MaterialModule { }
