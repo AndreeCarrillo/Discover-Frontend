@@ -22,8 +22,11 @@ const routes: Routes = [
   { path: 'property-card', component:PropertyCardComponent },
   { path: 'publicar', component:PublicarInmuebleComponent },
   { path: 'visualizar', component:VisualizeItemComponent },
+  {
+  path: "resena/:id",
+  component:MakeOpinionComponent
+  },
   { path: 'resena', component:MakeOpinionComponent }
-
 ];
 
 @NgModule({

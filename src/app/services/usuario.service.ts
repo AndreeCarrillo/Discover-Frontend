@@ -18,7 +18,7 @@ export class UsuarioService {
     return this.http.get<usuario[]>(this.ruta_servidor +"/"+ this.recurso);
   }
   getUsuario(id:number){
-    return this.http.get<usuario>(this.ruta_servidor +"/"+ this.recurso + '/' + id.toString());
+    return this.http.get<usuario>(this.ruta_servidor +"/"+ this.recurso + '/' + id);
   }
   addUsuario(usuario:usuario){
     return this.http.post(this.ruta_servidor +"/"+ this.recurso, usuario);

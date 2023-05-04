@@ -3,7 +3,7 @@
 <div class="searcher-container"></div>
 
 <div>
-    <button class="button-s" mat-raised-button color="warn" (click)="volverinmueble()">Regresar</button>
+    <button class="button-s" mat-raised-button color="warn" routerLink="/visualizar/{{getIdInmueble()}}">Regresar</button>
 
     <h2 class="title">Registra tu reseña del inmueble rentado</h2>
 
@@ -21,10 +21,10 @@
                 <ng-template matStepLabel>Escribe tu comentario...</ng-template>
                 <mat-form-field class="example-full-width">
                     <mat-label>Ingrese su comentario...</mat-label>
-                    <input matInput formControlName="descripcion" placeholder="Ingrese tu comentario..." > 
+                    <input matInput formControlName="descripcion" placeholder="Ingrese tu comentario..." >
                     <div *ngIf="myForm.get('descripcion')?.hasError('required') && myForm.get('descripcion')?.touched">
                       <span style="color: red;"> Este campo es obligatorio</span>
-                  </div> 
+                  </div>
                 </mat-form-field>
 
                 <div>
@@ -43,7 +43,7 @@
                 <ngb-rating formControlName="facilitiesRating" [max]="5" ></ngb-rating>
                 <p>Seguridad</p>
                 <ngb-rating formControlName="securityRating" [max]="5" ></ngb-rating>
-                
+
                 <div>
                   <button mat-button matStepperPrevious>Anterior</button>
                   <button mat-button matStepperNext >Siguiente</button>
@@ -58,7 +58,7 @@
               <h2 class="confirmation">Estas seguro que quieres enviar esta reseña?</h2>
               <div>
                 <button mat-button matStepperPrevious>Anterior</button>
-                <button mat-button (click)="saveresena()" >Enviar</button>
+                <button mat-button (click)="saveresena()" routerLink="/visualizar/{{getIdInmueble()}}">Enviar</button>
               </div>
             </mat-step>
         </mat-stepper>
