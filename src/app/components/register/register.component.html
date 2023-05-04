@@ -71,10 +71,8 @@
 
       
       </div>
-        <br>
-        <br>
-        
-        <mat-form-field >
+      <div class="container_1">
+      <mat-form-field >
           <mat-label>Dni</mat-label>
           <input matInput formControlName="dni" placeholder="Ingrese dni...">  
           <div *ngIf="myForm.get('dni')?.hasError('required') && myForm.get('dni')?.touched">
@@ -82,18 +80,17 @@
           </div> 
         </mat-form-field>
 
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="fill"> 
           <mat-label>Choose a date</mat-label>
           <input matInput [matDatepicker]="picker">
           <mat-hint>MM/DD/YYYY</mat-hint>
           <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
-        
-        <br>
+      </div>
+
         <button class="button_register"mat-raised-button color="primary">REGÍSTRATE</button>
         </form>
-  
       </div>
     </section>
 </main> 

@@ -6,13 +6,12 @@ import { PublicarInmuebleComponent } from './components/publicar-inmueble/public
 import { VisualizeItemComponent } from './components/visualize-item/visualize-item.component';
 import { MakeOpinionComponent } from './components/make-opinion/make-opinion.component';
 
+
 const routes: Routes = [
   {
-    path:"user/:id",
+    path:"",
     component: PrincipalComponent
   },
-  { path: '', component:PrincipalComponent },
-  { path:'home', component:PrincipalComponent},
   { path: 'property-card', component:PropertyCardComponent },
   { path: 'publicar', component:PublicarInmuebleComponent },
   { path: 'visualizar', component:VisualizeItemComponent },

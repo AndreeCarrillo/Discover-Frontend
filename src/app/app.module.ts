@@ -17,6 +17,8 @@ import {FormBuilder, Validators} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import{MatNativeDateModule} from '@angular/material/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,8 +39,8 @@ import { RegisterComponent } from './components/register/register.component';
     ReactiveFormsModule,
     HttpClientModule,
     MatStepperModule,
-    NgbModule
-    
+    NgbModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
