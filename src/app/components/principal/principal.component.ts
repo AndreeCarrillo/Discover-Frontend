@@ -72,7 +72,7 @@ export class PrincipalComponent implements OnInit{
   ubigeo:ubigeo[] = []
   caracteristicas:caracteristica[]=[]
 
-  constructor(private caracteristicasservice:CaracteristicasService ,private ubigeoservice:UbigeoService,private reseñaservice:ReseñaService,private userservice:UsuarioService ,private inmuebleservices:InmuebleService, private activedrouter:ActivatedRoute){
+  constructor(private caracteristicasservice:CaracteristicasService ,private ubigeoservice:UbigeoService,private resenaservice:ResenaService,private userservice:UsuarioService ,private inmuebleservices:InmuebleService, private activedrouter:ActivatedRoute){
 
   }
 
@@ -90,7 +90,7 @@ export class PrincipalComponent implements OnInit{
         this.loadreseñas()
         this.define_randoms_values()
         this.loadcaracteristicas()
-        this.properties_filter = data;        
+        this.properties_filter = data;
         this.filtradosearch = data;
         this.filtradofeatures=data;
       },
@@ -128,7 +128,7 @@ export class PrincipalComponent implements OnInit{
     }
   }
   loadreseñas(){
-    this.ResenaService.get_reseñas().subscribe({
+    this.resenaservice.get_reseñas().subscribe({
       next: (data)=>{
         this.reseñas=data;
         this.define_calification_per_property()
@@ -192,9 +192,9 @@ export class PrincipalComponent implements OnInit{
       }
     }
     this.filtradosearch=filteredProperties;
-    this.sebusco=true;    
+    this.sebusco=true;
     this.properties_filter = filteredProperties;
-  } 
+  }
   definefiltersvalue() {
     let uniqueTypes: string[] = [];
     this.properties.forEach((property) => {
@@ -202,14 +202,14 @@ export class PrincipalComponent implements OnInit{
         uniqueTypes.push(property.tipo_inmueble);
       }
     });
-    this.properties_array = uniqueTypes;   
+    this.properties_array = uniqueTypes;
     uniqueTypes = [];
     this.properties.forEach((property) => {
       if (!uniqueTypes.includes(property.tipo_alojamiento)) {
         uniqueTypes.push(property.tipo_alojamiento);
       }
     });
-    this.accommodations_array = uniqueTypes;  
+    this.accommodations_array = uniqueTypes;
     uniqueTypes = [];
     this.properties.forEach((property) => {
       property.caracteristicas_inmueble.forEach((caracteristica) => {
@@ -244,7 +244,7 @@ export class PrincipalComponent implements OnInit{
     if(this.property_Filter!='None'){
       let variable = this.properties_filter.filter((property)=>property.tipo_inmueble==this.property_Filter)
       this.properties_filter = variable;
-      this.sefiltro = true;      
+      this.sefiltro = true;
     }
     if(this.accommodation_Filter!='None'){
       let variable = this.properties_filter.filter((property)=>property.tipo_alojamiento==this.accommodation_Filter)
@@ -316,39 +316,39 @@ export class PrincipalComponent implements OnInit{
       });
       this.properties_filter = variable;
       this.sefiltro = true;
-    }    
+    }
     if(this.price_Filter!='None'){
       if(this.price_Filter=="desde S/0 hasta S/100"){
         console.log("PRUEBA")
-      let variable = this.properties_filter.filter((property)=>(property.precio>0 && property.precio<=100)) 
+      let variable = this.properties_filter.filter((property)=>(property.precio>0 && property.precio<=100))
       this.properties_filter = variable;
       }
       else if(this.price_Filter=="desde S/0 hasta S/100"){
-        let variable = this.properties_filter.filter((property)=>(property.precio>0 && property.precio<=100)) 
+        let variable = this.properties_filter.filter((property)=>(property.precio>0 && property.precio<=100))
         this.properties_filter = variable;
       }
       else if(this.price_Filter=="desde S/300 hasta S/700"){
-        let variable = this.properties_filter.filter((property)=>(property.precio>300 && property.precio<=700)) 
+        let variable = this.properties_filter.filter((property)=>(property.precio>300 && property.precio<=700))
         this.properties_filter = variable;
       }
       else if(this.price_Filter=="desde S/700 hasta S/1500"){
-        let variable = this.properties_filter.filter((property)=>(property.precio>700 && property.precio<=1500)) 
+        let variable = this.properties_filter.filter((property)=>(property.precio>700 && property.precio<=1500))
         this.properties_filter = variable;
       }
       else if(this.price_Filter=="desde S/1500 hasta S/2500"){
-        let variable = this.properties_filter.filter((property)=>(property.precio>1500 && property.precio<=2500)) 
+        let variable = this.properties_filter.filter((property)=>(property.precio>1500 && property.precio<=2500))
         this.properties_filter = variable;
       }
       else if(this.price_Filter=="desde S/2500 hasta S/5000"){
-        let variable = this.properties_filter.filter((property)=>(property.precio>2500 && property.precio<=5000)) 
+        let variable = this.properties_filter.filter((property)=>(property.precio>2500 && property.precio<=5000))
         this.properties_filter = variable;
       }
       else if(this.price_Filter=="desde S/5000 hasta S/10000"){
-        let variable = this.properties_filter.filter((property)=>(property.precio>5000 && property.precio<=10000)) 
+        let variable = this.properties_filter.filter((property)=>(property.precio>5000 && property.precio<=10000))
         this.properties_filter = variable;
       }
       else if(this.price_Filter=="desde S/10000"){
-        let variable = this.properties_filter.filter((property)=>(property.precio>10000)) 
+        let variable = this.properties_filter.filter((property)=>(property.precio>10000))
         this.properties_filter = variable;
       }
     }
@@ -357,7 +357,7 @@ export class PrincipalComponent implements OnInit{
   }
   eliminarFilters(){
     this.filters=true;
-    this.property_Filter='None'; 
+    this.property_Filter='None';
     this.accommodation_Filter = 'None'
     this.price_Filter = 'None'
     this.services_Filter = [];

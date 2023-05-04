@@ -71,6 +71,8 @@ export class PublicarInmuebleComponent {
       id_propietario: 18, //Usuario configurado por defecto
       id_ubigeo: this.formPublicar.get("id_ubigeo")!.value,
       direccion: this.formPublicar.get("direccion")!.value,
+      tipo_inmueble:"",
+      tipo_alojamiento:"",
       precio: parseFloat(this.formPublicar.get("precio")!.value),
       n_dormitorios: parseInt(this.formPublicar.get("n_dormitorios")!.value),
       n_banios: parseInt(this.formPublicar.get("n_banios")!.value),

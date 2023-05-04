@@ -38,6 +38,8 @@ export class VisualizeItemComponent{
     "id": 0,
     "id_propietario": 0,
     "id_ubigeo": 0,
+    "tipo_inmueble":"",
+    "tipo_alojamiento":"",
     "direccion": "",
     "precio": 0,
     "n_dormitorios": 0,
