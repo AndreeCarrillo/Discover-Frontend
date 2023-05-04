@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { usuario } from 'src/app/models/usuario.interface';
 
 @Component({
   selector: 'app-navbar',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   
-  img: string = 'https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg'  
+  @Input() usermain!:usuario;
 }

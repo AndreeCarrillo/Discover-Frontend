@@ -5,12 +5,20 @@ import { PropertyCardComponent } from './components/property-card/property-card.
 import { PublicarInmuebleComponent } from './components/publicar-inmueble/publicar-inmueble.component';
 import { VisualizeItemComponent } from './components/visualize-item/visualize-item.component';
 
+import { MakeOpinionComponent } from './components/make-opinion/make-opinion.component';
+
 const routes: Routes = [
-  { path: '', component: PrincipalComponent },
-  { path: 'home', component: PrincipalComponent },
-  { path: 'property-card', component: PropertyCardComponent },
-  { path:'publicar', component:PublicarInmuebleComponent},
-  { path: 'visualizar', component: VisualizeItemComponent },
+  {
+    path:"user/:id",
+    component: PrincipalComponent
+  },
+  { path: '', component:PrincipalComponent },
+  { path:'home', component:PrincipalComponent},
+  { path: 'property-card', component:PropertyCardComponent },
+  { path: 'publicar', component:PublicarInmuebleComponent },
+  { path: 'visualizar', component:VisualizeItemComponent },
+  { path: 'resena', component:MakeOpinionComponent }
+
 ];
 
 @NgModule({
