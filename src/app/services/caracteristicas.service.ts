@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { caracteristica } from '../models/caracteristicas';
 import { caracteristica } from '../models/caracteristica';
 
 @Injectable({
