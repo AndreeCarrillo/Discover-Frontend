@@ -1,9 +1,13 @@
-
 <app-navbar [usermain]="usermain"></app-navbar>
 <div class="searcher-container d-flex align-items-center justify-content-center flex-column">
     <h1 class="searcher-tittle">Bienvenido {{usermain.nombre}} {{usermain.apellido_paterno}} a Discover</h1>
     <input (keyup)="filtersearch($event)" type="text" style="border-radius: 20px;" class="form-control w-75" id="exampleFormControlInput1" placeholder="Ingrese departamento, distrito o provincia">
 </div>
+<main>
+  <div>
+    <div class="">
+        <section class="main">
+
 
 <div class="d-flex flex-row justify-content-around" style="margin-top: 50px; padding-bottom: 50px;">
     <div>
@@ -118,6 +122,8 @@
             <app-property-card [property]="properties_calificacion[1]"></app-property-card>
             <app-property-card [property]="properties_calificacion[2]"></app-property-card>
         </div>
+
+      </section>
     </div>
     <ng-template #filtrosready >
         <div class="d-flex justify-content-around flex-row flex-wrap align-items-center">
@@ -125,3 +131,7 @@
         </div>        
     </ng-template>
 </div>
+
+
+</main>
+
