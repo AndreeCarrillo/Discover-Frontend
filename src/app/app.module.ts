@@ -16,6 +16,9 @@ import { MakeOpinionComponent } from './components/make-opinion/make-opinion.com
 import {FormBuilder, Validators} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReviewCardComponent } from './components/review-card/review-card.component';
+import {MatDatepickerModule, matDatepickerAnimations } from '@angular/material/datepicker';
+import{MatNativeDateModule} from '@angular/material/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,7 @@ import { ReviewCardComponent } from './components/review-card/review-card.compon
     VisualizeItemComponent,
     PublicarInmuebleComponent,
     MakeOpinionComponent,
-    ReviewCardComponent
+    ReviewCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,8 +38,10 @@ import { ReviewCardComponent } from './components/review-card/review-card.compon
     ReactiveFormsModule,
     HttpClientModule,
     MatStepperModule,
-    NgbModule
-    
+    NgbModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

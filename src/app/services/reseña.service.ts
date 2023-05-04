@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { resena } from '../models/resena.interface';
+import { resena } from '../models/resena';
 
 @Injectable({
   providedIn: 'root'

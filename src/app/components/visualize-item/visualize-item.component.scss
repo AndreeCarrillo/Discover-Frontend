@@ -123,9 +123,9 @@ body{
 }
 
 
-.coment-container{
+.container-comments{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -144,4 +144,8 @@ body{
   align-items: center;
   flex-direction: column;
   margin-top: 20px;
+}
+
+.example-card {
+  max-width: 400px;
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, OnChanges, SimpleChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { inmueble } from 'src/app/models/inmuebles.interface';
-import { resena } from 'src/app/models/resena.interface';
+import { resena } from 'src/app/models/resena';
 import { ubigeo } from 'src/app/models/ubigeo.interface';
 import { usuario } from 'src/app/models/usuario.interface';
 import { InmuebleService } from 'src/app/services/inmueble.service';

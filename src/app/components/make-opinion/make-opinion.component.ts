@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators,FormGroup, FormControl} from '@angular/forms';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { usuario } from 'src/app/models/usuario.interface';
-import { resena } from 'src/app/models/resena.interface';
+import { resena } from 'src/app/models/resena';
 import { ResenaService } from 'src/app/services/reseña.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -14,18 +14,24 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class MakeOpinionComponent implements OnInit {
   myForm!:FormGroup;
-  
+
   id!:number;
+  idinmueble!:number;
   constructor(private _formBuilder: FormBuilder,private userservice:UsuarioService,private resenaservice:ResenaService,
     private router: Router, private activatedRouter: ActivatedRoute,
     private snackBar:MatSnackBar) {
   }
- 
-  
-  
+
+  getIdInmueble(){
+    this.idinmueble = this.activatedRouter.snapshot.params["id"];
+    let inmuebleIDD = parseInt(this.idinmueble.toString())
+    return  inmuebleIDD;
+  }
+
   ngOnInit(){
     this.loadusersesion();
     this.reactiveForm();
+    this.getIdInmueble();
     this.myForm = this._formBuilder.group({
       id:[""],
       descripcion:['',[Validators.required]],
@@ -34,12 +40,8 @@ export class MakeOpinionComponent implements OnInit {
       facilitiesRating: ['', Validators.required],
       securityRating: ['', Validators.required],
     });
-    // this.activatedRouter.paramMap.subscribe(params => {
-    //   const id_inmueble = +params.get('id_inmueble');
-    //   this.resena.id_inmueble = id_inmueble;
-    // });
   }
-  
+
   reactiveForm():void {
     this.myForm = this._formBuilder.group({
       id:[""],
@@ -56,10 +58,10 @@ export class MakeOpinionComponent implements OnInit {
     facilitiesRating: ['', Validators.required],
     securityRating: ['', Validators.required],
   });
-  
+
   url = "https://i.postimg.cc/k5mRVLnk/84459.png";
-  
-  
+
+
   onselectFile(event: Event) {
     const inputElement = event.target as HTMLInputElement;
     if (inputElement.files && inputElement.files.length > 0) {
@@ -73,25 +75,25 @@ export class MakeOpinionComponent implements OnInit {
       }
     }
   }
-  
+
   getRatingsAsJson() {
     const generalRating = +(this.secondFormGroup.get('generalRating')?.value || 0);
     const locationRating = +(this.secondFormGroup.get('locationRating')?.value || 0);
     const facilitiesRating = +(this.secondFormGroup.get('facilitiesRating')?.value || 0);
     const securityRating = +(this.secondFormGroup.get('securityRating')?.value || 0);
-  
+
     const ratingsJson = {
       general: generalRating,
       location: locationRating,
       facilities: facilitiesRating,
       security: securityRating
     };
-  
+
     console.log(ratingsJson);
     return ratingsJson;
   }
-  
-  
+
+
   calculateRatingAverage(ratings: { general: number; location: number; facilities: number; security: number }): number {
   const { general = 0, location = 0, facilities = 0, security = 0 } = ratings;
   const sum = general + location + facilities + security;
@@ -99,8 +101,8 @@ export class MakeOpinionComponent implements OnInit {
   return average;
 }
 
-  
-  
+
+
   isLinear = false;
   usermain:usuario = {
     "id": 0,
@@ -115,7 +117,7 @@ export class MakeOpinionComponent implements OnInit {
     "link_foto_perfil":  "",
     "fecha_nacimiento":  "",
     "fecha_inscripcion":  ""
-  } 
+  }
   saveresena():void{
     const ratings= this.getRatingsAsJson();
     var average:number= this.calculateRatingAverage(ratings);
@@ -125,7 +127,7 @@ export class MakeOpinionComponent implements OnInit {
     console.log(this.myForm.get("descripcion")!.value);
     const resena:resena={
       id: this.id,
-      id_inmueble:4 ,
+      id_inmueble:this.getIdInmueble(),
       id_user: this.usermain.id,
       calificacion:average ,
       observaciones: this.myForm.get("descripcion")!.value,
@@ -141,7 +143,6 @@ export class MakeOpinionComponent implements OnInit {
 
     this.resenaservice.addresena(resena).subscribe({
       next: (data)  => {
-        this.router.navigate(["/home"]);
         this.snackBar.open("La reseña se ha registrado correctamente","OK",{duration:3000});
       },
       error: (err) => {
