@@ -22,7 +22,22 @@ body{
   font-size: 20px;
 }
 
-
+.photos-property{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+.photo{
+  width: 350px;
+  height: 250px;
+  border-radius: 15px;
+  margin: 5px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .mid-property{
   display: flex;
@@ -33,6 +48,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin: 10px 0px;
 }
 .stars svg{
   margin-left: 7px;
@@ -87,9 +103,18 @@ body{
   justify-content: flex-start;
   align-items: center;
 }
-.contact-photo img{
+.contact-photo{
   margin: 10px 20px;
   border-radius: 100px;
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #B7AD92;
+}
+.contact-info{
+  margin-left: 10px;
 }
 .contact-phone{
   display: flex;

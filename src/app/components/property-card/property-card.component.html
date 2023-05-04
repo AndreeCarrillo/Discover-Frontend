@@ -9,7 +9,7 @@
     </ng-container>
     <ng-template #withoutimg>
         <span style="margin-bottom: 15px;" class="align-content-center">Not Image</span>
-    </ng-template>    
+    </ng-template>
     <mat-card-content class="d-flex align-items-center flex-column">
         <h2 style="font-weight: bold;">{{property.precio|currency:"S/ "}}</h2>
         <div>
@@ -24,7 +24,7 @@
         </div>
     </mat-card-content>
     <mat-card-actions class="d-flex justify-content-center">
-        <button  mat-raised-button style="font-family: 'Inter'; padding: 0 40px; border-radius: 30px; background-color: #006464; color: white;">MAS INFORMACION</button>
+        <button  mat-raised-button style="font-family: 'Inter'; padding: 0 40px; border-radius: 30px; background-color: #006464; color: white;" routerLink="/visualizar/{{property.id}}" >MAS INFORMACION</button>
     </mat-card-actions>
 </mat-card>
 <ng-template #dontexist>
