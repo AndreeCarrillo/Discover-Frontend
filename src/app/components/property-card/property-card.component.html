@@ -1,4 +1,6 @@
+
 <mat-card class="property-card justify-content-between" style="height: 98%; padding: 0 15px; background-color: #BEED3B; border-radius: 15px; margin: 15px; " *ngIf="property;else dontexist">
+
     <mat-card-header>
         <div mat-card-avatar class="img-header-card" style="background-image: url({{user.link_foto_perfil}});"></div>
         <mat-card-title style="font-family: 'Inter'; font-weight: bold;">{{user.nombre}} {{user.apellido_paterno}}</mat-card-title>
@@ -9,7 +11,7 @@
     </ng-container>
     <ng-template #withoutimg>
         <span style="margin-bottom: 15px;" class="align-content-center">Not Image</span>
-    </ng-template>    
+    </ng-template>
     <mat-card-content class="d-flex align-items-center flex-column">
         <h2 style="font-weight: bold;">{{property.precio|currency:"S/ "}}</h2>
         <div>
@@ -24,8 +26,9 @@
         </div>
     </mat-card-content>
     <mat-card-actions class="d-flex justify-content-center">
-        <button  mat-raised-button style="font-family: 'Inter'; padding: 0 40px; border-radius: 30px; background-color: #006464; color: white;">MAS INFORMACION</button>
+        <button  mat-raised-button style="font-family: 'Inter'; padding: 0 40px; border-radius: 30px; background-color: #006464; color: white;" routerLink="/visualizar/{{property.id}}" >MAS INFORMACION</button>
     </mat-card-actions>
 </mat-card>
 <ng-template #dontexist>
 </ng-template>
+

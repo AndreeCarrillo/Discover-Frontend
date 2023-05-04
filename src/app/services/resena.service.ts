@@ -1,3 +1,4 @@
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { resena } from '../models/resena';
@@ -14,6 +15,7 @@ export class ResenaService {
     return this.http.post<resena>(this.resource_principal+"/"+this.resource_reseña, resena)
   }
   get_reseñas(){
-    return this.http.get<resena[]>(this.resource_principal + this.resource_reseña)
+    return this.http.get<resena[]>(this.resource_principal + "/" +this.resource_reseña)
   }
 }
+
