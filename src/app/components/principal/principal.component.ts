@@ -5,8 +5,7 @@ import { resena } from 'src/app/models/resena.interface';
 import { ubigeo } from 'src/app/models/ubigeo.interface';
 import { usuario } from 'src/app/models/usuario.interface';
 import { InmuebleService } from 'src/app/services/inmueble.service';
-import { ReseñaService } from 'src/app/services/reseña.service';
-import { UbigeoService } from 'src/app/services/ubigeo.service';
+import { ResenaService } from 'src/app/services/reseña.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { __values } from 'tslib';
 
@@ -69,7 +68,7 @@ export class PrincipalComponent implements OnInit{
   }
   ubigeo:ubigeo[] = []
 
-  constructor(private ubigeoservice:UbigeoService,private reseñaservice:ReseñaService,private userservice:UsuarioService ,private inmuebleservices:InmuebleService, private activedrouter:ActivatedRoute){
+  constructor(private ResenaService:ResenaService,private userservice:UsuarioService ,private inmuebleservices:InmuebleService, private activedrouter:ActivatedRoute){
   }
 
   ngOnInit(){
@@ -109,7 +108,7 @@ export class PrincipalComponent implements OnInit{
     }
   }
   loadreseñas(){
-    this.reseñaservice.get_reseñas().subscribe({
+    this.ResenaService.get_reseñas().subscribe({
       next: (data)=>{
         this.reseñas=data;
         this.define_calification_per_property()

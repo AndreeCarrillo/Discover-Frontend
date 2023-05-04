@@ -643,184 +643,56 @@
     ],
     "Caracteristicas":[
         {
-            "id":1,
             "tipo": "Servicios",
-            "nombre":"Wi-fi",
-		"icon":"wifi"
-        },
-	  {
-            "id":2,
-            "tipo": "Servicios",
-            "nombre":"Cocina",
-		"icon":"local_laundry_service"
-        },
-	  {
-            "id":3,
-            "tipo": "Servicios",
-            "nombre":"Lavadora",
-		"icon":"local_laundry_service"
-        },
-	  {
-            "id":4,
-            "tipo": "Servicios",
-            "nombre":"Zona de trabajo",
-		        "icon":"chair_alt"
-        },
-	  {
-            "id":5,
-            "tipo": "Servicios",
-            "nombre":"Estacionamiento",
-		        "icon":"garage"
-        },
-	  {
-	    "id":6,
-	    "tipo": "Servicios",
-	    "nombre":"Aire acondicionado",
-	    "icon":"air_purifier_gen"
-	  },
-{
-	    "id":7,
-	    "tipo": "Servicio",
-	    "nombre":"TV",
-	    "icon":"tv"
-	  },
-{
-	    "id":8,
-	    "tipo": "Servicio",
-	    "nombre":"Estacionamiento de pago en las instalaciones",
-	    "icon":"local_parking"
-	  },
-{
-	    "id":9,
-	    "tipo": "Servicio",
-	    "nombre":"Piscina",
-	    "icon":"pool"
-	  },
-{
-	    "id":10,
-	    "tipo": "Servicio",
-	    "nombre":"Terraza",
-	    "icon":"balcony"
-	  },
-    {
-            "id": 11,
-            "tipo": "Comodidades",
-	      "nombre":"Parrilla",
-		"icon":"outdoor_grill"
-        },
-{
-            "id": 12,
-            "tipo": "Comodidades",
-	      "nombre":"Zona de comida al aire libre",
-		"icon":"deck"
-        },
-{
-            "id": 13,
-            "tipo": "Comodidades",
-	      "nombre":"Jacuzzi",
-		"icon":"hot_tub"
-        },
-{
-            "id": 14,
-            "tipo": "Comodidades",
-	      "nombre":"Lugar para hacer fogata",
-		"icon":"local_fire_department"
-        },
-{
-            "id": 15,
-            "tipo": "Comodidades",
-	      "nombre":"Mesa de billar",
-		"icon":"counter_8"
-        },
-{
-            "id": 16,
-            "tipo": "Comodidades",
-	      "nombre":"Chimenea interior",
-		"icon":"fireplace"
-        },
-{
-            "id": 17,
-            "tipo": "Comodidades",
-	      "nombre":"Piano",
-		"icon":"piano"
-        },
-{
-            "id": 18,
-            "tipo": "Comodidades",
-	      "nombre":"Equipo para hacer trabajo",
-		"icon":"directions_run"
-        },
-{
-            "id": 19,
-            "tipo": "Comodidades",
-	      "nombre":"Acceso al lago",
-		"icon":"water"
-        },
-{
-            "id": 20,
-            "tipo": "Comodidades",
-	      "nombre":"Acceso a la playa",
-		"icon":"beach_access"
-        },
-{
-            "id": 21,
-            "tipo": "Comodidades",
-	      "nombre":"Ducha exterior",
-		"icon":"shower"
+            "items":[
+                {"id":1,"nombre":"Wi-fi"},
+                {"id":2,"nombre":"Cocina"},
+                {"id":3,"nombre":"Lavadora"},
+                {"id":4,"nombre":"Zona de trabajo"},
+                {"id":5,"nombre":"Estacionamiento"},
+                {"id":6,"nombre":"Aire acondicionado"},
+                {"id":7,"nombre":"TV"},
+                {"id":8,"nombre":"Estacionamiento de pago en las instalaciones"}
+            ]
         },
         {
-            "id": 22,
-            "tipo": "Elementos de seguridad",
-		"nombre":"Detector de humo",
-		"icon":"detector_smoke"
-        },
-{
-            "id": 23,
-            "tipo": "Elementos de seguridad",
-		"nombre":"Botiquin de primeros auxilios",
-		"icon":"medical_services"
-        },
-{
-            "id": 24,
-            "tipo": "Elementos de seguridad",
-		"nombre":"Extintor de incendios",
-		"icon":"fire_extinguisher"
-        },
-{
-            "id": 25,
-            "tipo": "Caracteristicas del inmueble",
-		"nombre":"Tranquilo",
-		"icon":""
-        },
-{
-            "id": 26,
-            "tipo": "Caracteristicas del inmueble",
-		"nombre":"Ideal para familias",
-		"icon":""
-        },
-{
-            "id": 27,
-            "tipo": "Caracteristicas del inmueble",
-		"nombre":"Excepcional",
-		"icon":""
-        },
-{
-            "id": 28,
-            "tipo": "Caracteristicas del inmueble",
-		"nombre":"Central",
-		"icon":""
+            "tipo": "Comodidades",
+            "items":[
+                {"id":9,"nombre":"Piscina"},
+                {"id":10,"nombre":"Terraza"},
+                {"id":11,"nombre":"Parrilla"},
+                {"id":12,"nombre":"Zona de comida al aire libre"},
+                {"id":13,"nombre":"Jacuzzi"},
+                {"id":14,"nombre":"Lugar para hacer fogata"},
+                {"id":15,"nombre":"Mesa de billar"},
+                {"id":16,"nombre":"Chimenea interior"},
+                {"id":17,"nombre":"Piano"},
+                {"id":18,"nombre":"Equipo para hacer trabajo"},
+                {"id":19,"nombre":"Acceso al lago"},
+                {"id":20,"nombre":"Acceso a la playa"},
+                {"id":21,"nombre":"Ducha exterior"}
+            ]
         },
         {
-           "id": 29,
-            "tipo": "Caracteristicas del inmueble",
-            "nombre":"Espacioso",
-		"icon":""
+            "tipo": "Elementos de seguridad",
+            "items":[
+                {"id":22,"nombre":"Detector de humo"},
+                {"id":23,"nombre":"Botiquin de primeros auxilios"},
+                {"id":24,"nombre":"Extintor de incendios"}
+
+            ]
         },
-	{
-           "id": 30,
+        {
             "tipo": "Caracteristicas del inmueble",
-            "nombre":"Elegante",
-		"icon":""
+            "items":[
+                {"id":25,"nombre":"Tranquilo"},
+                {"id":26,"nombre":"Ideal para familias"},
+                {"id":27,"nombre":"Excepcional"},
+                {"id":28,"nombre":"Central"},
+                {"id":29,"nombre":"Espacioso"},
+                {"id":30,"nombre":"Elegante"}
+
+            ]
         }
     ],
     "Alquiler":[
