@@ -47,6 +47,7 @@ export class PrincipalComponent implements OnInit{
   ];
   properties: inmueble[] = [];
   reseñas: resena[]=[];
+  properties_calificacion: inmueble[] = []
 
   random_numbers:number[] = []
   usermain:usuario = {
@@ -71,13 +72,14 @@ export class PrincipalComponent implements OnInit{
     this.load_properties()
     this.loadreseñas()
     this.loadusersesion()
-    this.define_randoms_values()
     this.define_calification_per_property()
   }
   load_properties(){
     this.inmuebleservices.getInmuebles().subscribe({
       next:(data)=>{
         this.properties=data;
+        this.loadreseñas()
+        this.define_randoms_values()
       },
       error: (err)=>{
         console.log(err);
@@ -85,7 +87,7 @@ export class PrincipalComponent implements OnInit{
     })
   }
   loadusersesion(){
-        this.userservice.getUsuario(18).subscribe({
+        this.userservice.getUsuario(10).subscribe({
         next: (data)=>{
           this.usermain=data;
         },
@@ -95,9 +97,9 @@ export class PrincipalComponent implements OnInit{
       });
     }
   define_randoms_values(){
+    console.log(this.properties.length)
     for(let i=0;i<3;i++){
-      let randomNum = Math.floor(Math.random() * 19);
-      console.log(randomNum)
+      let randomNum = Math.floor(Math.random() * ((this.properties.length)-1));
       this.random_numbers.push(randomNum);
     }
   }
@@ -105,6 +107,7 @@ export class PrincipalComponent implements OnInit{
     this.reseñaservice.get_reseñas().subscribe({
       next: (data)=>{
         this.reseñas=data;
+        this.define_calification_per_property()
       },
       error: (err)=>{
         console.log(err);
@@ -116,12 +119,14 @@ export class PrincipalComponent implements OnInit{
       let cont = 0
       let sum = 0
       this.reseñas.forEach((resena)=>{
-        if(resena.id_inmueble=property.id){
+        if(resena.id_inmueble==property.id){
           cont++;
           sum = sum + resena.calificacion;
         }
+        
       })
       property.calificacion=(sum/cont);
     })
+    this.properties_calificacion = this.properties.sort((a,b)=>b.calificacion-a.calificacion)
   }
 }
