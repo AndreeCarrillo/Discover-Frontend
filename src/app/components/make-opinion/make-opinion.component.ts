@@ -15,7 +15,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class MakeOpinionComponent implements OnInit {
   myForm!:FormGroup;
   
-  id:number=45;
+  id!:number;
   constructor(private _formBuilder: FormBuilder,private userservice:UsuarioService,private resenaservice:ResenaService,
     private router: Router, private activatedRouter: ActivatedRoute,
     private snackBar:MatSnackBar) {
@@ -34,6 +34,10 @@ export class MakeOpinionComponent implements OnInit {
       facilitiesRating: ['', Validators.required],
       securityRating: ['', Validators.required],
     });
+    // this.activatedRouter.paramMap.subscribe(params => {
+    //   const id_inmueble = +params.get('id_inmueble');
+    //   this.resena.id_inmueble = id_inmueble;
+    // });
   }
   
   reactiveForm():void {
@@ -146,7 +150,7 @@ export class MakeOpinionComponent implements OnInit {
     })
   }
   loadusersesion(){
-    this.userservice.getUsuario(18).subscribe({
+    this.userservice.getUsuario(19).subscribe({
     next: (data)=>{
       this.usermain=data;
     },
@@ -154,5 +158,8 @@ export class MakeOpinionComponent implements OnInit {
       console.log(err);
     },
   });
-}
+  }
+  volverinmueble():void {
+    this.router.navigate(["/"]);
+  }
 }
