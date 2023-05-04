@@ -8,6 +8,7 @@ import { InmuebleService } from 'src/app/services/inmueble.service';
 import { ResenaService } from 'src/app/services/reseña.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { __values } from 'tslib';
+import { UbigeoService } from 'src/app/services/ubigeo.service';
 
 @Component({
   selector: 'app-principal',
@@ -68,7 +69,7 @@ export class PrincipalComponent implements OnInit{
   }
   ubigeo:ubigeo[] = []
 
-  constructor(private ResenaService:ResenaService,private userservice:UsuarioService ,private inmuebleservices:InmuebleService, private activedrouter:ActivatedRoute){
+  constructor(private ResenaService:ResenaService,private userservice:UsuarioService ,private inmuebleservices:InmuebleService, private activedrouter:ActivatedRoute, private ubigeoservice:UbigeoService){
   }
 
   ngOnInit(){
@@ -127,7 +128,7 @@ export class PrincipalComponent implements OnInit{
           cont++;
           sum = sum + resena.calificacion;
         }
-        
+
       })
       property.calificacion=(sum/cont);
     })
@@ -146,7 +147,7 @@ export class PrincipalComponent implements OnInit{
   filtersearch(event: Event) {
     const filter = (event.target as HTMLInputElement).value.toLowerCase();
     const filteredProperties = [];
-  
+
     for (const departamento of this.ubigeo) {
       for (const provincia of departamento.provincias) {
         for (const distrito of provincia.distritos) {
@@ -164,8 +165,8 @@ export class PrincipalComponent implements OnInit{
         }
       }
     }
-  
+
     this.properties_filter = filteredProperties;
-  }  
+  }
 
 }

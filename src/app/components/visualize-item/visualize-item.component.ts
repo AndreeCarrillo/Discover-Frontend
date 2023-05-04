@@ -6,6 +6,7 @@ import { InmuebleService } from 'src/app/services/inmueble.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { CaracteristicasService } from 'src/app/services/caracteristicas.service';
 import { caracteristica } from 'src/app/models/caracteristica';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 export interface Photo {
   color: string;
@@ -87,7 +88,6 @@ nombrecompleto():string{
             })
           }
         )
-
   }
   /*
     loadCaracteristicaServicio(){
