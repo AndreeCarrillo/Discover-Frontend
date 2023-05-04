@@ -15,6 +15,7 @@ import { PublicarInmuebleComponent } from './components/publicar-inmueble/public
 import { MakeOpinionComponent } from './components/make-opinion/make-opinion.component'
 import {FormBuilder, Validators} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReviewCardComponent } from './components/review-card/review-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PropertyCardComponent,
     VisualizeItemComponent,
     PublicarInmuebleComponent,
-    MakeOpinionComponent
+    MakeOpinionComponent,
+    ReviewCardComponent
   ],
   imports: [
     BrowserModule,
