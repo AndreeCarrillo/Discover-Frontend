@@ -5,7 +5,7 @@ import { resena } from '../models/resena.interface';
 @Injectable({
   providedIn: 'root'
 })
-export class ReseñaService {
+export class ResenaService {
 
   resource_principal: string ="http://localhost:3000/"
   resource_reseña: string = "resena"

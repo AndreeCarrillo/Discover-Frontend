@@ -26,7 +26,7 @@
                 <ng-template matStepLabel>Escribe tu comentario...</ng-template>
                 <mat-form-field class="example-full-width">
                     <mat-label>Ingrese su comentario...</mat-label>
-                    <textarea formControlName="descripcion" matInput ></textarea>
+                    <input matInput formControlName="descripcion" placeholder="Ingrese tu comentario..." > 
                 </mat-form-field>
                 <div>
                   <button mat-button matStepperNext>Siguiente</button>
@@ -37,17 +37,17 @@
               <form [formGroup]="secondFormGroup">
                 <ng-template matStepLabel>Calificación</ng-template>
                 <p>¿Cúanta puntuación le pones a este inmueble?</p>
-                <ngb-rating [max]="5" ></ngb-rating>
+                <ngb-rating formControlName="generalRating" [max]="5"></ngb-rating>
                 <p>Ubicación</p>
-                <ngb-rating [max]="5"></ngb-rating>
+                <ngb-rating formControlName="locationRating" [max]="5" ></ngb-rating>
                 <p>Instalaciones</p>
-                <ngb-rating [max]="5"></ngb-rating>
+                <ngb-rating formControlName="facilitiesRating" [max]="5" ></ngb-rating>
                 <p>Seguridad</p>
-                <ngb-rating [max]="5"></ngb-rating>
+                <ngb-rating formControlName="securityRating" [max]="5" ></ngb-rating>
                 
                 <div>
                   <button mat-button matStepperPrevious>Anterior</button>
-                  <button mat-button matStepperNext>Siguiente</button>
+                  <button mat-button matStepperNext >Siguiente</button>
                 </div>
               </form>
             </mat-step>
@@ -59,7 +59,7 @@
               <h2 class="confirmation">Estas seguro que quieres enviar esta reseña?</h2>
               <div>
                 <button mat-button matStepperPrevious>Anterior</button>
-                <button mat-button >Enviar</button>
+                <button mat-button (click)="saveresena()" >Enviar</button>
               </div>
             </mat-step>
         </mat-stepper>
