@@ -1,20 +1,166 @@
-import { Component } from '@angular/core';
-import {FormBuilder, Validators} from '@angular/forms';
-
+import { Component, OnInit } from '@angular/core';
+import {FormBuilder, Validators,FormGroup, FormControl} from '@angular/forms';
+import { UsuarioService } from 'src/app/services/usuario.service';
+import { usuario } from 'src/app/models/usuario.interface';
+import { resena } from 'src/app/models/resena';
+import { ResenaService } from 'src/app/services/reseña.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-make-opinion',
   templateUrl: './make-opinion.component.html',
   styleUrls: ['./make-opinion.component.scss']
 })
-export class MakeOpinionComponent {
-  img: string = 'https://i.postimg.cc/nL8PsrZ9/hombre-foto.jpg' 
+
+export class MakeOpinionComponent implements OnInit {
+  myForm!:FormGroup;
+
+  id!:number;
+  idinmueble!:number;
+  constructor(private _formBuilder: FormBuilder,private userservice:UsuarioService,private resenaservice:ResenaService,
+    private router: Router, private activatedRouter: ActivatedRoute,
+    private snackBar:MatSnackBar) {
+  }
+
+  getIdInmueble(){
+    this.idinmueble = this.activatedRouter.snapshot.params["id"];
+    let inmuebleIDD = parseInt(this.idinmueble.toString())
+    return  inmuebleIDD;
+  }
+
+  ngOnInit(){
+    this.loadusersesion();
+    this.reactiveForm();
+    this.getIdInmueble();
+    this.myForm = this._formBuilder.group({
+      id:[""],
+      descripcion:['',[Validators.required]],
+      generalRating: ['', Validators.required],
+      locationRating: ['', Validators.required],
+      facilitiesRating: ['', Validators.required],
+      securityRating: ['', Validators.required],
+    });
+  }
+
+  reactiveForm():void {
+    this.myForm = this._formBuilder.group({
+      id:[""],
+      descripcion:['',[Validators.required]]
+    });
+  }
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
   });
   secondFormGroup = this._formBuilder.group({
     secondCtrl: ['', Validators.required],
+    generalRating: ['', Validators.required],
+    locationRating: ['', Validators.required],
+    facilitiesRating: ['', Validators.required],
+    securityRating: ['', Validators.required],
   });
-  isLinear = false; 
-  constructor(private _formBuilder: FormBuilder) {}
 
+  url = "https://i.postimg.cc/k5mRVLnk/84459.png";
+
+
+  onselectFile(event: Event) {
+    const inputElement = event.target as HTMLInputElement;
+    if (inputElement.files && inputElement.files.length > 0) {
+      var reader = new FileReader();
+      reader.readAsDataURL(inputElement.files[0]);
+      reader.onload = (event: ProgressEvent<FileReader>) => {
+        const result = (event.target as FileReader).result;
+        if (typeof result === 'string') {
+          this.url = result;
+        }
+      }
+    }
+  }
+
+  getRatingsAsJson() {
+    const generalRating = +(this.secondFormGroup.get('generalRating')?.value || 0);
+    const locationRating = +(this.secondFormGroup.get('locationRating')?.value || 0);
+    const facilitiesRating = +(this.secondFormGroup.get('facilitiesRating')?.value || 0);
+    const securityRating = +(this.secondFormGroup.get('securityRating')?.value || 0);
+
+    const ratingsJson = {
+      general: generalRating,
+      location: locationRating,
+      facilities: facilitiesRating,
+      security: securityRating
+    };
+
+    console.log(ratingsJson);
+    return ratingsJson;
+  }
+
+
+  calculateRatingAverage(ratings: { general: number; location: number; facilities: number; security: number }): number {
+  const { general = 0, location = 0, facilities = 0, security = 0 } = ratings;
+  const sum = general + location + facilities + security;
+  const average = sum / 4;
+  return average;
+}
+
+
+
+  isLinear = false;
+  usermain:usuario = {
+    "id": 0,
+    "nombre": "",
+    "apellido_paterno":  "",
+    "apellido_materno":  "",
+    "dni":  "",
+    "telefono":  "",
+    "correo":  "",
+    "password":  "",
+    "link_foto_dni":  "",
+    "link_foto_perfil":  "",
+    "fecha_nacimiento":  "",
+    "fecha_inscripcion":  ""
+  }
+  saveresena():void{
+    const ratings= this.getRatingsAsJson();
+    var average:number= this.calculateRatingAverage(ratings);
+    average = Math.ceil(average);
+    console.log(average)
+    console.log(this.usermain)
+    console.log(this.myForm.get("descripcion")!.value);
+    const resena:resena={
+      id: this.id,
+      id_inmueble:this.getIdInmueble(),
+      id_user: this.usermain.id,
+      calificacion:average ,
+      observaciones: this.myForm.get("descripcion")!.value,
+      link_foto: this.url
+    }
+    console.log(this.id)
+    console.log(resena.id_inmueble)
+    console.log(resena.id_user)
+    console.log(resena.calificacion)
+    console.log(resena.observaciones)
+    console.log(resena.link_foto)
+
+
+    this.resenaservice.addresena(resena).subscribe({
+      next: (data)  => {
+        this.snackBar.open("La reseña se ha registrado correctamente","OK",{duration:3000});
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
+  }
+  loadusersesion(){
+    this.userservice.getUsuario(19).subscribe({
+    next: (data)=>{
+      this.usermain=data;
+    },
+    error: (err) => {
+      console.log(err);
+    },
+  });
+  }
+  volverinmueble():void {
+    this.router.navigate(["/"]);
+  }
 }

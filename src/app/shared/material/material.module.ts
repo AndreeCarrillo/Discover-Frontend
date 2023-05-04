@@ -15,6 +15,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSliderModule} from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
+import {MatDatepickerModule, matDatepickerAnimations} from '@angular/material/datepicker';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     MatSelectModule,
     MatCheckboxModule,
     MatSliderModule,
-    FormsModule
+    FormsModule,
+    MatDatepickerModule
   ],
   exports: [
     MatToolbarModule,
@@ -52,7 +54,8 @@ import { FormsModule } from '@angular/forms';
     MatSelectModule,
     MatCheckboxModule,
     MatSliderModule,
-    FormsModule
+    FormsModule,
+    MatDatepickerModule
   ]
 })
 export class MaterialModule { }

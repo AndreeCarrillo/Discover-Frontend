@@ -1,6 +1,6 @@
+
 <form class="formulario" [formGroup]="formPublicar">
 
-    
     <div class="divisor">
         <div class="subTitulo"><h2>Dirección</h2></div>
         <mat-form-field class="formField">
@@ -34,7 +34,7 @@
             </div>
             -->
         </mat-form-field>
-    
+
         <mat-form-field class="formField">
             <mat-label>Tipo de Alojamiento</mat-label> 
             <mat-select formControlName="tipoAlojamiento" placeholder="Ingrese el tipo de alojamiento">
@@ -179,7 +179,7 @@
         <mat-checkbox class="check" id="7" [(ngModel)]="isChecked" (change)="onCheckboxChange(6)">TV</mat-checkbox>
         <mat-checkbox class="check" id="8" [(ngModel)]="isChecked" (change)="onCheckboxChange(7)">Estacionamiento de pago en las instalaciones</mat-checkbox>
     </div>
-    
+
     <div class="divisor">
         <div class="subTitulo"><h2>Comodidades</h2></div>
         <mat-checkbox class="check" id="9"  [(ngModel)]="isChecked" (change)="onCheckboxChange(8)">Piscina</mat-checkbox>
@@ -213,7 +213,7 @@
                     <mat-card-content>Seleccione una imagen</mat-card-content>
                 </mat-card>
             </div>
-            
+
             <div id="objImg">
                 <mat-card class="imagen">
                     <mat-card-content>Seleccione una imagen</mat-card-content>
