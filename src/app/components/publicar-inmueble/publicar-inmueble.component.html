@@ -53,32 +53,68 @@
         <div class="subTitulo"><h2>Ubicación</h2></div>
         <mat-form-field class="formField">
             <mat-label>Departamento</mat-label>
-            <input matInput type="text" formControlName="departamento" placeholder="Ingrese el departamento">
-            <!--
-            <div *ngIf="formPublicar.get('departamento')?.hasError('required') && formPublicar.get('departamento')?.touched">
-                <span style="color: red;">Este campo es obligatorio</span>
-            </div>
-            -->
+            <mat-select formControlName="departamento" placeholder="Ingrese el departamento">
+                <mat-option value="Lima">Lima</mat-option>
+            </mat-select>
         </mat-form-field>
 
         <mat-form-field class="formField">
             <mat-label>Provincia</mat-label>
-            <input matInput type="text" formControlName="provincia" placeholder="Ingrese la provincia">
-            <!--
-            <div *ngIf="formPublicar.get('provincia')?.hasError('required') && formPublicar.get('provincia')?.touched">
-                <span style="color: red;">Este campo es obligatorio</span>
-            </div>
-            -->
+            <mat-select formControlName="provincia" placeholder="Ingrese la provincia">
+                <mat-option value="Lima">Lima</mat-option>
+            </mat-select>
         </mat-form-field>
 
         <mat-form-field class="formField">
             <mat-label>Distrito</mat-label>
-            <input matInput type="text" formControlName="distrito" placeholder="Ingrese el distrito">
-            <!--
-            <div *ngIf="formPublicar.get('distrito')?.hasError('required') && formPublicar.get('distrito')?.touched">
+            <mat-select formControlName="id_ubigeo" placeholder="Ingrese el distrito">
+                <mat-option value="150101">Lima</mat-option>
+                <mat-option value="150102">Ancon</mat-option>
+                <mat-option value="150103">Ate</mat-option>
+                <mat-option value="150104">Barranco</mat-option>
+                <mat-option value="150105">Breña</mat-option>
+                <mat-option value="150106">Carabayllo</mat-option>
+                <mat-option value="150107">Chaclacayo</mat-option>
+                <mat-option value="150108">Chorrillos</mat-option>
+                <mat-option value="150109">Cieneguilla</mat-option>
+                <mat-option value="150110">Comas</mat-option>
+                <mat-option value="150111">El Agustino</mat-option>
+                <mat-option value="150112">Independencia</mat-option>
+                <mat-option value="150113">Jesus Maria</mat-option>
+                <mat-option value="150114">La Molina</mat-option>
+                <mat-option value="150115">La Victoria</mat-option>
+                <mat-option value="150116">Lince</mat-option>
+                <mat-option value="150117">Los Olivos</mat-option>
+                <mat-option value="150118">Lurigancho</mat-option>
+                <mat-option value="150119">Lurin</mat-option>
+                <mat-option value="150120">Magdalena del Mar</mat-option>
+                <mat-option value="150121">Miraflores</mat-option>
+                <mat-option value="150122">Pachacamac</mat-option>
+                <mat-option value="150123">Pucusana</mat-option>
+                <mat-option value="150124">Pueblo Libre</mat-option>
+                <mat-option value="150125">Puente Piedra</mat-option>
+                <mat-option value="150126">Punta Hermosa</mat-option>
+                <mat-option value="150127">Punta Negra</mat-option>
+                <mat-option value="150128">Rimac</mat-option>
+                <mat-option value="150129">San Bartolo</mat-option>
+                <mat-option value="150130">San Borja</mat-option>
+                <mat-option value="150131">San Isidro</mat-option>
+                <mat-option value="150132">San Juan de Lurigancho</mat-option>
+                <mat-option value="150133">San Juan de Miraflores</mat-option>
+                <mat-option value="150134">San Luis</mat-option>
+                <mat-option value="150135">San Martin de Porres</mat-option>
+                <mat-option value="150136">San Miguel</mat-option>
+                <mat-option value="150137">Santa Anita</mat-option>
+                <mat-option value="150138">Santa Maria del Mar</mat-option>
+                <mat-option value="150139">Santa Rosa</mat-option>
+                <mat-option value="150140">Santiago de Surco</mat-option>
+                <mat-option value="150141">Surquillo</mat-option>
+                <mat-option value="150142">Villa El Salvador</mat-option>
+                <mat-option value="150143">Villa Maria del Triunfo</mat-option>
+            </mat-select>
+            <div *ngIf="formPublicar.get('id_ubigeo')?.hasError('id_ubigeo') && formPublicar.get('distrito')?.touched">
                 <span style="color: red;">Este campo es obligatorio</span>
             </div>
-            -->
         </mat-form-field>
     </div>
 

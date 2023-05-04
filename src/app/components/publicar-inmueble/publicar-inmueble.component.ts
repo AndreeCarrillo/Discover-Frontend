@@ -36,7 +36,7 @@ export class PublicarInmuebleComponent {
     this.formPublicar = this.formBuilder.group({
         id:[""],
         id_propietario:[""],
-        id_ubigeo:[""],
+        id_ubigeo:["",[Validators.required]],
         direccion:["",[Validators.required]],
         precio:["",[Validators.required]],
         n_dormitorios:["",[Validators.required]],
@@ -69,7 +69,7 @@ export class PublicarInmuebleComponent {
     const inmueble:inmueble = {
       id: parseInt(""),
       id_propietario: 18, //Usuario configurado por defecto
-      id_ubigeo: 150101, //Ubigeo aleatorio
+      id_ubigeo: this.formPublicar.get("id_ubigeo")!.value,
       direccion: this.formPublicar.get("direccion")!.value,
       precio: parseFloat(this.formPublicar.get("precio")!.value),
       n_dormitorios: parseInt(this.formPublicar.get("n_dormitorios")!.value),
@@ -77,7 +77,9 @@ export class PublicarInmuebleComponent {
       n_huespedes: parseInt(this.formPublicar.get("n_huespedes")!.value),
       m2_cuadrados: parseInt(this.formPublicar.get("m2_cuadrados")!.value),
       tiempo_antiguedad: this.formPublicar.get("tiempo_antiguedad")!.value,
-      link_fotos: ["Foto_01","Foto_02","Foto_03"], //Insertar fotos
+      link_fotos: ["https://i.postimg.cc/CKMMbZ3m/364014549.webp",
+                    "https://i.postimg.cc/FKqt17Nf/364014536.jpg",
+                    "https://i.postimg.cc/m2S0CdTW/364014535.jpg"], //Insertar fotos
       descripcion: this.formPublicar.get("descripcion")!.value,
       latitud: "", //No se implementa aún
       longitud: "", //No se implementa aún
