@@ -21,8 +21,8 @@ export class InmuebleService {
   addInmueble(inmueble:inmueble){
     return this.http.post<inmueble>(this.ruta_servidor+"/"+this.recurso, inmueble)
   }
-  updateInmueble(id:number,inmueble:inmueble){
-    return this.http.put<inmueble>(this.ruta_servidor+"/"+this.recurso+"/"+id.toString(), inmueble)
+  updateInmueble(inmueble:inmueble){
+    return this.http.put<inmueble>(this.ruta_servidor+"/"+this.recurso+"/"+inmueble.id.toString(), inmueble)
   }
   deleteInmueble(id:number){
     return this.http.delete(this.ruta_servidor +"/"+this.recurso + "/" + id.toString());
