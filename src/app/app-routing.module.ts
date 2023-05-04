@@ -7,16 +7,31 @@ import { VisualizeItemComponent } from './components/visualize-item/visualize-it
 import { MakeOpinionComponent } from './components/make-opinion/make-opinion.component';
 
 
+
+
+
 const routes: Routes = [
   {
     path:"",
     component: PrincipalComponent
   },
+
+
+  {
+    path:"visualizar/:id",
+  component:VisualizeItemComponent
+  },
+  { path: '', component:PrincipalComponent },
+  { path:'home', component:PrincipalComponent},
+
   { path: 'property-card', component:PropertyCardComponent },
   { path: 'publicar', component:PublicarInmuebleComponent },
   { path: 'visualizar', component:VisualizeItemComponent },
+  {
+  path: "resena/:id",
+  component:MakeOpinionComponent
+  },
   { path: 'resena', component:MakeOpinionComponent }
-
 ];
 
 @NgModule({

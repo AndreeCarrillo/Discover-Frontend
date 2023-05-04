@@ -15,8 +15,13 @@ import { PublicarInmuebleComponent } from './components/publicar-inmueble/public
 import { MakeOpinionComponent } from './components/make-opinion/make-opinion.component'
 import {FormBuilder, Validators} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+
+import { ReviewCardComponent } from './components/review-card/review-card.component';
+import {MatDatepickerModule, matDatepickerAnimations } from '@angular/material/datepicker';
+
 import{MatNativeDateModule} from '@angular/material/core';
 
 @NgModule({
@@ -28,8 +33,12 @@ import{MatNativeDateModule} from '@angular/material/core';
     VisualizeItemComponent,
     PublicarInmuebleComponent,
     MakeOpinionComponent,
+
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+
+    ReviewCardComponent
+
   ],
   imports: [
     BrowserModule,
@@ -40,7 +49,12 @@ import{MatNativeDateModule} from '@angular/material/core';
     HttpClientModule,
     MatStepperModule,
     NgbModule,
+
+
+    MatDatepickerModule,
     MatNativeDateModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

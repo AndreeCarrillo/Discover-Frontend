@@ -14,7 +14,11 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSliderModule} from '@angular/material/slider';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+
+
+
+import { FormsModule } from '@angular/forms';
+import {MatDatepickerModule, matDatepickerAnimations} from '@angular/material/datepicker';
 
 
 
@@ -36,6 +40,10 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatSelectModule,
     MatCheckboxModule,
     MatSliderModule,
+
+
+    FormsModule,
+
     MatDatepickerModule
   ],
   exports: [
@@ -53,6 +61,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatSelectModule,
     MatCheckboxModule,
     MatSliderModule,
+
+    FormsModule,
     MatDatepickerModule
   ]
 })

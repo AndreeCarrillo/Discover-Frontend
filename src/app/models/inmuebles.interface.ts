@@ -1,6 +1,8 @@
 export interface inmueble {
     "id": number
     "id_propietario": number
+    "tipo_inmueble": string
+    "tipo_alojamiento":string
     "id_ubigeo": number
     "direccion": string
     "precio": number

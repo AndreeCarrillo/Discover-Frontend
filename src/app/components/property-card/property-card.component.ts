@@ -15,6 +15,8 @@ export class PropertyCardComponent implements OnInit, OnChanges{
   @Input() property:inmueble={
     "id": 0,
     "id_propietario": 1,
+    "tipo_inmueble": "",
+    "tipo_alojamiento": "",
     "id_ubigeo": 0,
     "direccion": "",
     "precio": 0,
