@@ -6,6 +6,8 @@ import { PublicarInmuebleComponent } from './components/publicar-inmueble/public
 import { VisualizeItemComponent } from './components/visualize-item/visualize-item.component';
 import { MakeOpinionComponent } from './components/make-opinion/make-opinion.component';
 
+
+
 const routes: Routes = [
   {
     path:"user/:id",
@@ -20,7 +22,8 @@ const routes: Routes = [
   { path: 'property-card', component:PropertyCardComponent },
   { path: 'publicar', component:PublicarInmuebleComponent },
   { path: 'visualizar', component:VisualizeItemComponent },
-  {path:'opinion', component:MakeOpinionComponent}
+  { path: 'resena', component:MakeOpinionComponent }
+
 ];
 
 @NgModule({

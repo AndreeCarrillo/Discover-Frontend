@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
+
 import { HttpClient } from '@angular/common/http';
 import { usuario } from '../models/usuario.interface';
+
 
 @Injectable({
   providedIn: 'root'
@@ -16,15 +18,15 @@ export class UsuarioService {
     return this.http.get<usuario[]>(this.ruta_servidor +"/"+ this.recurso);
   }
   getUsuario(id:number){
-    return this.http.get<usuario>(this.ruta_servidor +"/"+ this.recurso + '/' + id);
+    return this.http.get<usuario>(this.ruta_servidor +"/"+ this.recurso + '/' + id.toString());
   }
   addUsuario(usuario:usuario){
     return this.http.post(this.ruta_servidor +"/"+ this.recurso, usuario);
   }
-  updateUsuario(usuario:usuario){
-    return this.http.put(this.ruta_servidor +"/"+ this.recurso+"/"+usuario.id, usuario);
+  updateUsuario(id:number, usuario:usuario){
+    return this.http.put(this.ruta_servidor +"/"+ this.recurso+"/"+usuario.id.toString(), usuario);
   }
   deleteUsuario(id:number){
-    return this.http.delete(this.ruta_servidor +"/"+ this.recurso + '/' + id);
+    return this.http.delete(this.ruta_servidor +"/"+ this.recurso + '/' + id.toString());
   }
 }

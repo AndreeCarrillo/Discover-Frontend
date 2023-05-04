@@ -1,4 +1,6 @@
+
 <mat-card class="property-card justify-content-between" style="height: 98%; padding: 0 15px; background-color: #BEED3B; border-radius: 15px; margin: 15px; " *ngIf="property;else dontexist">
+
     <mat-card-header>
         <div mat-card-avatar class="img-header-card" style="background-image: url({{user.link_foto_perfil}});"></div>
         <mat-card-title style="font-family: 'Inter'; font-weight: bold;">{{user.nombre}} {{user.apellido_paterno}}</mat-card-title>
@@ -29,3 +31,4 @@
 </mat-card>
 <ng-template #dontexist>
 </ng-template>
+
