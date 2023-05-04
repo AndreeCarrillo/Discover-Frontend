@@ -19,26 +19,28 @@ export class MakeOpinionComponent implements OnInit {
   constructor(private _formBuilder: FormBuilder,private userservice:UsuarioService,private resenaservice:ResenaService,
     private router: Router, private activatedRouter: ActivatedRoute,
     private snackBar:MatSnackBar) {
-    
-
   }
-  descripcion:string = '';
+ 
+  
+  
+  ngOnInit(){
+    this.loadusersesion();
+    this.reactiveForm();
+    this.myForm = this._formBuilder.group({
+      id:[""],
+      descripcion:['',[Validators.required]],
+      generalRating: ['', Validators.required],
+      locationRating: ['', Validators.required],
+      facilitiesRating: ['', Validators.required],
+      securityRating: ['', Validators.required],
+    });
+  }
   
   reactiveForm():void {
     this.myForm = this._formBuilder.group({
       id:[""],
-      descripcion:['']
+      descripcion:['',[Validators.required]]
     });
-  }
-  ngOnInit(){
-    
-    this.loadusersesion();
-    this.reactiveForm();
-    this.myForm = this._formBuilder.group({
-      descripcion: ['']
-    });
-    
-    
   }
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
@@ -116,17 +118,16 @@ export class MakeOpinionComponent implements OnInit {
     average = Math.ceil(average);
     console.log(average)
     console.log(this.usermain)
-    const descripcion = this.myForm.controls['descripcion'].value;
-    console.log(descripcion);
+    console.log(this.myForm.get("descripcion")!.value);
     const resena:resena={
       id: this.id,
       id_inmueble:4 ,
       id_user: this.usermain.id,
       calificacion:average ,
-      observaciones: this.descripcion,
+      observaciones: this.myForm.get("descripcion")!.value,
       link_foto: this.url
     }
-    console.log('a')
+    console.log(this.id)
     console.log(resena.id_inmueble)
     console.log(resena.id_user)
     console.log(resena.calificacion)
@@ -134,10 +135,10 @@ export class MakeOpinionComponent implements OnInit {
     console.log(resena.link_foto)
 
 
-    this.resenaservice.addreseña(resena).subscribe({
+    this.resenaservice.addresena(resena).subscribe({
       next: (data)  => {
         this.router.navigate(["/home"]);
-        this.snackBar.open("El paquete se ha vendido correctamente","OK",{duration:3000});
+        this.snackBar.open("La reseña se ha registrado correctamente","OK",{duration:3000});
       },
       error: (err) => {
         console.log(err);
