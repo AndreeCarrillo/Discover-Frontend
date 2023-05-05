@@ -30,6 +30,23 @@
     color: #006464;
     text-align: center;
 }
+.title-name{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 36px;
+    color: black;
+    text-align: left;
+}
+.sub-title,.confirmation{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #006464;
+    text-align: left;
+}
 .form-opinion{
     width: 70%;
     margin: 0 auto;
@@ -46,15 +63,7 @@
     height: 100px;
     margin: 0 20px;
 }
-.sub-title{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 36px;
-    color: #006464;
-    text-align: left;
-}
+
 .user-info {
     display: flex;
     align-items: center;
@@ -85,3 +94,13 @@ ngb-rating{
     font-size: 50px;
     margin-left: 12%;
 }
+.upload-img{
+    margin-left: 100px;
+    width: 300px;
+    padding: 20px;
+}
+.button-s{
+    padding: 30px;
+    margin-top: 20px;
+    margin-left: 2%;
+ }

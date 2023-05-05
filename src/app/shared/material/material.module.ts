@@ -16,6 +16,12 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSliderModule} from '@angular/material/slider';
 
 
+
+import { FormsModule } from '@angular/forms';
+import {MatDatepickerModule, matDatepickerAnimations} from '@angular/material/datepicker';
+
+
+
 @NgModule({
   declarations: [],
   imports: [
@@ -33,7 +39,12 @@ import {MatSliderModule} from '@angular/material/slider';
     MatAutocompleteModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatSliderModule
+    MatSliderModule,
+
+
+    FormsModule,
+
+    MatDatepickerModule
   ],
   exports: [
     MatToolbarModule,
@@ -49,7 +60,10 @@ import {MatSliderModule} from '@angular/material/slider';
     MatAutocompleteModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatSliderModule
+    MatSliderModule,
+
+    FormsModule,
+    MatDatepickerModule
   ]
 })
 export class MaterialModule { }
