@@ -2,12 +2,22 @@ body{
   margin: 10px 80px;
 }
 
+.title_datos{
+  margin-top: 30px;
+  font-size:30px;
 
+}
+.scale-up-bottom{animation:scale-up-bottom 1s; } @keyframes scale-up-bottom{0%{transform:scale(.5);transform-origin:center bottom}100%{transform:scale(1);transform-origin:center bottom}}
+
+.blur-in{animation:blur-in 1s linear both} @keyframes blur-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
 
 .start-property{
   display: flex;
-  justify-content:flex-start;
+  justify-content:space-between;
   align-items: center;
+}
+.start-property{
+  font-weight: bold;
 }
 .photos-property{
   margin: 10px 0px;
@@ -65,7 +75,10 @@ body{
   align-items: center;
 }
 
-
+.caract_text{
+  margin-bottom: 0px;
+  margin-bottom: 0px;
+}
 
 .description{
   margin:30px 10px;

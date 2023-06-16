@@ -1,5 +1,6 @@
 .formulario{
     padding: 5%;
+    padding-top: 3%;
 }
 .formField{
     margin: 1%;
@@ -42,4 +43,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.title{
+
+  padding-top: 50px;
+  background-color: #BEED3B;
+  font-size: 35px;
+  padding-bottom: 30px;
+  margin-bottom: 0;
+  text-align: center;
 }

@@ -285,6 +285,8 @@
     {
       "id": 1,
       "id_propietario": 13,
+      "tipo_inmueble": "Departamento",
+      "tipo_alojamiento": "Habitacion Compartida",
       "id_ubigeo": 150101,
       "direccion": "Jirón de la Unión 456, Cercado de Lima",
       "precio": 1200,
@@ -315,6 +317,8 @@
     {
       "id": 2,
       "id_propietario": 7,
+      "tipo_inmueble": "Departamento",
+      "tipo_alojamiento": "Alojamiento Entero",
       "id_ubigeo": 150102,
       "direccion": "Calle Los Delfines 123, Urb. Santa Rosa",
       "precio": 750,
@@ -343,6 +347,8 @@
     {
       "id": 3,
       "id_propietario": 19,
+      "tipo_inmueble": "Casa",
+      "tipo_alojamiento": "Alojamiento Entero",
       "id_ubigeo": 150103,
       "direccion": "Av. Separadora Industrial 345, Salamanca",
       "precio": 2000,
@@ -371,6 +377,8 @@
     {
       "id": 4,
       "id_propietario": 2,
+      "tipo_inmueble": "Departamento",
+      "tipo_alojamiento": "Alojamiento Entero",
       "id_ubigeo": 150104,
       "direccion": "Calle San Martín 567",
       "precio": 900,
@@ -398,6 +406,8 @@
     {
       "id": 5,
       "id_propietario": 16,
+      "tipo_inmueble": "Departamento",
+      "tipo_alojamiento": "Habitacion Compartida",
       "id_ubigeo": 150105,
       "direccion": "Av. Bolivia 789",
       "precio": 1300,
@@ -425,6 +435,8 @@
     {
       "id": 6,
       "id_propietario": 10,
+      "tipo_inmueble": "Casa",
+      "tipo_alojamiento": "Alojamiento Entero",
       "id_ubigeo": 150106,
       "direccion": "Av. San Juan 321, Urb. Santo Domingo",
       "precio": 1800,
@@ -453,6 +465,8 @@
     {
       "id": 7,
       "id_propietario": 4,
+      "tipo_inmueble": "Casa",
+      "tipo_alojamiento": "Habitacion Compartida",
       "id_ubigeo": 150107,
       "direccion": "Jirón Los Laureles 112",
       "precio": 2200,
@@ -480,6 +494,8 @@
     {
       "id": 8,
       "id_propietario": 11,
+      "tipo_inmueble": "Departamento",
+      "tipo_alojamiento": "Alojamiento Entero",
       "id_ubigeo": 150108,
       "direccion": "Calle Los Pinos 123, Urb. La Campiña",
       "precio": 1500,
@@ -507,6 +523,8 @@
     {
       "id": 9,
       "id_propietario": 6,
+      "tipo_inmueble": "Departamento",
+      "tipo_alojamiento": "Habitacion Privada",
       "id_ubigeo": 150109,
       "direccion": "Av. Nueva Toledo 431",
       "precio": 850,
@@ -535,6 +553,8 @@
     {
       "id": 10,
       "id_propietario": 18,
+      "tipo_inmueble": "Casa",
+      "tipo_alojamiento": "Alojamiento Entero",
       "id_ubigeo": 150110,
       "direccion": "Calle Los Alpes 145, Urb. Santa Luzmila",
       "precio": 2800,
@@ -565,6 +585,8 @@
     {
       "id": 11,
       "id_propietario": 3,
+      "tipo_inmueble": "Casa",
+      "tipo_alojamiento": "Alojamiento Entero",
       "id_ubigeo": 150111,
       "direccion": "Av. Riva Agüero 678",
       "precio": 1100,
@@ -592,6 +614,8 @@
     {
       "id": 12,
       "id_propietario": 15,
+      "tipo_inmueble": "Casa",
+      "tipo_alojamiento": "Habitacion Privada",
       "id_ubigeo": 150112,
       "direccion": "Av. Carlos Izaguirre 987",
       "precio": 1600,
@@ -619,6 +643,8 @@
     {
       "id": 13,
       "id_propietario": 8,
+      "tipo_inmueble": "Departamento",
+      "tipo_alojamiento": "Habitacion Privada",
       "id_ubigeo": 150113,
       "direccion": "Calle San Felipe 890",
       "precio": 700,
@@ -646,6 +672,8 @@
     {
       "id": 14,
       "id_propietario": 9,
+      "tipo_inmueble": "Casa",
+      "tipo_alojamiento": "Habitacion Privada",
       "id_ubigeo": 1501014,
       "direccion": "Calle Los Alamos 135, Urb. Las Praderas",
       "precio": 1900,
@@ -674,6 +702,8 @@
     {
       "id": 15,
       "id_propietario": 5,
+      "tipo_inmueble": "Casa",
+      "tipo_alojamiento": "Habitacion Privada",
       "id_ubigeo": 150115,
       "direccion": "Av. Manco Cápac 543",
       "precio": 1400,
@@ -701,6 +731,8 @@
     {
       "id": 16,
       "id_propietario": 1,
+      "tipo_inmueble": "Departamento",
+      "tipo_alojamiento": "Habitacion Privada",
       "id_ubigeo": 150116,
       "direccion": "Calle Los Olivos 321",
       "precio": 1000,
@@ -731,6 +763,8 @@
     {
       "id": 17,
       "id_propietario": 14,
+      "tipo_inmueble": "Casa",
+      "tipo_alojamiento": "Habitacion Privada",
       "id_ubigeo": 150117,
       "direccion": "Calle Los Nogales 654, Urb. El Trébol",
       "precio": 2400,
@@ -757,6 +791,8 @@
     {
       "id": 18,
       "id_propietario": 20,
+      "tipo_inmueble": "Departamento",
+      "tipo_alojamiento": "Habitacion Privada",
       "id_ubigeo": 150118,
       "direccion": "Av. Central 432, San Antonio",
       "precio": 950,
@@ -787,6 +823,8 @@
     {
       "id": 19,
       "id_propietario": 12,
+      "tipo_inmueble": "Casa",
+      "tipo_alojamiento": "Habitacion Privada",
       "id_ubigeo": 150119,
       "direccion": "Av. Lurín 785",
       "precio": 1800,
@@ -819,6 +857,8 @@
     {
       "id": 20,
       "id_propietario": 7,
+      "tipo_inmueble": "Departamento",
+      "tipo_alojamiento": "Habitacion Privada",
       "id_ubigeo": "150120",
       "direccion": "Calle Gonzales Prada 678",
       "precio": 1200,
@@ -846,44 +886,6 @@
         28,
         29
       ]
-    },
-    {
-      "id": 21,
-      "id_propietario": 18,
-      "id_ubigeo": "150133",
-      "direccion": "Av. San Juan 888",
-      "precio": 2300,
-      "n_dormitorios": 2,
-      "n_banios": 2,
-      "n_huespedes": 6,
-      "m2_cuadrados": 200,
-      "tiempo_antiguedad": "Menos de 1 año",
-      "link_fotos": [
-        "https://i.postimg.cc/CKMMbZ3m/364014549.webp",
-        "https://i.postimg.cc/FKqt17Nf/364014536.jpg",
-        "https://i.postimg.cc/m2S0CdTW/364014535.jpg"
-      ],
-      "descripcion": "Muy espacioso inmueble",
-      "latitud": "",
-      "longitud": "",
-      "caracteristicas_inmueble": [
-        1,
-        3,
-        7,
-        8,
-        9,
-        11,
-        12,
-        13,
-        14,
-        15,
-        18,
-        22,
-        26,
-        27,
-        29
-      ],
-      "calificacion": 0
     }
   ],
   "departamentos": [
