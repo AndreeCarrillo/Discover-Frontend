@@ -24,6 +24,7 @@ import {MatDatepickerModule, matDatepickerAnimations } from '@angular/material/d
 
 import{MatNativeDateModule} from '@angular/material/core';
 import { MakeAlquilerComponent } from './components/make-alquiler/make-alquiler.component';
+import { ViewProfileComponent } from './components/view-profile/view-profile.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { MakeAlquilerComponent } from './components/make-alquiler/make-alquiler.
     RegisterComponent,
 
     ReviewCardComponent,
-      MakeAlquilerComponent
+      MakeAlquilerComponent,
+      ViewProfileComponent
 
   ],
   imports: [

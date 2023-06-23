@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 .title_alquiler{
   display: flex;
   justify-content: center;
@@ -41,4 +43,18 @@ body{
   justify-content: center;
   align-items: center;
   margin-top: 40px;
+}
+.div_button button{
+  border-radius: 15px;
+  padding: 10px 20px;
+  border-color: #789626;
+  border-width: 5px;
+  background-color:#BEED3B;
+  transition: 0.5s all ease;
+}
+.div_button button:hover{
+  transition: 0.5s all ease;
+  border-color: #789626;
+  background-color:#789626;
+  color: white;
 }
