@@ -433,36 +433,7 @@
       ]
     },
     {
-      "id": 6,
-      "id_propietario": 10,
-      "tipo_inmueble": "Casa",
-      "tipo_alojamiento": "Alojamiento Entero",
-      "id_ubigeo": 150106,
-      "direccion": "Av. San Juan 321, Urb. Santo Domingo",
-      "precio": 1800,
-      "n_dormitorios": 4,
-      "n_banios": 3,
-      "n_huespedes": 7,
-      "m2_cuadrados": 140,
-      "tiempo_antiguedad": "Más de 40 años",
-      "link_fotos": [
-        "https://i.postimg.cc/rstv5gn5/367556046.webp",
-        "https://i.postimg.cc/qRtkZsDv/367556044.webp",
-        "https://i.postimg.cc/NGmt9fWS/367556038.webp"
-      ],
-      "descripcion": "Casa de dos pisos con 4 dormitorios y 3 baños, en un barrio histórico. Cuenta con un amplio jardín y espacios acogedores. Perfecta para familias que disfrutan de la arquitectura clásica.",
-      "caracteristicas_inmueble": [
-        3,
-        4,
-        5,
-        7,
-        12,
-        21,
-        22,
-        30
-      ]
-    },
-    {
+
       "id": 7,
       "id_propietario": 4,
       "tipo_inmueble": "Casa",
@@ -1900,6 +1871,14 @@
       "observaciones": "holahola",
       "link_foto": "https://i.postimg.cc/k5mRVLnk/84459.png",
       "id": 53
+    },
+    {
+      "id_inmueble": 5,
+      "id_user": 19,
+      "calificacion": 4,
+      "observaciones": "Excelente experiencia",
+      "link_foto": "https://i.postimg.cc/k5mRVLnk/84459.png",
+      "id": 54
     }
   ]
 }
