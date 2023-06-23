@@ -23,6 +23,8 @@ import { ReviewCardComponent } from './components/review-card/review-card.compon
 import {MatDatepickerModule, matDatepickerAnimations } from '@angular/material/datepicker';
 
 import{MatNativeDateModule} from '@angular/material/core';
+import { MakeAlquilerComponent } from './components/make-alquiler/make-alquiler.component';
+import { ViewProfileComponent } from './components/view-profile/view-profile.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import{MatNativeDateModule} from '@angular/material/core';
     LoginComponent,
     RegisterComponent,
 
-    ReviewCardComponent
+    ReviewCardComponent,
+      MakeAlquilerComponent,
+      ViewProfileComponent
 
   ],
   imports: [

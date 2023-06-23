@@ -433,6 +433,7 @@
       ]
     },
     {
+
       "id": 7,
       "id_propietario": 4,
       "tipo_inmueble": "Casa",
@@ -856,38 +857,6 @@
         28,
         29
       ]
-    },
-    {
-      "id": 21,
-      "id_propietario": 18,
-      "id_ubigeo": "150112",
-      "direccion": "Jr. La honestida",
-      "tipo_inmueble": "",
-      "tipo_alojamiento": "",
-      "precio": 500,
-      "n_dormitorios": 4,
-      "n_banios": 2,
-      "n_huespedes": 5,
-      "m2_cuadrados": 140,
-      "tiempo_antiguedad": "Menos de 1 año",
-      "link_fotos": [
-        "https://i.postimg.cc/CKMMbZ3m/364014549.webp",
-        "https://i.postimg.cc/FKqt17Nf/364014536.jpg",
-        "https://i.postimg.cc/m2S0CdTW/364014535.jpg"
-      ],
-      "descripcion": "Como apartamento",
-      "latitud": "",
-      "longitud": "",
-      "caracteristicas_inmueble": [
-        1,
-        3,
-        9,
-        19,
-        22,
-        25,
-        27
-      ],
-      "calificacion": 0
     }
   ],
   "departamentos": [

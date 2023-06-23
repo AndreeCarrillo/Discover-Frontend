@@ -31,7 +31,7 @@ export class RegisterComponent {
     private snackBar:MatSnackBar){
       this.currentDate = new Date();
     }
-
+    value = 'Clear me';
     ngOnInit(){
       this.reactiveForm();
     }
@@ -44,7 +44,10 @@ export class RegisterComponent {
         email:["",[Validators.required, Validators.maxLength(60)]],
         password:["",[Validators.required, Validators.maxLength(20)]],
         phone:["",[Validators.required, Validators.maxLength(9)]],
-        dni:["",[Validators.required, Validators.maxLength(8)]]
+        dni:["",[Validators.required, Validators.maxLength(8)]],
+        fecha_nacimiento:["", Validators.required],
+        linkFotoPerfil:["", Validators.required],
+        linkDNI:["", Validators.required]
       });
   }
   saveUsuario():void{
@@ -57,10 +60,10 @@ export class RegisterComponent {
       password: this.myForm.get("password")!.value,
       telefono: this.myForm.get("phone")!.value,
       dni: this.myForm.get("dni")!.value,
-      fecha_nacimiento:(this.currentDate!.valueOf.toString()),
+      fecha_nacimiento: this.myForm.get("fecha_nacimiento")!.value,
       fecha_inscripcion:(this.currentDate!.valueOf.toString()),
-      link_foto_dni: this.myForm.get("")!.value,
-      link_foto_perfil:this.myForm.get("")!.value,
+      link_foto_dni: this.myForm.get("linkFotoPerfil")!.value,
+      link_foto_perfil:this.myForm.get("linkDNI")!.value,
     }
 
     this.UsuarioService.addUsuario(usuario).subscribe({
@@ -83,4 +86,17 @@ export class RegisterComponent {
 
 
 
+
+
+
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  const imageInput = document.getElementById("image-input") as HTMLInputElement;
+  const changeButton:any = document.getElementById("change-button");
+  const myDiv :any = document.getElementById("my-div");
+  changeButton.addEventListener("click", function() {
+    const imageUrl = imageInput.value;
+    myDiv.style.backgroundImage = `url(${imageUrl})`;
+  });
+});

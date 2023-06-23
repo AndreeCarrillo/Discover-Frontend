@@ -6,13 +6,15 @@
 <app-navbar [usermain]="usermain"></app-navbar>
 <body>
   <main>
-    <h1>Datos del inmueble</h1>
-    <div class="start-property">
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ubication">{{property.direccion}}</span> - <span>{{property.tiempo_antiguedad}}</span></p>
+    <h1 class="title_datos scale-up-bottom">Datos del inmueble</h1>
+    <div class="start-property scale-up-bottom">
+      <p><span class="ubication">{{property.direccion}}</span> - <span>{{property.tiempo_antiguedad}}</span></p>
+      <button mat-raised-button color="primary" routerLink="/alquiler/{{property.id}}"> Alquilar este inmueble</button>
     </div>
+
     <div class="photos-property">
       <!-- <mat-grid-list cols="4" rowHeight="100px">
-        <mat-grid-tile class="grid-photo"
+        <mat-grid-tile class="grid-phot"
             *ngFor="let photo of photos"
             [colspan]="photo.cols"
             [rowspan]="photo.rows"
@@ -40,15 +42,14 @@
       </div>
     </div>
     <div class="main-features">
-      <div class="features_guests"><span class="material-symbols-outlined">group</span><p>&nbsp;<span>{{property.n_huespedes}}</span>&nbsp;&nbsp;huésped(s)</p></div><!--Pa cambiar con el ts-->
-      <div class="features_bedrooms"><span class="material-symbols-outlined">bed</span><p>&nbsp;<span>{{property.n_dormitorios}}</span>&nbsp;&nbsp;dormitorio(s)</p></div><!--Pa cambiar con el ts-->
-      <div class="features_bathrooms"><span class="material-symbols-outlined">wc</span><p>&nbsp;<span>{{property.n_banios}}</span>&nbsp;&nbsp;baño(s)</p></div><!--Pa cambiar con el ts-->
-      <div class="features_area"><span class="material-symbols-outlined">home</span><p>&nbsp;<span>{{property.m2_cuadrados}}</span>&nbsp;&nbsp;m2</p></div><!--Pa cambiar con el ts-->
+      <div class="features_guests"><span class="material-symbols-outlined">group</span><p class="caract_text">&nbsp;<span>{{property.n_huespedes}}</span>&nbsp;&nbsp;huésped(s)</p></div><!--Pa cambiar con el ts-->
+      <div class="features_bedrooms"><span class="material-symbols-outlined">bed</span><p class="caract_text">&nbsp;<span>{{property.n_dormitorios}}</span>&nbsp;&nbsp;dormitorio(s)</p></div><!--Pa cambiar con el ts-->
+      <div class="features_bathrooms"><span class="material-symbols-outlined">wc</span><p class="caract_text">&nbsp;<span>{{property.n_banios}}</span>&nbsp;&nbsp;baño(s)</p></div><!--Pa cambiar con el ts-->
+      <div class="features_area"><span class="material-symbols-outlined">home</span><p class="caract_text">&nbsp;<span>{{property.m2_cuadrados}}</span>&nbsp;&nbsp;m2</p></div><!--Pa cambiar con el ts-->
     </div>
     <div class="description">
       <h2>Descripción</h2>
-      <p><span>{{property.descripcion}}
-      <!--Pa cambiar con el ts--></span></p>
+      <p><span>{{property.descripcion}}</span></p>
     </div>
     <div class="features">
       <h1>Qué ofrece este inmueble</h1>

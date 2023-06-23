@@ -151,7 +151,7 @@ export class MakeOpinionComponent implements OnInit {
     })
   }
   loadusersesion(){
-    this.userservice.getUsuario(19).subscribe({
+    this.userservice.getUsuario(10).subscribe({
     next: (data)=>{
       this.usermain=data;
     },
