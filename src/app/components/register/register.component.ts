@@ -82,13 +82,6 @@ export class RegisterComponent {
     this.router.navigate(["/login"]);
   }
 
-
-
-
-
-
-
-
 }
 
 document.addEventListener("DOMContentLoaded", function() {

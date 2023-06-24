@@ -9,6 +9,7 @@ import { LoginComponent } from './components/login/login.component';
 import { MakeAlquilerComponent } from './components/make-alquiler/make-alquiler.component';
 import { ViewProfileComponent } from './components/view-profile/view-profile.component';
 import { RegisterComponent } from './components/register/register.component';
+import { HistorialAlquilerComponent } from './components/historial-alquiler/historial-alquiler.component';
 
 
 const routes: Routes = [
@@ -36,7 +37,8 @@ const routes: Routes = [
   },
   { path: 'resena', component:MakeOpinionComponent },
   {path: "alquiler/:id", component: MakeAlquilerComponent},
-  {path: "view-profile/:id", component: ViewProfileComponent}
+  {path: "view-profile/:id", component: ViewProfileComponent},
+  {path: "historial-alquiler/:id", component:HistorialAlquilerComponent}
 ];
 
 @NgModule({

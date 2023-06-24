@@ -1191,37 +1191,37 @@
       "id": 25,
       "tipo": "Caracteristicas del inmueble",
       "nombre": "Tranquilo",
-      "icon": ""
+      "icon": "relax"
     },
     {
       "id": 26,
       "tipo": "Caracteristicas del inmueble",
       "nombre": "Ideal para familias",
-      "icon": ""
+      "icon": "family_restroom"
     },
     {
       "id": 27,
       "tipo": "Caracteristicas del inmueble",
       "nombre": "Excepcional",
-      "icon": ""
+      "icon": "auto_awesome"
     },
     {
       "id": 28,
       "tipo": "Caracteristicas del inmueble",
       "nombre": "Central",
-      "icon": ""
+      "icon": "filter_tilt_shift"
     },
     {
       "id": 29,
       "tipo": "Caracteristicas del inmueble",
       "nombre": "Espacioso",
-      "icon": ""
+      "icon": "social_distance"
     },
     {
       "id": 30,
       "tipo": "Caracteristicas del inmueble",
       "nombre": "Elegante",
-      "icon": ""
+      "icon": "local_bar"
     }
   ],
   "Alquiler": [
