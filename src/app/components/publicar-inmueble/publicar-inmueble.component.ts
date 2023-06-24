@@ -73,6 +73,7 @@ export class PublicarInmuebleComponent {
     const selectedIds: number[] = [];
 
     var contador: number = 1;
+
     this.isChecked.forEach(element => {
       if(element){
         selectedIds.push(contador);

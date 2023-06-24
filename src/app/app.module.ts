@@ -25,6 +25,7 @@ import {MatDatepickerModule, matDatepickerAnimations } from '@angular/material/d
 import{MatNativeDateModule} from '@angular/material/core';
 import { MakeAlquilerComponent } from './components/make-alquiler/make-alquiler.component';
 import { ViewProfileComponent } from './components/view-profile/view-profile.component';
+import { HistorialAlquilerComponent } from './components/historial-alquiler/historial-alquiler.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ViewProfileComponent } from './components/view-profile/view-profile.com
 
     ReviewCardComponent,
       MakeAlquilerComponent,
-      ViewProfileComponent
+      ViewProfileComponent,
+      HistorialAlquilerComponent
 
   ],
   imports: [
