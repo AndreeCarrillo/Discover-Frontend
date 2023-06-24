@@ -80,8 +80,6 @@ export class PublicarInmuebleComponent {
       contador++;
     });
 
-    //console.log(selectedIds);
-
     const inmueble:inmueble = {
       id: parseInt(""),
       id_propietario: 18, //Usuario configurado por defecto
