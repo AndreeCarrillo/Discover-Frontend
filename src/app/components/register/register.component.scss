@@ -11,9 +11,6 @@
   }
 
 .mainregister{
-  display:flex;
-  justify-content: center;
-  align-items: center;
     width: 60vw;
     font-family: 'Inter', sans-serif;
     font-weight: 400px;
@@ -22,11 +19,12 @@
 .register_text{
     font-family: 'Inter', sans-serif;
     font-weight:bolder;
+    text-align: center;
 }
 
 .img{
     height: 120vh;
-    width: 45vw;
+    width: 40vw;
     background-image: url("https://i.postimg.cc/cLCH4YG7/pexels-taryn-elliott-9565728.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -34,18 +32,11 @@
 }
 
 main{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
     width: 100%;
     height: 100%;
-}
-
-.central{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 .button_register{
     border-radius: 100px;
@@ -55,7 +46,7 @@ main{
     padding: 5px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .example-full-width .contra{
@@ -72,10 +63,23 @@ main{
     justify-content: center;
 }
 
-#my-div{
+.my-div{
   background-position: center;
   background-size: cover;
-  padding: 100px 200px;
+  padding: 140px;
+  margin: 0px 17vw;
+  background-color: red;
+}
+.my-div2{
+  background-position: center;
+  background-size: cover;
+  padding: 130px;
+  margin: 0px 24vw;
+  border-radius: 100%;
+  background-color: red;
+}
+.margin-top{
+  margin-top: 10px;
 }
 
 

@@ -5,10 +5,10 @@
     </section>
 
     <section class="mainregister">
-        <div class="central">
-            <h1 class="register_text" style="color: #006464">Únete a la familia de Discover</h1>
-            <form [formGroup]="myForm">
 
+
+            <form [formGroup]="myForm">
+              <h1 class="register_text" style="color: #006464">Únete a la familia de Discover</h1>
               <div class="container_1">
                 <mat-form-field class="mat-form">
                   <mat-label>Nombre</mat-label>
@@ -17,9 +17,6 @@
                     <span style="color: red;"> Este campo es obligatorio</span>
                   </div>
                 </mat-form-field>
-
-                <br>
-                <br>
 
                 <mat-form-field class="mat-form">
                 <mat-label>ApellidoPaterno</mat-label>
@@ -70,8 +67,6 @@
                     <span style="color: red;">La clave debe ser igual</span>
                   </div>
                 </mat-form-field>
-
-
               </div>
 
               <br>
@@ -79,7 +74,7 @@
 
               <div class="container_1">
 
-                <mat-form-field >
+                <mat-form-field class="mat-form" appearance="fill">
                   <mat-label>Telefono</mat-label>
                   <input matInput formControlName="phone" placeholder="Ingrese telefono...">
                   <div *ngIf="myForm.get('phone')?.hasError('required') && myForm.get('phone')?.touched">
@@ -87,10 +82,8 @@
                   </div>
                 </mat-form-field>
 
-                <br>
-                <br>
 
-                <mat-form-field >
+                <mat-form-field appearance="fill" class="mat-form">
                   <mat-label>Dni</mat-label>
                   <input matInput formControlName="dni" placeholder="Ingrese dni...">
                   <div *ngIf="myForm.get('dni')?.hasError('required') && myForm.get('dni')?.touched">
@@ -101,7 +94,7 @@
               </div>
 
               <div class="container_1">
-                <mat-form-field appearance="fill">
+                <mat-form-field appearance="fill" class="mat-form">
                   <mat-label>Fecha de nacimiento</mat-label>
                   <input matInput [matDatepicker]="picker" formControlName="fecha_nacimiento">
                   <mat-hint>MM/DD/YYYY</mat-hint>
@@ -115,7 +108,20 @@
 
 
               <div class="container_1">
-                <mat-form-field >
+                <mat-form-field appearance="fill" class="mat-form">
+                  <mat-label>Link foto DNI</mat-label>
+                  <input matInput formControlName="linkFotoPerfil" placeholder="Ingrese URL..." id="image-input">
+                  <div *ngIf="myForm.get('linkFotoPerfil')?.hasError('required') && myForm.get('linkFotoPerfil')?.touched">
+                    <span style="color: red;"> Este campo es obligatorio</span>
+                  </div>
+                </mat-form-field>
+
+                <button mat-raised-button color="primary" id="change-button">Vista Previa</button>
+              </div>
+              <div id="my-div" class="my-div"></div>
+
+              <div class="container_1 margin-top">
+                <mat-form-field appearance="fill" class="mat-form">
                   <mat-label>Link foto de perfil</mat-label>
                   <input matInput formControlName="linkFotoPerfil" placeholder="Ingrese URL..." id="image-input">
                   <div *ngIf="myForm.get('linkFotoPerfil')?.hasError('required') && myForm.get('linkFotoPerfil')?.touched">
@@ -125,14 +131,12 @@
 
                 <button mat-raised-button color="primary" id="change-button">Vista Previa</button>
               </div>
+              <div id="my-div2" class="my-div2"></div>
 
-
-              <div id="my-div"></div>
 
               <div class="button_register">
                 <button mat-raised-button color="primary">REGÍSTRATE</button>
               </div>
             </form>
-      </div>
     </section>
 </main>
