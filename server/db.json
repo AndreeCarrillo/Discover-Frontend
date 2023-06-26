@@ -433,7 +433,6 @@
       ]
     },
     {
-
       "id": 7,
       "id_propietario": 4,
       "tipo_inmueble": "Casa",
@@ -1879,6 +1878,22 @@
       "observaciones": "Excelente experiencia",
       "link_foto": "https://i.postimg.cc/k5mRVLnk/84459.png",
       "id": 54
+    },
+    {
+      "id_inmueble": 4,
+      "id_user": 10,
+      "calificacion": 3.25,
+      "observaciones": "GOOD",
+      "link_foto": "https://i.postimg.cc/k5mRVLnk/84459.png",
+      "id": 55
+    },
+    {
+      "id_inmueble": 4,
+      "id_user": 10,
+      "calificacion": 4.3,
+      "observaciones": "Me gusto la cocina",
+      "link_foto": "https://i.postimg.cc/k5mRVLnk/84459.png",
+      "id": 56
     }
   ]
 }

@@ -252,17 +252,17 @@ export class PrincipalComponent implements OnInit{
       this.sefiltro = true;
     }
     if(this.guests_Filter!=0){
-      let variable = this.properties_filter.filter((property)=>property.n_huespedes==this.guests_Filter)
+      let variable = this.properties_filter.filter((property)=>property.n_huespedes>=this.guests_Filter)
       this.properties_filter = variable;
       this.sefiltro = true;
     }
     if(this.bedrooms_Filter!=0){
-      let variable = this.properties_filter.filter((property)=>property.n_dormitorios==this.bedrooms_Filter)
+      let variable = this.properties_filter.filter((property)=>property.n_dormitorios>=this.bedrooms_Filter)
       this.properties_filter = variable;
       this.sefiltro = true;
     }
     if(this.bathrooms_Filter!=0){
-      let variable = this.properties_filter.filter((property)=>property.n_banios==this.bathrooms_Filter)
+      let variable = this.properties_filter.filter((property)=>property.n_banios>=this.bathrooms_Filter)
       this.properties_filter = variable;
       this.sefiltro = true;
     }
