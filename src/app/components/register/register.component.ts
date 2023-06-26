@@ -22,6 +22,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
+  ngPassword:Boolean=false;
   myForm!:FormGroup;
   id!:number;
   currentDate: Date;
@@ -31,7 +32,6 @@ export class RegisterComponent {
     private snackBar:MatSnackBar){
       this.currentDate = new Date();
     }
-    value = 'Clear me';
     ngOnInit(){
       this.reactiveForm();
     }
@@ -79,7 +79,7 @@ export class RegisterComponent {
   }
 
   volverLogin():void{
-    this.router.navigate(["/login"]);
+    this.router.navigate(["/"]);
   }
 
 }
@@ -93,3 +93,13 @@ document.addEventListener("DOMContentLoaded", function() {
     myDiv.style.backgroundImage = `url(${imageUrl})`;
   });
 });
+document.addEventListener("DOMContentLoaded", function() {
+  const imageInput = document.getElementById("image-input2") as HTMLInputElement;
+  const changeButton:any = document.getElementById("change-button2");
+  const myDiv :any = document.getElementById("my-div2");
+  changeButton.addEventListener("click", function() {
+    const imageUrl = imageInput.value;
+    myDiv.style.backgroundImage = `url(${imageUrl})`;
+  });
+});
+
