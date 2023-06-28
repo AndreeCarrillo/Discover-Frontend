@@ -94,12 +94,15 @@ export class MakeOpinionComponent implements OnInit {
   isLinear = false;
   usermain:userInformation = {
     id: 0,
-    fullName: '',
+    name: "",
+    apellidoPaterno: "",
+    apellidoMaterno: "",
+    dni: "",
     telephone: '',
     email: '',
     dateAfiiliation: '',
     dateBirth: '',
-    linkFotoPerfil: '',
+    linkFotoPerfil: ''
   }
   saveresena():void{
     const ratings= this.getRatingsAsJson();

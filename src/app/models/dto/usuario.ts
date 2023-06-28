@@ -18,7 +18,10 @@ export interface registerUserRequest {
 
 export interface userInformation {
     id:number
-    fullName:string
+    name:string
+    apellidoPaterno:string
+    apellidoMaterno:string
+    dni:string
     telephone:string
     email:string
     dateAfiiliation:string
