@@ -1,8 +1,8 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { allInmueblesResponse } from 'src/app/models/dto/inmueble';
 import { inmueble } from 'src/app/models/inmuebles.interface';
 import { ubigeo } from 'src/app/models/ubigeo.interface';
 import { usuario } from 'src/app/models/usuario.interface';
-import { UbigeoService } from 'src/app/services/ubigeo.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
@@ -12,25 +12,26 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 })
 export class PropertyCardComponent implements OnInit, OnChanges{
 
-  @Input() property:inmueble={
-    "id": 0,
-    "id_propietario": 1,
-    "tipo_inmueble": "",
-    "tipo_alojamiento": "",
-    "id_ubigeo": 0,
-    "direccion": "",
-    "precio": 0,
-    "n_dormitorios": 0,
-    "n_banios": 0,
-    "n_huespedes": 0,
-    "m2_cuadrados": 0,
-    "tiempo_antiguedad": "",
-    "link_fotos": [],
-    "descripcion": "",
-    "latitud": "",
-    "longitud": "",
-    "caracteristicas_inmueble": [],
-    "calificacion": 0
+  @Input() property:allInmueblesResponse={
+    id:0,
+    linkPhotoUser:"",
+    fullName:"",
+    province:"",
+    department:"",
+    district:"",
+    linkPhotoProperty:"",
+    price:0,
+    squareMeter:0,
+    numBedrooms:0,
+    numGuest:0,
+    numBathrooms:0,
+    description:"",
+    properType:"",
+    sharedRoom:"",
+    caracteristicaList: [{
+        featureType:"",
+        featureName:""
+    }]
   };
   user:usuario = {
     "id": 0,
@@ -51,7 +52,7 @@ export class PropertyCardComponent implements OnInit, OnChanges{
   provincia!:string;
   district!:string;
 
-  constructor(private usuarioservice: UsuarioService, private ubigeoservice:UbigeoService){
+  constructor(private usuarioservice: UsuarioService){
   }
   ngOnInit(): void {
     
@@ -61,34 +62,34 @@ export class PropertyCardComponent implements OnInit, OnChanges{
     this.loadUbigeo()
   }
   loadUser(){
-    this.usuarioservice.getUsuario(this.property.id_propietario).subscribe({
-      next: (data)=>{
-        this.user=data;
-      },
-      error: (err)=>{
-        console.log(err);
-      }
-    })
+    // this.usuarioservice.getUsuario(this.property.id_propietario).subscribe({
+    //   next: (data)=>{
+    //     this.user=data;
+    //   },
+    //   error: (err)=>{
+    //     console.log(err);
+    //   }
+    // })
   }
   loadUbigeo(){
-    this.ubigeoservice.get_ubigeo().subscribe({
-      next: (data)=>{
-        this.ubigeo=data
-        this.ubigeo.forEach((department)=>{
-          department.provincias.forEach((provincia)=>{
-            provincia.distritos.forEach((distrito)=>{
-              if(distrito.ubigeo==this.property.id_ubigeo){
-                this.departament=department.nombre
-                this.provincia=provincia.nombre
-                this.district=distrito.nombre
-              }
-            })
-          })
-        })
-      },
-      error: (err)=>{
-        console.log(err);
-      }
-    })
+    // this.ubigeoservice.get_ubigeo().subscribe({
+    //   next: (data)=>{
+    //     this.ubigeo=data
+    //     this.ubigeo.forEach((department)=>{
+    //       department.provincias.forEach((provincia)=>{
+    //         provincia.distritos.forEach((distrito)=>{
+    //           if(distrito.ubigeo==this.property.id_ubigeo){
+    //             this.departament=department.nombre
+    //             this.provincia=provincia.nombre
+    //             this.district=distrito.nombre
+    //           }
+    //         })
+    //       })
+    //     })
+    //   },
+    //   error: (err)=>{
+    //     console.log(err);
+    //   }
+    // })
   }
 }

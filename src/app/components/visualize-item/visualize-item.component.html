@@ -3,12 +3,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 </head>
-<app-navbar [usermain]="usermain"></app-navbar>
+<app-navbar [usermain]="usermain"></app-navbar> 
 <body>
   <main>
     <h1 class="title_datos scale-up-bottom">Datos del inmueble</h1>
     <div class="start-property scale-up-bottom">
-      <p><span class="ubication">{{property.direccion}}</span> - <span>{{property.tiempo_antiguedad}}</span></p>
+      <p><span class="ubication">{{property.address}}</span> - <span>{{property.timeAntiquity}}</span></p>
       <button mat-raised-button color="primary" routerLink="/alquiler/{{property.id}}"> Alquilar este inmueble</button>
     </div>
 
@@ -26,7 +26,7 @@
           {{photo.text}}
         </mat-grid-tile>
       </mat-grid-list> -->
-      <ng-container *ngFor="let item of property.link_fotos" >
+      <ng-container *ngFor="let item of property.inmuebleFotoList" >
         <div class="photos-container">
           <div style="background-image: url({{item}});" class="photo">
           </div>
@@ -36,25 +36,25 @@
     </div>
     <div class="mid-property">
       <div class="container1">
-      <h1>Precio de alquiler: S/. <span class="price">{{property.precio}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+      <h1>Precio de alquiler: S/. <span class="price">{{property.price}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
       </div>
       <div class="container2">
       </div>
     </div>
     <div class="main-features">
-      <div class="features_guests"><span class="material-symbols-outlined">group</span><p class="caract_text">&nbsp;<span>{{property.n_huespedes}}</span>&nbsp;&nbsp;huésped(s)</p></div><!--Pa cambiar con el ts-->
-      <div class="features_bedrooms"><span class="material-symbols-outlined">bed</span><p class="caract_text">&nbsp;<span>{{property.n_dormitorios}}</span>&nbsp;&nbsp;dormitorio(s)</p></div><!--Pa cambiar con el ts-->
-      <div class="features_bathrooms"><span class="material-symbols-outlined">wc</span><p class="caract_text">&nbsp;<span>{{property.n_banios}}</span>&nbsp;&nbsp;baño(s)</p></div><!--Pa cambiar con el ts-->
-      <div class="features_area"><span class="material-symbols-outlined">home</span><p class="caract_text">&nbsp;<span>{{property.m2_cuadrados}}</span>&nbsp;&nbsp;m2</p></div><!--Pa cambiar con el ts-->
+      <div class="features_guests"><span class="material-symbols-outlined">group</span><p class="caract_text">&nbsp;<span>{{property.numGuests}}</span>&nbsp;&nbsp;huésped(s)</p></div><!--Pa cambiar con el ts-->
+      <div class="features_bedrooms"><span class="material-symbols-outlined">bed</span><p class="caract_text">&nbsp;<span>{{property.numBedrooms}}</span>&nbsp;&nbsp;dormitorio(s)</p></div><!--Pa cambiar con el ts-->
+      <div class="features_bathrooms"><span class="material-symbols-outlined">wc</span><p class="caract_text">&nbsp;<span>{{property.numBathrooms}}</span>&nbsp;&nbsp;baño(s)</p></div><!--Pa cambiar con el ts-->
+      <div class="features_area"><span class="material-symbols-outlined">home</span><p class="caract_text">&nbsp;<span>{{property.squareMeter}}</span>&nbsp;&nbsp;m2</p></div><!--Pa cambiar con el ts-->
     </div>
     <div class="description">
       <h2>Descripción</h2>
-      <p><span>{{property.descripcion}}</span></p>
+      <p><span>{{property.description}}</span></p>
     </div>
     <div class="features">
       <h1>Qué ofrece este inmueble</h1>
       <div class="features-container">
-        <div *ngFor="let item of caracteristicas"><h4><span class="material-symbols-outlined">{{item.icon}}<!--Pa cambiar con el ts--></span>&nbsp;<span><!--Pa cambiar con el ts-->&nbsp;&nbsp;{{item.nombre}}</span></h4></div>
+        <div *ngFor="let item of property.listCaracteristaInmuebleIcons"><h4><span class="material-symbols-outlined">{{item.icon}}<!--Pa cambiar con el ts--></span>&nbsp;<span><!--Pa cambiar con el ts-->&nbsp;&nbsp;{{item.nombre}}</span></h4></div>
       </div>
     </div>
     <div class="map-google">
@@ -68,12 +68,12 @@
       <h1>Contacto</h1>
       <div class="contact-data">
         <div class="contact-photo">
-          <div class="contact-photo" style="background-image: url({{user_property.link_foto_perfil}});"></div>
+          <div class="contact-photo" style="background-image: url({{property.photoOwner}});"></div>
         </div>
         <div class="contact-info">
-          <h3><span>{{nombrecompleto()}}</span></h3>
-         <p>Fecha de registro en la aplicación:&nbsp;<span>{{user_property.fecha_inscripcion}}<!--Pa cambiar con el ts--></span></p>
-         <p class="contact-phone"><span class="material-symbols-outlined">phone</span>&nbsp;<span>{{user_property.telefono}}</span><!--Pa cambiar con el ts--></p>
+          <h3><span>{{property.userContact.fullName}}</span></h3>
+         <p>Fecha de registro en la aplicación:&nbsp;<span>{{property.userContact.dateAfiiliation}}<!--Pa cambiar con el ts--></span></p>
+         <p class="contact-phone"><span class="material-symbols-outlined">phone</span>&nbsp;<span>{{property.userContact.telephone}}</span><!--Pa cambiar con el ts--></p>
         </div>
       </div>
     </div>
@@ -81,14 +81,14 @@
   <div class="coments">
     <h1>Reseñas de la comunidad</h1>
     <div class="container-comments">
-      <div *ngFor="let item of resenasInmueble" class="">
+      <div *ngFor="let item of property.listOpinions" class="">
         <mat-card class="example-card">
           <mat-card-header>
             <mat-card-title></mat-card-title>
-            <mat-card-subtitle>Puntuación: {{item.calificacion}}</mat-card-subtitle>
+            <mat-card-subtitle>Puntuación: {{item.stars}}</mat-card-subtitle>
           </mat-card-header>
           <mat-card-content>
-            <p>{{item.observaciones}}</p>
+            <p>{{item.description}}</p>
             <p></p>
           </mat-card-content>
           <mat-card-actions>

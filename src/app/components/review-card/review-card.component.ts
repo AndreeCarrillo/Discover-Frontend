@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ResenaService } from 'src/app/services/resena.service';
 import { usuario } from 'src/app/models/usuario.interface';
 import { UsuarioService } from 'src/app/services/usuario.service';
 

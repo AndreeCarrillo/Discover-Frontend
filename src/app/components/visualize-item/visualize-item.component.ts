@@ -8,7 +8,8 @@ import { CaracteristicasService } from 'src/app/services/caracteristicas.service
 import { caracteristica } from 'src/app/models/caracteristica';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { resena } from 'src/app/models/resena';
-import { ResenaService } from 'src/app/services/resena.service';
+import { userInformation } from 'src/app/models/dto/usuario';
+import { getInmuebleId } from 'src/app/models/dto/inmueble';
 
 export interface Photo {
   color: string;
@@ -30,29 +31,33 @@ export interface Photo {
 export class VisualizeItemComponent{
 
   id!:number;
-  usermain!:usuario;
+  usermain!:userInformation;
   user_property!:usuario;
   EsPropietario:boolean=false;
   EsComentor:boolean=false;
-  property: inmueble={
+  property: getInmuebleId={
     "id": 0,
-    "id_propietario": 0,
-    "id_ubigeo": 0,
-    "tipo_inmueble":"",
-    "tipo_alojamiento":"",
-    "direccion": "",
-    "precio": 0,
-    "n_dormitorios": 0,
-    "n_banios": 0,
-    "n_huespedes": 0,
-    "m2_cuadrados": 0,
-    "tiempo_antiguedad": "",
-    "link_fotos": [],
-    "descripcion": "",
-    "latitud": "",
-    "longitud": "",
-    "caracteristicas_inmueble": [],
-    "calificacion": 0
+    "address": "",
+    "timeAntiquity": "",
+    "inmuebleFotoList": [],
+    "price": 0,
+    "numGuests": 0,
+    "listCaracteristaInmuebleIcons": [],
+    "photoOwner": "",
+    "numBedrooms": 0,
+    "numBathrooms": 0,
+    "squareMeter": 0,
+    "description": "",
+    "listOpinions": [],
+    "userContact": {
+        "id": 0,
+        "fullName": "",
+        "telephone": "",
+        "email": "",
+        "dateAfiiliation": "",
+        "dateBirth": "",
+        "linkFotoPerfil": ""
+    }
   };
 
   id_property:number=0;
@@ -72,35 +77,29 @@ export class VisualizeItemComponent{
   ];
 
   constructor(private userservice:UsuarioService ,private inmuebleservices:InmuebleService, private activedrouter:ActivatedRoute,
-    private caracteristicasservices:CaracteristicasService, private resenaservice: ResenaService, private router: Router, private sanckbar:MatSnackBar){
+    private caracteristicasservices:CaracteristicasService, /*private resenaservice: ResenaService,*/ private router: Router, private sanckbar:MatSnackBar){
   }
 
   ngOnInit(){
 
     this.getId();
     this.load_property();
-    this.loadReseñas()
   }
 
-  getId():number{
+  getId(){
     this.id = this.activedrouter.snapshot.params["id"];
-    return this.id;
   }
 
-  getIduser():number{
-    this.id_property = this.property.id_propietario;
-    return  this.id_property;
+  getIduser(){
+    // this.id_property = this.property.id_propietario;
+    // return this.id_property;
   }
 
   load_property(){
-    this.inmuebleservices.getInmueble(this.getId()).subscribe({
+    this.inmuebleservices.getInmueble(this.id).subscribe({
       next:(data)=>{
         this.property=data;
-        this.loadCaracteristicas();
-        this.getIduser();
-        this.loaduser_property();
-        this.loadusersesion();
-        console.log(this.property)
+        this.loadUserSesion();
       },
       error: (err)=>{
         console.log(err);
@@ -115,64 +114,51 @@ nombrecompleto():string{
 }
 
 loadCaracteristicas(){
-        this.property.caracteristicas_inmueble.forEach(
-          (caracteristicaid)=>{
-            this.caracteristicasservices.getCaracteristica(caracteristicaid).subscribe({
-              next:(data)=>{
-                this.caracteristicas.push(data)
+        // this.property.caracteristicas_inmueble.forEach(
+        //   (caracteristicaid)=>{
+        //     this.caracteristicasservices.getCaracteristica(caracteristicaid).subscribe({
+        //       next:(data)=>{
+        //         this.caracteristicas.push(data)
 
-              }
-            })
-          }
-        )
-        console.log(this.caracteristicas)
+        //       }
+        //     })
+        //   }
+        // )
+        // console.log(this.caracteristicas)
   }
-  loadusersesion(){
-    this.userservice.getUsuario(10).subscribe({
-      next: (data)=>{
+  loadUserSesion() {
+    let userLocalStorage = this.userservice.getCurrentUserId();
+
+    let currentUserId = userLocalStorage != null ? userLocalStorage : 0;
+
+    this.userservice.getUsuario(currentUserId).subscribe({
+      next:(data)=>{
         this.usermain=data;
         this.BorrarInmueble();
       },
-      error: (err) => {
+      error:(err)=>{
         console.log(err);
-      },
-    });
+      }
+    })
   }
   loaduser_property(){
-    console.log(this.property);
-    this.userservice.getUsuario(this.property.id_propietario).subscribe({
-      next: (data) => {
+    // console.log(this.property);
+    // this.userservice.getUsuario(this.property.id_propietario).subscribe({
+    //   next: (data) => {
 
-        this.user_property=data;
-        console.log(this.user_property)
-      },
-      error: (err) => {
-        console.log(err);
-      }
-    })
+    //     this.user_property=data;
+    //     console.log(this.user_property)
+    //   },
+    //   error: (err) => {
+    //     console.log(err);
+    //   }
+    // })
   }
-
-
-  loadReseñas(){
-    this.resenaservice.get_reseñas().subscribe({
-      next: (data) => {
-        this.resenas=data;
-        this.resenasInmueble=this.resenas.filter((x)=>x.id_inmueble==this.property.id
-        )
-      },
-      error: (err) => {
-        console.log(err);
-      }
-    })
-  }
-
-
-
 
 
   BorrarInmueble(){
-    if(this.property.id_propietario==this.usermain.id){
-      this.EsPropietario=true
+    if(this.property.userContact.id==this.usermain.id){
+      this.EsPropietario=true;
     }
   }
 

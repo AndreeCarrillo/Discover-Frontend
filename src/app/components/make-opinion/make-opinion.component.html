@@ -3,15 +3,15 @@
 <div class="searcher-container"></div>
 
 <div>
-    <button class="button-s" mat-raised-button color="warn" routerLink="/visualizar/{{getIdInmueble()}}">Regresar</button>
+    <button class="button-s" mat-raised-button color="warn" routerLink="/visualizar/{{idinmueble}}">Regresar</button>
 
     <h2 class="title">Registra tu reseña del inmueble rentado</h2>
 
     <form class="form-opinion" [formGroup]="myForm">
         <div class="user-info">
-          <h3 class="nav-perfil" style="background-image: url({{usermain.link_foto_perfil}});" href=""></h3>
+          <h3 class="nav-perfil" style="background-image: url({{usermain.linkFotoPerfil}});" href=""></h3>
           <div class="user-info-text">
-              <h3 class="title-name">{{usermain.nombre}} {{usermain.apellido_paterno}}</h3>
+              <h3 class="title-name">{{usermain.fullName}}</h3>
               <h2 class="sub-title">Escribe tu reseña</h2>
           </div>
         </div>
@@ -57,7 +57,7 @@
               <h2 class="confirmation">Estas seguro que quieres enviar esta reseña?</h2>
               <div>
                 <button mat-button matStepperPrevious>Anterior</button>
-                <button mat-button (click)="saveresena()" routerLink="/visualizar/{{getIdInmueble()}}">Enviar</button>
+                <button mat-button (click)="saveresena()" routerLink="/visualizar/{{idinmueble}}">Enviar</button>
               </div>
             </mat-step>
         </mat-stepper>

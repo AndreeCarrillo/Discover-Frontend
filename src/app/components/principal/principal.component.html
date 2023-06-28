@@ -1,6 +1,6 @@
 <app-navbar [usermain]="usermain"></app-navbar>
 <div class="searcher-container d-flex align-items-center justify-content-center flex-column">
-    <h1 class="searcher-tittle">Bienvenido {{usermain.nombre}} {{usermain.apellido_paterno}} a Discover</h1>
+    <h1 class="searcher-tittle">Bienvenido {{usermain.fullName}} a Discover</h1>
     <input (keyup)="filtersearch($event)" type="text" style="border-radius: 20px;" class="form-control w-75" id="exampleFormControlInput1" placeholder="Ingrese departamento, distrito o provincia">
 </div>
 <main>
