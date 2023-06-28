@@ -166,7 +166,7 @@ loadCaracteristicas(){
   DeleteInmueble(){
     this.inmuebleservices.deleteInmueble(this.property.id).subscribe({
       next: (data) => {
-        this.load_property();
+        //this.load_property();
       },
       error: (err) => {
         console.log(err);

@@ -23,7 +23,7 @@ import { allInmueblesResponse } from 'src/app/models/dto/inmueble';
   templateUrl: './principal.component.html',
   styleUrls: ['./principal.component.scss'],
 })
-export class PrincipalComponent implements OnInit, OnChanges {
+export class PrincipalComponent implements OnInit{
   currentUserId: number = 0;
   property_Filter: string = 'None';
   accommodation_Filter: string = 'None';
@@ -63,7 +63,10 @@ export class PrincipalComponent implements OnInit, OnChanges {
   random_numbers: number[] = [];
   usermain: userInformation = {
     id: 0,
-    fullName: '',
+    name: "",
+    apellidoPaterno: "",
+    apellidoMaterno: "",
+    dni: "",
     telephone: '',
     email: '',
     dateAfiiliation: '',
@@ -87,12 +90,11 @@ export class PrincipalComponent implements OnInit, OnChanges {
     this.load_properties();
   }
 
-  ngOnChanges(){
-    this.fillFilterInputs();
-    this.getCurrentUserId();
-    this.loadUserSesion();
-    this.load_properties();
-  }
+  // ngOnChanges(){
+  //   this.getCurrentUserId();
+  //   this.loadUserSesion();
+  //   this.load_properties();
+  // }
 
   fillFilterInputs() {
     this.fillPropertyTypeSelect();

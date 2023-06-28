@@ -5,6 +5,7 @@ import { Route } from '@angular/router';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ActivatedRoute } from '@angular/router';
+import { userInformation } from 'src/app/models/dto/usuario';
 
 @Component({
   selector: 'app-view-profile',
@@ -14,19 +15,17 @@ import { ActivatedRoute } from '@angular/router';
 export class ViewProfileComponent {
 
   id!:number;
-  usermain:usuario = {
-    "id": 0,
-    "nombre": "",
-    "apellido_paterno":  "",
-    "apellido_materno":  "",
-    "dni":  "",
-    "telefono":  "",
-    "correo":  "",
-    "password":  "",
-    "link_foto_dni":  "",
-    "link_foto_perfil":  "",
-    "fecha_nacimiento":  "",
-    "fecha_inscripcion":  ""
+  usermain:userInformation = {
+    id: 0,
+    name: "",
+    apellidoPaterno: "",
+    apellidoMaterno: "",
+    dni: "",
+    telephone: '',
+    email: '',
+    dateAfiiliation: '',
+    dateBirth: '',
+    linkFotoPerfil: '',
   }
 
   constructor(private userservice:UsuarioService , private activedrouter:ActivatedRoute){
@@ -34,24 +33,20 @@ export class ViewProfileComponent {
 }
 
 ngOnInit(){
+  this.getId();
   this.loadusersesion();
 }
-getId():number{
+getId(){
   this.id = this.activedrouter.snapshot.params["id"];
-  return this.id;
-}
-nombrecompleto():string{
-  let nombre = this.usermain.nombre+" "+ this.usermain.apellido_paterno+" "+this.usermain.apellido_materno;
-  return nombre.toString();
 }
 loadusersesion(){
-//   this.userservice.getUsuario(this.getId()).subscribe({
-//   next: (data)=>{
-//     this.usermain=data;
-//   },
-//   error: (err) => {
-//     console.log(err);
-//   },
-// });
+      this.userservice.getUsuario(this.id).subscribe({
+      next: (data)=>{
+        this.usermain=data;
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
   }
 }
