@@ -11,6 +11,7 @@ import { ResenaService } from 'src/app/services/reseña.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { __values } from 'tslib';
 import { UbigeoService } from 'src/app/services/ubigeo.service';
+import { userInformation } from 'src/app/models/dto/usuario';
 
 @Component({
   selector: 'app-principal',
@@ -55,20 +56,15 @@ export class PrincipalComponent implements OnInit{
   properties_filter!: inmueble[] ;
 
   random_numbers:number[] = []
-  usermain:usuario = {
-    "id": 0,
-    "nombre": "",
-    "apellido_paterno":  "",
-    "apellido_materno":  "",
-    "dni":  "",
-    "telefono":  "",
-    "correo":  "",
-    "password":  "",
-    "link_foto_dni":  "",
-    "link_foto_perfil":  "",
-    "fecha_nacimiento":  "",
-    "fecha_inscripcion":  ""
-  }
+  usermain:userInformation = {
+    id:0,
+    fullName:"",
+    telephone:"",
+    email:"",
+    dateAfiiliation:"",
+    dateBirth:"",
+    linkFotoPerfil:""
+}
   ubigeo:ubigeo[] = []
   caracteristicas:caracteristica[]=[]
 
@@ -252,17 +248,17 @@ export class PrincipalComponent implements OnInit{
       this.sefiltro = true;
     }
     if(this.guests_Filter!=0){
-      let variable = this.properties_filter.filter((property)=>property.n_huespedes>=this.guests_Filter)
+      let variable = this.properties_filter.filter((property)=>property.n_huespedes==this.guests_Filter)
       this.properties_filter = variable;
       this.sefiltro = true;
     }
     if(this.bedrooms_Filter!=0){
-      let variable = this.properties_filter.filter((property)=>property.n_dormitorios>=this.bedrooms_Filter)
+      let variable = this.properties_filter.filter((property)=>property.n_dormitorios==this.bedrooms_Filter)
       this.properties_filter = variable;
       this.sefiltro = true;
     }
     if(this.bathrooms_Filter!=0){
-      let variable = this.properties_filter.filter((property)=>property.n_banios>=this.bathrooms_Filter)
+      let variable = this.properties_filter.filter((property)=>property.n_banios==this.bathrooms_Filter)
       this.properties_filter = variable;
       this.sefiltro = true;
     }

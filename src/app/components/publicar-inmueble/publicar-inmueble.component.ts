@@ -4,8 +4,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { InmuebleService } from 'src/app/services/inmueble.service';
 import { inmueble } from 'src/app/models/inmuebles.interface';
-import { UsuarioService } from 'src/app/services/usuario.service';
-import { usuario } from 'src/app/models/usuario.interface';
 
 @Component({
   selector: 'app-publicar-inmueble',
@@ -25,24 +23,10 @@ export class PublicarInmuebleComponent {
     }
     //console.log('El estado del checkbox ' + id + ' es:', this.isChecked);
   }
-  usermain:usuario = {
-    "id": 0,
-    "nombre": "",
-    "apellido_paterno":  "",
-    "apellido_materno":  "",
-    "dni":  "",
-    "telefono":  "",
-    "correo":  "",
-    "password":  "",
-    "link_foto_dni":  "",
-    "link_foto_perfil":  "",
-    "fecha_nacimiento":  "",
-    "fecha_inscripcion":  ""
-  }
 
   constructor(private formBuilder:FormBuilder, private inmuebleService:InmuebleService,
     private router: Router, private activatedRouter: ActivatedRoute,
-    private snackBar:MatSnackBar, private userservice:UsuarioService) {}
+    private snackBar:MatSnackBar) {}
 
   ngOnInit(){
     this.reactiveForm();
@@ -73,13 +57,14 @@ export class PublicarInmuebleComponent {
     const selectedIds: number[] = [];
 
     var contador: number = 1;
-
     this.isChecked.forEach(element => {
       if(element){
         selectedIds.push(contador);
       }
       contador++;
     });
+
+    //console.log(selectedIds);
 
     const inmueble:inmueble = {
       id: parseInt(""),
@@ -115,16 +100,6 @@ export class PublicarInmuebleComponent {
     });
 
   }
-  loadusersesion(){
-    this.userservice.getUsuario(10).subscribe({
-    next: (data)=>{
-      this.usermain=data;
-    },
-    error: (err) => {
-      console.log(err);
-    },
-  });
-}
 
   volverHome():void {
     this.router.navigate(["/home"]);

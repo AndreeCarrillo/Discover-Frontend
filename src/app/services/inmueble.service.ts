@@ -1,30 +1,40 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { inmueble } from '../models/inmuebles.interface';
+import { environment } from 'src/environment/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class InmuebleService {
+  ruta_servidor: string = `${environment.API_URL}`;
+  recurso: string = 'inmuebles';
 
-  ruta_servidor: string = "http://localhost:3000";
-  recurso: string = "inmuebles";
+  constructor(private http: HttpClient) {}
 
-  constructor(private http:HttpClient) { }
-
-  getInmuebles(){
-    return this.http.get<inmueble[]>(this.ruta_servidor+"/"+ this.recurso)
+  getInmuebles() {
+    return this.http.get<inmueble[]>(this.ruta_servidor + '/' + this.recurso);
   }
-  getInmueble(id:number){
-    return this.http.get<inmueble>(this.ruta_servidor+"/"+this.recurso+"/"+id.toString())
+  getInmueble(id: number) {
+    return this.http.get<inmueble>(
+      this.ruta_servidor + '/' + this.recurso + '/' + id.toString()
+    );
   }
-  addInmueble(inmueble:inmueble){
-    return this.http.post<inmueble>(this.ruta_servidor+"/"+this.recurso, inmueble)
+  addInmueble(inmueble: inmueble) {
+    return this.http.post<inmueble>(
+      this.ruta_servidor + '/' + this.recurso,
+      inmueble
+    );
   }
-  updateInmueble(inmueble:inmueble){
-    return this.http.put<inmueble>(this.ruta_servidor+"/"+this.recurso+"/"+inmueble.id.toString(), inmueble)
+  updateInmueble(inmueble: inmueble) {
+    return this.http.put<inmueble>(
+      this.ruta_servidor + '/' + this.recurso + '/' + inmueble.id.toString(),
+      inmueble
+    );
   }
-  deleteInmueble(id:number){
-    return this.http.delete(this.ruta_servidor +"/"+this.recurso + "/" + id.toString());
+  deleteInmueble(id: number) {
+    return this.http.delete(
+      this.ruta_servidor + '/' + this.recurso + '/' + id.toString()
+    );
   }
 }

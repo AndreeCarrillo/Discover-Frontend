@@ -52,7 +52,8 @@
             </mat-step>
             <mat-step>
               <ng-template matStepLabel>Hecho</ng-template>
-            
+              <img class="upload-img" [src]="url">
+              <input type="file" (change)="onselectFile($event)">
               <br>
               <h2 class="confirmation">Estas seguro que quieres enviar esta reseña?</h2>
               <div>

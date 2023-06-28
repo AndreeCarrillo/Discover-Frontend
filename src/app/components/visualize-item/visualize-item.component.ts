@@ -9,6 +9,7 @@ import { caracteristica } from 'src/app/models/caracteristica';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { resena } from 'src/app/models/resena';
 import { ResenaService } from 'src/app/services/resena.service';
+import { userInformation } from 'src/app/models/dto/usuario';
 
 export interface Photo {
   color: string;
@@ -30,7 +31,7 @@ export interface Photo {
 export class VisualizeItemComponent{
 
   id!:number;
-  usermain!:usuario;
+  usermain!:userInformation;
   user_property!:usuario;
   EsPropietario:boolean=false;
   EsComentor:boolean=false;

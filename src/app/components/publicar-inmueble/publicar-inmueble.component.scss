@@ -1,24 +1,5 @@
-.body{
-  background-color: #f0f0f0;
-}
 .formulario{
     padding: 5%;
-    padding-top: 3%;
-    background-image: url(https://i.postimg.cc/XJvj1Vqr/Untitled-Project-2.jpg);
-    background-repeat: no-repeat;
-    background-position: top right;
-
-}
-.link_volver{
-  text-decoration: none;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  color: black;
-  margin: 10px;
-}
-.link_volver p{
-  margin: 0;
 }
 .formField{
     margin: 1%;
@@ -30,7 +11,7 @@
  margin: 5px;
 }
 .check{
-    background-color: #d3d3d3;
+    background-color: #f0f0f0;
     color: black;
     padding-left: 10px;
     padding-right: 10px;
@@ -62,16 +43,3 @@
     justify-content: center;
     align-items: center;
 }
-.title{
-
-  padding-top: 50px;
-  background-color: #BEED3B;
-  font-size: 35px;
-  padding-bottom: 50px;
-  margin-bottom: 0;
-  text-align: center;
-  font-family: 'Fjalla One', sans-serif;
-  font-family: 'Montserrat', sans-serif;
-  border-radius: 0px 0px 30% 30%;
-}
-

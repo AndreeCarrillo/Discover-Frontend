@@ -62,6 +62,19 @@ export class MakeOpinionComponent implements OnInit {
   url = "https://i.postimg.cc/k5mRVLnk/84459.png";
 
 
+  onselectFile(event: Event) {
+    const inputElement = event.target as HTMLInputElement;
+    if (inputElement.files && inputElement.files.length > 0) {
+      var reader = new FileReader();
+      reader.readAsDataURL(inputElement.files[0]);
+      reader.onload = (event: ProgressEvent<FileReader>) => {
+        const result = (event.target as FileReader).result;
+        if (typeof result === 'string') {
+          this.url = result;
+        }
+      }
+    }
+  }
 
   getRatingsAsJson() {
     const generalRating = +(this.secondFormGroup.get('generalRating')?.value || 0);
@@ -108,7 +121,7 @@ export class MakeOpinionComponent implements OnInit {
   saveresena():void{
     const ratings= this.getRatingsAsJson();
     var average:number= this.calculateRatingAverage(ratings);
-    average = Math.round(average*10)/10;
+    average = Math.ceil(average);
     console.log(average)
     console.log(this.usermain)
     console.log(this.myForm.get("descripcion")!.value);
@@ -138,7 +151,7 @@ export class MakeOpinionComponent implements OnInit {
     })
   }
   loadusersesion(){
-    this.userservice.getUsuario(10).subscribe({
+    this.userservice.getUsuario(19).subscribe({
     next: (data)=>{
       this.usermain=data;
     },

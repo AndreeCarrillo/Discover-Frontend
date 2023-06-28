@@ -14,8 +14,6 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSliderModule} from '@angular/material/slider';
-import {MatDividerModule} from '@angular/material/divider';
-
 
 
 
@@ -42,7 +40,7 @@ import {MatDatepickerModule, matDatepickerAnimations} from '@angular/material/da
     MatSelectModule,
     MatCheckboxModule,
     MatSliderModule,
-    MatDividerModule,
+
 
     FormsModule,
 
@@ -63,7 +61,7 @@ import {MatDatepickerModule, matDatepickerAnimations} from '@angular/material/da
     MatSelectModule,
     MatCheckboxModule,
     MatSliderModule,
-    MatDividerModule,
+
     FormsModule,
     MatDatepickerModule
   ]

@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { caracteristica } from '../models/caracteristica';
+import { environment } from 'src/environment/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CaracteristicasService {
 
-  ruta_servidor: string = "http://localhost:3000";
+  ruta_servidor: string = `${environment.API_URL}`;
   recurso: string = "Caracteristicas";
 
   constructor(private http:HttpClient) { }

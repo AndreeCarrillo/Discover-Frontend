@@ -22,7 +22,6 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
-  ngPassword:Boolean=false;
   myForm!:FormGroup;
   id!:number;
   currentDate: Date;
@@ -32,6 +31,7 @@ export class RegisterComponent {
     private snackBar:MatSnackBar){
       this.currentDate = new Date();
     }
+
     ngOnInit(){
       this.reactiveForm();
     }
@@ -44,10 +44,7 @@ export class RegisterComponent {
         email:["",[Validators.required, Validators.maxLength(60)]],
         password:["",[Validators.required, Validators.maxLength(20)]],
         phone:["",[Validators.required, Validators.maxLength(9)]],
-        dni:["",[Validators.required, Validators.maxLength(8)]],
-        fecha_nacimiento:["", Validators.required],
-        linkFotoPerfil:["", Validators.required],
-        linkDNI:["", Validators.required]
+        dni:["",[Validators.required, Validators.maxLength(8)]]
       });
   }
   saveUsuario():void{
@@ -60,10 +57,10 @@ export class RegisterComponent {
       password: this.myForm.get("password")!.value,
       telefono: this.myForm.get("phone")!.value,
       dni: this.myForm.get("dni")!.value,
-      fecha_nacimiento: this.myForm.get("fecha_nacimiento")!.value,
+      fecha_nacimiento:(this.currentDate!.valueOf.toString()),
       fecha_inscripcion:(this.currentDate!.valueOf.toString()),
-      link_foto_dni: this.myForm.get("linkFotoPerfil")!.value,
-      link_foto_perfil:this.myForm.get("linkDNI")!.value,
+      link_foto_dni: this.myForm.get("")!.value,
+      link_foto_perfil:this.myForm.get("")!.value,
     }
 
     this.UsuarioService.addUsuario(usuario).subscribe({
@@ -79,27 +76,11 @@ export class RegisterComponent {
   }
 
   volverLogin():void{
-    this.router.navigate(["/"]);
+    this.router.navigate(["/login"]);
   }
 
+
+
+
+
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-  const imageInput = document.getElementById("image-input") as HTMLInputElement;
-  const changeButton:any = document.getElementById("change-button");
-  const myDiv :any = document.getElementById("my-div");
-  changeButton.addEventListener("click", function() {
-    const imageUrl = imageInput.value;
-    myDiv.style.backgroundImage = `url(${imageUrl})`;
-  });
-});
-document.addEventListener("DOMContentLoaded", function() {
-  const imageInput = document.getElementById("image-input2") as HTMLInputElement;
-  const changeButton:any = document.getElementById("change-button2");
-  const myDiv :any = document.getElementById("my-div2");
-  changeButton.addEventListener("click", function() {
-    const imageUrl = imageInput.value;
-    myDiv.style.backgroundImage = `url(${imageUrl})`;
-  });
-});
-
