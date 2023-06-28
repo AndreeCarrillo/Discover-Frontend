@@ -45,13 +45,13 @@ nombrecompleto():string{
   return nombre.toString();
 }
 loadusersesion(){
-  this.userservice.getUsuario(this.getId()).subscribe({
-  next: (data)=>{
-    this.usermain=data;
-  },
-  error: (err) => {
-    console.log(err);
-  },
-});
-}
+//   this.userservice.getUsuario(this.getId()).subscribe({
+//   next: (data)=>{
+//     this.usermain=data;
+//   },
+//   error: (err) => {
+//     console.log(err);
+//   },
+// });
+  }
 }

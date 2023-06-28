@@ -66,15 +66,15 @@ export class RegisterComponent {
       link_foto_perfil:this.myForm.get("linkDNI")!.value,
     }
 
-    this.UsuarioService.addUsuario(usuario).subscribe({
-      next: (data) =>{
-        this.router.navigate(["/register"]);
-        this.snackBar.open("El usuario se ingresó correctamente","OK",{duration:3000});
-      },
-      error: (err) => {
-        console.log(err);
-      }
-    });
+    // this.UsuarioService.addUsuario(usuario).subscribe({
+    //   next: (data) =>{
+    //     this.router.navigate(["/register"]);
+    //     this.snackBar.open("El usuario se ingresó correctamente","OK",{duration:3000});
+    //   },
+    //   error: (err) => {
+    //     console.log(err);
+    //   }
+    // });
 
   }
 

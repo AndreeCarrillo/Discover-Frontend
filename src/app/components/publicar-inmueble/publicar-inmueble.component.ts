@@ -104,26 +104,26 @@ export class PublicarInmuebleComponent {
       calificacion:0
     }
 
-    this.inmuebleService.addInmueble(inmueble).subscribe({
-      next: (data)  => {
-        this.router.navigate(["/home"]);
-        this.snackBar.open("El inmueble se ingresó correctamente","OK",{duration:3000});
-      },
-      error: (err) => {
-        console.log(err);
-      }
-    });
+    // this.inmuebleService.addInmueble(inmueble).subscribe({
+    //   next: (data)  => {
+    //     this.router.navigate(["/home"]);
+    //     this.snackBar.open("El inmueble se ingresó correctamente","OK",{duration:3000});
+    //   },
+    //   error: (err) => {
+    //     console.log(err);
+    //   }
+    // });
 
   }
   loadusersesion(){
-    this.userservice.getUsuario(10).subscribe({
-    next: (data)=>{
-      this.usermain=data;
-    },
-    error: (err) => {
-      console.log(err);
-    },
-  });
+//     this.userservice.getUsuario(10).subscribe({
+//     next: (data)=>{
+//       this.usermain=data;
+//     },
+//     error: (err) => {
+//       console.log(err);
+//     },
+//   });
 }
 
   volverHome():void {

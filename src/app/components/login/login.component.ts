@@ -1,51 +1,47 @@
-import { usuario } from './../../models/usuario.interface';
-import { PrincipalComponent } from './../principal/principal.component';
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { Router } from '@angular/router';
-
+import { loginDto } from 'src/app/models/dto/usuario';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-  constructor(private usuario:UsuarioService, private router:Router){}
-  usuariomain:usuario = {
-    "id": 8,
-    "nombre": '',
-    "apellido_paterno": '',
-    "apellido_materno": '',
-    "dni": '',
-    "telefono": '',
-    "correo": '',
-    "password": '',
-    "link_foto_dni": '',
-    "link_foto_perfil": '',
-    "fecha_nacimiento": '',
-    "fecha_inscripcion": '',
-  }
+  logInForm: FormGroup = {} as FormGroup;
+
+  constructor(
+    private usuario: UsuarioService,
+    private router: Router,
+    private _formBuilder: FormBuilder
+  ) {}
 
   ngOnInit(): void {
-    this.getusuario;
-  }
-
-  getusuario()
-  {
-    this.usuario.getUsuario((Math.floor(Math.random()*(19)))).subscribe({
-      next : (data) => {
-        this.usuariomain = (data);
-      },
-      error: (err) => {
-        console.log(err);
-      }
+    this.logInForm = this._formBuilder.group({
+      email: ['', [Validators.required]],
+      password: ['', [Validators.required]],
     });
   }
-  clickButton()
-  {
-    this.router.navigate(['/home']);
+
+  clickButton() {
+    let loginDto: loginDto = {
+      email: this.logInForm.value.email,
+      password: this.logInForm.value.password,
+    };
+
+    this.usuario.login(loginDto).subscribe(
+      () => {
+        this.router.navigate(['/home']);
+      },
+      (error) => {
+        alert('Usuario o contraseña incorrectos');
+      }
+    );
   }
 }

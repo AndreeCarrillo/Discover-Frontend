@@ -1,30 +1,44 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { inmueble } from '../models/inmuebles.interface';
+import { environment } from 'src/environment/environment';
+import {
+  allInmueblesResponse,
+  getInmuebleId,
+  postInmueble,
+} from '../models/dto/inmueble';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class InmuebleService {
+  ruta_servidor: string = `${environment.API_URL}`;
 
-  ruta_servidor: string = "http://localhost:3000";
-  recurso: string = "inmuebles";
+  constructor(private http: HttpClient) {}
 
-  constructor(private http:HttpClient) { }
+  getInmuebles() {
+    return this.http.get<allInmueblesResponse[]>(
+      this.ruta_servidor + '/inmuebles'
+    );
+  }
+  getInmueble(id: number) {
+    return this.http.get<getInmuebleId>(
+      this.ruta_servidor + '/inmuebles/' + id.toString()
+    );
+  }
 
-  getInmuebles(){
-    return this.http.get<inmueble[]>(this.ruta_servidor+"/"+ this.recurso)
+  getPropertiesTypes() {
+    return this.http.get<string[]>(this.ruta_servidor + '/properties-types');
   }
-  getInmueble(id:number){
-    return this.http.get<inmueble>(this.ruta_servidor+"/"+this.recurso+"/"+id.toString())
+
+  getSharedRoom() {
+    return this.http.get<string[]>(this.ruta_servidor + '/shared-room');
   }
-  addInmueble(inmueble:inmueble){
-    return this.http.post<inmueble>(this.ruta_servidor+"/"+this.recurso, inmueble)
+
+  addInmueble(inmueble: postInmueble) {
+    return this.http.post<any>(this.ruta_servidor + '/inmuebles', inmueble);
   }
-  updateInmueble(inmueble:inmueble){
-    return this.http.put<inmueble>(this.ruta_servidor+"/"+this.recurso+"/"+inmueble.id.toString(), inmueble)
-  }
-  deleteInmueble(id:number){
-    return this.http.delete(this.ruta_servidor +"/"+this.recurso + "/" + id.toString());
+
+  deleteInmueble(id: number) {
+    return this.http.delete(this.ruta_servidor + '/inmuebles/' + id.toString());
   }
 }

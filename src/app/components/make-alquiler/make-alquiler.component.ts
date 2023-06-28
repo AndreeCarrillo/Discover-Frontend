@@ -68,28 +68,28 @@ export class MakeAlquilerComponent {
   }
 
   load_property(){
-    this.inmuebleservices.getInmueble(this.getId()).subscribe({
-      next:(data)=>{
-        this.property=data;
-        this.getIduser();
-        this.loaduser_property();
-        this.loadusersesion();
-        console.log(this.property)
-      },
-      error: (err)=>{
-        console.log(err);
-      }
-    })
+    // this.inmuebleservices.getInmueble(this.getId()).subscribe({
+    //   next:(data)=>{
+    //     this.property=data;
+    //     this.getIduser();
+    //     this.loaduser_property();
+    //     this.loadusersesion();
+    //     console.log(this.property)
+    //   },
+    //   error: (err)=>{
+    //     console.log(err);
+    //   }
+    // })
   }
   loadusersesion(){
-    this.userservice.getUsuario(10).subscribe({
-    next: (data)=>{
-      this.usermain=data;
-    },
-    error: (err) => {
-      console.log(err);
-    },
-  });
+  //   this.userservice.getUsuario(10).subscribe({
+  //   next: (data)=>{
+  //     this.usermain=data;
+  //   },
+  //   error: (err) => {
+  //     console.log(err);
+  //   },
+  // });
   }
   nombrecompleto():string{
     let nombre = this.user_property.nombre+" "+ this.user_property.apellido_paterno+" "+this.user_property.apellido_materno;
@@ -97,16 +97,16 @@ export class MakeAlquilerComponent {
   }
 
   loaduser_property(){
-    console.log(this.property);
-    this.userservice.getUsuario(this.property.id_propietario).subscribe({
-      next: (data) => {
+    // console.log(this.property);
+    // this.userservice.getUsuario(this.property.id_propietario).subscribe({
+    //   next: (data) => {
 
-        this.user_property=data;
-        console.log(this.user_property)
-      },
-      error: (err) => {
-        console.log(err);
-      }
-    })
+    //     this.user_property=data;
+    //     console.log(this.user_property)
+    //   },
+    //   error: (err) => {
+    //     console.log(err);
+    //   }
+    // })
   }
 }
