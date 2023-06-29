@@ -40,6 +40,7 @@ export class VisualizeItemComponent{
     "address": "",
     "timeAntiquity": "",
     "inmuebleFotoList": [],
+    "typeProperty":"",
     "price": 0,
     "numGuests": 0,
     "listCaracteristaInmuebleIcons": [],
@@ -51,7 +52,9 @@ export class VisualizeItemComponent{
     "listOpinions": [],
     "userContact": {
         "id": 0,
-        "fullName": "",
+        "name": "",
+        "apellidoPaterno":"",
+        "apellidoMaterno":"",
         "telephone": "",
         "email": "",
         "dateAfiiliation": "",

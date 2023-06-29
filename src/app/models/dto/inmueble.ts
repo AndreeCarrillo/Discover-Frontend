@@ -44,6 +44,7 @@ export interface getInmuebleId {
     "address": string
     "timeAntiquity": string
     "inmuebleFotoList": string[],
+    "typeProperty":string,
     "price": number,
     "numGuests": number,
     "listCaracteristaInmuebleIcons": 
@@ -65,7 +66,9 @@ export interface getInmuebleId {
     ,
     "userContact": {
         "id": number,
-        "fullName": string,
+        "name": string,
+        "apellidoPaterno":string,
+        "apellidoMaterno":string,
         "telephone": string,
         "email": string,
         "dateAfiiliation": string,
