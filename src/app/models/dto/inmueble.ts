@@ -47,7 +47,7 @@ export interface getInmuebleId {
     "typeProperty":string,
     "price": number,
     "numGuests": number,
-    "listCaracteristaInmuebleIcons": 
+    "listCaracteristaInmuebleIcons":
         {
         "nombre": string
         "icon": string
@@ -58,7 +58,7 @@ export interface getInmuebleId {
     "numBathrooms": number,
     "squareMeter": number,
     "description": string,
-    "listOpinions": 
+    "listOpinions":
         {
         "description": "string",
         "stars": number
