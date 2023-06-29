@@ -46,7 +46,7 @@ export interface getInmuebleId {
     "inmuebleFotoList": string[],
     "price": number,
     "numGuests": number,
-    "listCaracteristaInmuebleIcons": 
+    "listCaracteristaInmuebleIcons":
         {
         "nombre": string
         "icon": string
@@ -57,7 +57,7 @@ export interface getInmuebleId {
     "numBathrooms": number,
     "squareMeter": number,
     "description": string,
-    "listOpinions": 
+    "listOpinions":
         {
         "description": "string",
         "stars": number
@@ -65,7 +65,9 @@ export interface getInmuebleId {
     ,
     "userContact": {
         "id": number,
-        "fullName": string,
+        "name": string,
+        "apellidoPaterno": string,
+        "apellidoMaterno": string,
         "telephone": string,
         "email": string,
         "dateAfiiliation": string,

@@ -51,7 +51,9 @@ export class VisualizeItemComponent{
     "listOpinions": [],
     "userContact": {
         "id": 0,
-        "fullName": "",
+        "name": "",
+        "apellidoPaterno": "",
+        "apellidoMaterno": "",
         "telephone": "",
         "email": "",
         "dateAfiiliation": "",
@@ -109,9 +111,9 @@ export class VisualizeItemComponent{
 
 
 nombrecompleto():string{
-  let nombre = this.user_property.nombre+" "+ this.user_property.apellido_paterno+" "+this.user_property.apellido_materno;
-  return nombre.toString();
-}
+    let nombre = this.property.userContact.name + " " + this.property.userContact.apellidoPaterno + " " + this.property.userContact.apellidoMaterno;
+    return nombre.toString();
+  }
 
 loadCaracteristicas(){
         // this.property.caracteristicas_inmueble.forEach(
