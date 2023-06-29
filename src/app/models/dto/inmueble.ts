@@ -44,6 +44,7 @@ export interface getInmuebleId {
     "address": string
     "timeAntiquity": string
     "inmuebleFotoList": string[],
+    "typeProperty":string,
     "price": number,
     "numGuests": number,
     "listCaracteristaInmuebleIcons": 

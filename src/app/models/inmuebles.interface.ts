@@ -13,8 +13,8 @@ export interface inmueble {
     "tiempo_antiguedad": string
     "link_fotos": string[]
     "descripcion": string
-    "latitud": "",
-    "longitud": "",
+    "latitud": string,
+    "longitud": string,
     "caracteristicas_inmueble": number[]
     "calificacion": number
 }

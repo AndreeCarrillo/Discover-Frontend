@@ -4,7 +4,8 @@ import { usuario } from 'src/app/models/usuario.interface';
 import { InmuebleService } from 'src/app/services/inmueble.service';
 import { inmueble } from 'src/app/models/inmuebles.interface';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { userInformation } from 'src/app/models/dto/usuario';
+import { getInmuebleId } from 'src/app/models/dto/inmueble';
 @Component({
   selector: 'app-make-alquiler',
   templateUrl: './make-alquiler.component.html',
@@ -13,49 +14,55 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class MakeAlquilerComponent {
   id!:number;
 
-  constructor(private userservice:UsuarioService, private inmuebleservices:InmuebleService, private activedrouter:ActivatedRoute,  private router: Router) {
+  
+
+  // user_property!:usuario;
+  usermain:userInformation = {
+    id: 0,
+    name: "",
+    apellidoPaterno: "",
+    apellidoMaterno: "",
+    dni: "",
+    telephone: '',
+    email: '',
+    dateAfiiliation: '',
+    dateBirth: '',
+    linkFotoPerfil: '',
   }
 
-  user_property!:usuario;
-  usermain:usuario = {
+  property: getInmuebleId={
     "id": 0,
-    "nombre": "",
-    "apellido_paterno":  "",
-    "apellido_materno":  "",
-    "dni":  "",
-    "telefono":  "",
-    "correo":  "",
-    "password":  "",
-    "link_foto_dni":  "",
-    "link_foto_perfil":  "",
-    "fecha_nacimiento":  "",
-    "fecha_inscripcion":  ""
-  }
-  property: inmueble={
-    "id": 0,
-    "id_propietario": 0,
-    "id_ubigeo": 0,
-    "tipo_inmueble":"",
-    "tipo_alojamiento":"",
-    "direccion": "",
-    "precio": 0,
-    "n_dormitorios": 0,
-    "n_banios": 0,
-    "n_huespedes": 0,
-    "m2_cuadrados": 0,
-    "tiempo_antiguedad": "",
-    "link_fotos": [],
-    "descripcion": "",
-    "latitud": "",
-    "longitud": "",
-    "caracteristicas_inmueble": [],
-    "calificacion": 0
+    "address": "",
+    "timeAntiquity": "",
+    "inmuebleFotoList": [],
+    "typeProperty":"",
+    "price": 0,
+    "numGuests": 0,
+    "listCaracteristaInmuebleIcons": [],
+    "photoOwner": "",
+    "numBedrooms": 0,
+    "numBathrooms": 0,
+    "squareMeter": 0,
+    "description": "",
+    "listOpinions": [],
+    "userContact": {
+        "id": 0,
+        "fullName": "",
+        "telephone": "",
+        "email": "",
+        "dateAfiiliation": "",
+        "dateBirth": "",
+        "linkFotoPerfil": ""
+    }
   };
+  constructor(private userservice:UsuarioService, private inmuebleservices:InmuebleService, private activedrouter:ActivatedRoute,  private router: Router) {
+  }
   id_property:number=0;
   ngOnInit(){
 
     this.getId();
     this.load_property();
+   
   }
   getId():number{
     this.id = this.activedrouter.snapshot.params["id"];
@@ -63,23 +70,23 @@ export class MakeAlquilerComponent {
   }
 
   getIduser():number{
-    this.id_property = this.property.id_propietario;
+    this.id_property = this.property.userContact.id;
     return  this.id_property;
   }
 
   load_property(){
-    // this.inmuebleservices.getInmueble(this.getId()).subscribe({
-    //   next:(data)=>{
-    //     this.property=data;
-    //     this.getIduser();
-    //     this.loaduser_property();
-    //     this.loadusersesion();
-    //     console.log(this.property)
-    //   },
-    //   error: (err)=>{
-    //     console.log(err);
-    //   }
-    // })
+    this.inmuebleservices.getInmueble(this.id).subscribe({
+      next:(data)=>{
+        this.property=data;
+        this.getIduser();
+        this.loaduser_property();
+        this.loadusersesion();
+        console.log(this.property)
+      },
+      error: (err)=>{
+        console.log(err);
+      }
+    })
   }
   loadusersesion(){
   //   this.userservice.getUsuario(10).subscribe({
@@ -92,21 +99,20 @@ export class MakeAlquilerComponent {
   // });
   }
   nombrecompleto():string{
-    let nombre = this.user_property.nombre+" "+ this.user_property.apellido_paterno+" "+this.user_property.apellido_materno;
+    let nombre = this.usermain.name+" "+ this.usermain.apellidoPaterno+" "+this.usermain.apellidoMaterno;
     return nombre.toString();
   }
 
   loaduser_property(){
-    // console.log(this.property);
-    // this.userservice.getUsuario(this.property.id_propietario).subscribe({
-    //   next: (data) => {
-
-    //     this.user_property=data;
-    //     console.log(this.user_property)
-    //   },
-    //   error: (err) => {
-    //     console.log(err);
-    //   }
-    // })
+    console.log(this.property);
+    this.userservice.getUsuario(this.property.userContact.id).subscribe({
+      next: (data) => {
+        this.usermain=data;
+        
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
   }
 }

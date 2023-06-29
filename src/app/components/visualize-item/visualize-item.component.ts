@@ -40,6 +40,7 @@ export class VisualizeItemComponent{
     "address": "",
     "timeAntiquity": "",
     "inmuebleFotoList": [],
+    "typeProperty":"",
     "price": 0,
     "numGuests": 0,
     "listCaracteristaInmuebleIcons": [],
