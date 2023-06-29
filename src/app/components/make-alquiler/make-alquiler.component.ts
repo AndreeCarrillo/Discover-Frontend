@@ -6,6 +6,9 @@ import { inmueble } from 'src/app/models/inmuebles.interface';
 import { ActivatedRoute, Router } from '@angular/router';
 import { userInformation } from 'src/app/models/dto/usuario';
 import { getInmuebleId } from 'src/app/models/dto/inmueble';
+import { AlquilerService } from 'src/app/services/alquiler.service';
+import { alquilerRequest } from 'src/app/models/dto/alquiler';
+import {MatSnackBar} from '@angular/material/snack-bar';
 @Component({
   selector: 'app-make-alquiler',
   templateUrl: './make-alquiler.component.html',
@@ -14,9 +17,7 @@ import { getInmuebleId } from 'src/app/models/dto/inmueble';
 export class MakeAlquilerComponent {
   id!:number;
 
-  
 
-  // user_property!:usuario;
   usermain:userInformation = {
     id: 0,
     name: "",
@@ -47,7 +48,9 @@ export class MakeAlquilerComponent {
     "listOpinions": [],
     "userContact": {
         "id": 0,
-        "fullName": "",
+        "name": "",
+        "apellidoPaterno":"",
+        "apellidoMaterno":"",
         "telephone": "",
         "email": "",
         "dateAfiiliation": "",
@@ -55,14 +58,15 @@ export class MakeAlquilerComponent {
         "linkFotoPerfil": ""
     }
   };
-  constructor(private userservice:UsuarioService, private inmuebleservices:InmuebleService, private activedrouter:ActivatedRoute,  private router: Router) {
+  constructor(private userservice:UsuarioService, private inmuebleservices:InmuebleService,private alquilerservice:AlquilerService, private activedrouter:ActivatedRoute,  private router: Router,
+    private snackBar:MatSnackBar) {
   }
   id_property:number=0;
   ngOnInit(){
 
     this.getId();
     this.load_property();
-   
+    this.loadusersesion();
   }
   getId():number{
     this.id = this.activedrouter.snapshot.params["id"];
@@ -79,8 +83,7 @@ export class MakeAlquilerComponent {
       next:(data)=>{
         this.property=data;
         this.getIduser();
-        this.loaduser_property();
-        this.loadusersesion();
+        
         console.log(this.property)
       },
       error: (err)=>{
@@ -88,31 +91,40 @@ export class MakeAlquilerComponent {
       }
     })
   }
+  
   loadusersesion(){
-  //   this.userservice.getUsuario(10).subscribe({
-  //   next: (data)=>{
-  //     this.usermain=data;
-  //   },
-  //   error: (err) => {
-  //     console.log(err);
-  //   },
-  // });
+    let userLocalStorage = this.userservice.getCurrentUserId();
+
+    let currentUserId = userLocalStorage != null ? userLocalStorage : 0;
+
+    this.userservice.getUsuario(currentUserId).subscribe({
+      next:(data)=>{
+        this.usermain=data;
+      },
+      error:(err)=>{
+        console.log(err);
+      }
+    })
   }
   nombrecompleto():string{
-    let nombre = this.usermain.name+" "+ this.usermain.apellidoPaterno+" "+this.usermain.apellidoMaterno;
+    let nombre = this.property.userContact.name+" "+ this.property.userContact.apellidoPaterno+" "+this.property.userContact.apellidoMaterno;
     return nombre.toString();
   }
 
-  loaduser_property(){
-    console.log(this.property);
-    this.userservice.getUsuario(this.property.userContact.id).subscribe({
-      next: (data) => {
-        this.usermain=data;
-        
+  savealquiler():void{
+    const alquiler:alquilerRequest={
+      client_id:this.usermain.id,
+      inmueble_id:this.id_property,
+      price:this.property.price,
+      transactionDate:new Date(Date.now())
+    }
+    this.alquilerservice.postAlquiler(alquiler).subscribe({
+      next: (data)  => {
+        this.snackBar.open("El alquiler se ha registrado correctamente","OK",{duration:3000});
       },
       error: (err) => {
         console.log(err);
       }
     })
-  }
+  };
 }

@@ -1,4 +1,4 @@
-<!-- <app-navbar [usermain]="usermain"></app-navbar> -->
+<app-navbar [usermain]="usermain"></app-navbar>
 
 <body>
   <main>
@@ -19,15 +19,14 @@
         <div class="section_compra">
           <h2 class="caract_text">Datos del propietario</h2>
           <h3><span class="caract_text">Nombre: </span> <span>{{nombrecompleto()}}</span></h3>
-          <h3><span class="caract_text">DNI: </span> <span>{{usermain.dni}}</span></h3>
-          <h3><span class="caract_text">Teléfono: </span> <span>{{usermain.telephone}}</span></h3>
-          <h3><span class="caract_text">Correo electrónico: </span> <span>{{usermain.email}}</span></h3>
-          <h3><span class="caract_text">Fecha de registro en la web: </span><span>{{usermain.dateAfiiliation}}</span></h3>
+          <h3><span class="caract_text">Teléfono: </span> <span>{{property.userContact.telephone}}</span></h3>
+          <h3><span class="caract_text">Correo electrónico: </span> <span>{{property.userContact.email}}</span></h3>
+          <h3><span class="caract_text">Fecha de registro en la web: </span><span>{{property.userContact.dateAfiiliation}}</span></h3>
         </div>
       </div>
     </section>
     <div class="div_button">
-      <button>Alquilar este inmueble</button>
+      <button (click)="savealquiler()" routerLink="/visualizar/{{property.id}}">Alquilar este inmueble</button>
     </div>
   </main>
 </body>

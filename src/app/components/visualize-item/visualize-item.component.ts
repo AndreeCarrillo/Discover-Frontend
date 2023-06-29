@@ -52,7 +52,9 @@ export class VisualizeItemComponent{
     "listOpinions": [],
     "userContact": {
         "id": 0,
-        "fullName": "",
+        "name": "",
+        "apellidoPaterno":"",
+        "apellidoMaterno":"",
         "telephone": "",
         "email": "",
         "dateAfiiliation": "",

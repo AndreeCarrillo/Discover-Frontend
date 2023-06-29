@@ -66,7 +66,9 @@ export interface getInmuebleId {
     ,
     "userContact": {
         "id": number,
-        "fullName": string,
+        "name": string,
+        "apellidoPaterno":string,
+        "apellidoMaterno":string,
         "telephone": string,
         "email": string,
         "dateAfiiliation": string,
