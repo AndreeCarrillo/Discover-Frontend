@@ -24,8 +24,12 @@
           <input
             matInput
             placeholder="Ej. *******"
+            [type]="hidePassword ? 'password' : 'text'"
             formControlName="password"
           />
+          <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" >
+            <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
         </mat-form-field>
       </form>
 
@@ -42,7 +46,7 @@
         <h5 class="Cuenta_text" style="color: black">
           No tienes cuenta?&nbsp;&nbsp;
         </h5>
-        <a><h5 style="color: #00c9d1">&nbsp;&nbsp;Registrate ahí</h5> </a>
+        <a class="RegisterConnection" routerLink="/register"><h5 style="color: #00c9d1">&nbsp;&nbsp;Registrate aquí</h5> </a>
       </div>
     </div>
   </section>
