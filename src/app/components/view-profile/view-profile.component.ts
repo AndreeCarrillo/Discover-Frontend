@@ -30,23 +30,23 @@ export class ViewProfileComponent {
 
   constructor(private userservice:UsuarioService , private activedrouter:ActivatedRoute){
 
-}
-
-ngOnInit(){
-  this.getId();
-  this.loadusersesion();
-}
-getId(){
-  this.id = this.activedrouter.snapshot.params["id"];
-}
-loadusersesion(){
-      this.userservice.getUsuario(this.id).subscribe({
-      next: (data)=>{
-        this.usermain=data;
-      },
-      error: (err) => {
-        console.log(err);
-      },
-    });
   }
+
+  ngOnInit(){
+    this.getId();
+    this.loadusersesion();
+  }
+  getId(){
+    this.id = this.activedrouter.snapshot.params["id"];
+  }
+  loadusersesion(){
+        this.userservice.getUsuario(this.id).subscribe({
+        next: (data)=>{
+          this.usermain=data;
+        },
+        error: (err) => {
+          console.log(err);
+        },
+      });
+    }
 }

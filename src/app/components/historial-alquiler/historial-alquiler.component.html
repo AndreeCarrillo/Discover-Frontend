@@ -1,42 +1,42 @@
 
-<!-- <app-navbar [usermain]="usermain"></app-navbar> -->
+ <app-navbar [usermain]="usermain"></app-navbar>
 <main>
 
   <h1>Mi historial de alquileres</h1>
 
   <div class="div-table">
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <table mat-table [dataSource]="listAlquiler" class="mat-elevation-z8">
 
-      <ng-container matColumnDef="ubicacion">
+      <ng-container matColumnDef="location">
         <th mat-header-cell *matHeaderCellDef>Ubicación</th>
-        <td mat-cell *matCellDef="let element"> {{element.ubicacion}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.location}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="name">
+      <ng-container matColumnDef="fullNameOwner">
         <th mat-header-cell *matHeaderCellDef> Nombre propietario </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.fullNameOwner}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="precio">
+      <ng-container matColumnDef="price">
         <th mat-header-cell *matHeaderCellDef> Precio </th>
-        <td mat-cell *matCellDef="let element"> {{element.precio}} </td>
+        <td mat-cell *matCellDef="let element"> S/. {{element.price}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="date">
+      <ng-container matColumnDef="transactionDate">
         <th mat-header-cell *matHeaderCellDef> Fecha transacción </th>
-        <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.transactionDate}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="activate">
+      <ng-container matColumnDef="active">
         <th mat-header-cell *matHeaderCellDef> Activado? </th>
-        <td mat-cell *matCellDef="let element"> {{element.activate}} </td>
+        <td mat-cell *matCellDef="let element"> {{activateAlquiler(element.active)}} </td>
       </ng-container>
 
       <ng-container matColumnDef="acciones">
         <th mat-header-cell *matHeaderCellDef> Acciones </th>
         <td mat-cell *matCellDef="let element">
-          <a href=""> <span class="material-symbols-outlined">delete</span> </a>
-          <a href=""><span class="material-symbols-outlined">visibility</span></a>
+          <a routerLink="/historial-alquiler/{{usermain.id}}" *ngIf="isActivate" (click)="putActivateAlquiler(element.id)"><span class="material-symbols-outlined">delete</span></a>
+          <a routerLink="/visualizar/{{element.property_id}}"><span class="material-symbols-outlined">visibility</span></a>
         </td>
       </ng-container>
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
