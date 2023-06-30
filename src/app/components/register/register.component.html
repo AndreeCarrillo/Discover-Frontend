@@ -115,9 +115,9 @@
                   </div>
                 </mat-form-field>
 
-                <button mat-raised-button color="primary" id="change-button">Vista Previa</button>
+                <button (click)="changeImageDni()" mat-raised-button color="primary" id="change-button">Vista Previa</button>
               </div>
-              <div id="my-div" class="my-div"></div>
+              <div id="my-div" class="my-div" style="background-image: url({{dniFoto}});"></div>
 
               <div class="container_1 margin-top">
                 <mat-form-field appearance="fill" class="mat-form">
@@ -128,9 +128,9 @@
                   </div>
                 </mat-form-field>
 
-                <button mat-raised-button color="primary" id="change-button2">Vista Previa</button>
+                <button mat-raised-button color="primary" id="change-button2" (click)="changeImagePerfil()">Vista Previa</button>
               </div>
-              <div id="my-div2" class="my-div2"></div>
+              <div id="my-div2" class="my-div2" style="background-image: url({{perfilFoto}});"></div>
 
 
               <div class="button_register">

@@ -10,4 +10,10 @@ import { usuario } from 'src/app/models/usuario.interface';
 export class NavbarComponent {
   
   @Input() usermain!:userInformation;
+
+  logout(){
+    localStorage.removeItem('token');
+    localStorage.removeItem('user_id');
+  }
 }
+

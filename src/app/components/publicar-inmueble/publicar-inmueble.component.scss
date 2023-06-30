@@ -9,6 +9,15 @@
     background-position: top right;
 
 }
+
+.my-div2{
+  background-position: center;
+  background-size: cover;
+  padding: 140px;
+  width:30%;
+  height: 300px;
+  background-color: #D9D9D9;
+}
 .link_volver{
   text-decoration: none;
   display: flex;
@@ -74,4 +83,3 @@
   font-family: 'Montserrat', sans-serif;
   border-radius: 0px 0px 30% 30%;
 }
-

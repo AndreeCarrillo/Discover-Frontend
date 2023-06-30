@@ -43,6 +43,8 @@ export class RegisterComponent implements OnInit{
   id!:number;
   currentDate: Date;
   hide = true;
+  dniFoto:string = "";
+  perfilFoto:string = "";
 
   constructor(private formBuilder:FormBuilder, private UsuarioService:UsuarioService,
     private router:Router, private activatedRoute:ActivatedRoute,
@@ -96,7 +98,6 @@ export class RegisterComponent implements OnInit{
       console.log(registeruser);
         this.UsuarioService.addUsuario(registeruser).subscribe({
           next: (data) =>{
-
             this.router.navigate(['/']);
             this.snackBar.open("El usuario se registró correctamente","OK",{duration:3000});
           },
@@ -110,24 +111,32 @@ export class RegisterComponent implements OnInit{
       this.router.navigate(["/"]);
     }
 
+    changeImageDni(){
+      this.dniFoto = this.myForm.value.linkPhotoDni;
+    }
+
+    changeImagePerfil(){
+      this.perfilFoto = this.myForm.value.linkPhotoProfile;
+    }
+
   }
 
-document.addEventListener("DOMContentLoaded", function() {
-  const imageInput = document.getElementById("image-input") as HTMLInputElement;
-  const changeButton:any = document.getElementById("change-button");
-  const myDiv :any = document.getElementById("my-div");
-  changeButton.addEventListener("click", function() {
-    const imageUrl = imageInput.value;
-    myDiv.style.backgroundImage = `url(${imageUrl})`;
-  });
-});
-document.addEventListener("DOMContentLoaded", function() {
-  const imageInput = document.getElementById("image-input2") as HTMLInputElement;
-  const changeButton:any = document.getElementById("change-button2");
-  const myDiv :any = document.getElementById("my-div2");
-  changeButton.addEventListener("click", function() {
-    const imageUrl = imageInput.value;
-    myDiv.style.backgroundImage = `url(${imageUrl})`;
-  });
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//   const imageInput = document.getElementById("image-input") as HTMLInputElement;
+//   const changeButton:any = document.getElementById("change-button");
+//   const myDiv :any = document.getElementById("my-div");
+//   changeButton.addEventListener("click", function() {
+//     const imageUrl = imageInput.value;
+//     myDiv.style.backgroundImage = `url(${imageUrl})`;
+//   });
+// });
+// document.addEventListener("DOMContentLoaded", function() {
+//   const imageInput = document.getElementById("image-input2") as HTMLInputElement;
+//   const changeButton:any = document.getElementById("change-button2");
+//   const myDiv :any = document.getElementById("my-div2");
+//   changeButton.addEventListener("click", function() {
+//     const imageUrl = imageInput.value;
+//     myDiv.style.backgroundImage = `url(${imageUrl})`;
+//   });
+// });
 
