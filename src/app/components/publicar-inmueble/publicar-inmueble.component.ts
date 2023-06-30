@@ -3,9 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { InmuebleService } from 'src/app/services/inmueble.service';
-import { inmueble } from 'src/app/models/inmuebles.interface';
 import { UsuarioService } from 'src/app/services/usuario.service';
-import { usuario } from 'src/app/models/usuario.interface';
 import { postInmueble } from 'src/app/models/dto/inmueble';
 
 @Component({
@@ -34,7 +32,7 @@ export class PublicarInmuebleComponent {
     }else{
       this.isChecked[id] = true;
     }
-    //console.log('El estado del checkbox ' + id + ' es:', this.isChecked);
+
   }
 
   constructor(private formBuilder:FormBuilder, private inmuebleService:InmuebleService,
@@ -68,16 +66,6 @@ export class PublicarInmuebleComponent {
 
   publicarInmueble():void {
 
-    const selectedIds: number[] = [];
-
-    var contador: number = 1;
-
-    // this.isChecked.forEach(element => {
-    //   if(element){
-    //     selectedIds.push(contador);
-    //   }
-    //   contador++;
-    // });
     for(let i = 1; i<=30; i++){
       if(this.isChecked[i-1]){
         this.caracteristica_array.push(i);
