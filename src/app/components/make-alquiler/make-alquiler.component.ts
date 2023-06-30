@@ -63,11 +63,11 @@ export class MakeAlquilerComponent {
   }
   id_property:number=0;
   ngOnInit(){
-    this.load_property();
     this.getIdProperty();
+    this.load_property();
     this.loadusersesion();
     this.formPublicar = this.formBuilder.group({
-      precio:["", [Validators.required, Validators.min(this.property.price*0.8)]]
+      precio:["", [Validators.required, Validators.min(0)]]
     })
   }
   getIdProperty(){
