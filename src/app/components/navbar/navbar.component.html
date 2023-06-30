@@ -16,7 +16,7 @@
           <div class="dropdown-content">
             <a routerLink="/view-profile/{{usermain.id}}">Ver perfil</a>
             <a routerLink="/historial-alquiler/{{usermain.id}}" >Historial de alquileres</a>
-            <a href="#" style="color: red;"> <span class="material-symbols-outlined">logout</span> Cerrar sesión</a>
+            <a routerLink="" style="color: red;" (click)="logout()"> <span class="material-symbols-outlined">logout</span> Cerrar sesión</a>
           </div>
         </div>
         <!----<a class="nav-perfil" style="background-image: url({{usermain.link_foto_perfil}});" href=""></a>----->

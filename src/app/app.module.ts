@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { PropertyCardComponent } from './components/property-card/property-card.component';
@@ -26,6 +26,7 @@ import{MatNativeDateModule} from '@angular/material/core';
 import { MakeAlquilerComponent } from './components/make-alquiler/make-alquiler.component';
 import { ViewProfileComponent } from './components/view-profile/view-profile.component';
 import { HistorialAlquilerComponent } from './components/historial-alquiler/historial-alquiler.component';
+import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,13 @@ import { HistorialAlquilerComponent } from './components/historial-alquiler/hist
 
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
