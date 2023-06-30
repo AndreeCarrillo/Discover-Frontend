@@ -20,7 +20,7 @@ import {MatDividerModule} from '@angular/material/divider';
 
 
 import { FormsModule } from '@angular/forms';
-import {MatDatepickerModule, matDatepickerAnimations} from '@angular/material/datepicker';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 

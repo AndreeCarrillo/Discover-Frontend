@@ -1,20 +1,11 @@
 import {
   Component,
-  OnInit,
-  AfterViewInit,
-  OnChanges,
-  SimpleChanges,
+  OnInit
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { caracteristica } from 'src/app/models/caracteristicas';
-import { inmueble } from 'src/app/models/inmuebles.interface';
-import { resena } from 'src/app/models/resena';
-import { ubigeo } from 'src/app/models/ubigeo.interface';
-import { usuario } from 'src/app/models/usuario.interface';
 import { CaracteristicasService } from 'src/app/services/caracteristicas.service';
 import { InmuebleService } from 'src/app/services/inmueble.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
-import { __values } from 'tslib';
 import { userInformation } from 'src/app/models/dto/usuario';
 import { allInmueblesResponse } from 'src/app/models/dto/inmueble';
 
@@ -56,8 +47,6 @@ export class PrincipalComponent implements OnInit{
     'desde S/10000',
   ];
   properties: allInmueblesResponse[] = [];
-  reseñas: resena[] = [];
-  properties_calificacion: inmueble[] = [];
   properties_filter!: allInmueblesResponse[];
 
   random_numbers: number[] = [];
@@ -73,8 +62,6 @@ export class PrincipalComponent implements OnInit{
     dateBirth: '',
     linkFotoPerfil: '',
   };
-  ubigeo: ubigeo[] = [];
-  caracteristicas: caracteristica[] = [];
 
   constructor(
     private caracteristicasService: CaracteristicasService,
@@ -89,12 +76,6 @@ export class PrincipalComponent implements OnInit{
     this.loadUserSesion();
     this.load_properties();
   }
-
-  // ngOnChanges(){
-  //   this.getCurrentUserId();
-  //   this.loadUserSesion();
-  //   this.load_properties();
-  // }
 
   fillFilterInputs() {
     this.fillPropertyTypeSelect();
@@ -186,76 +167,17 @@ export class PrincipalComponent implements OnInit{
     const filter = (event.target as HTMLInputElement).value.toLowerCase();
     let filteredProperties = [];
 
-    // for (const departamento of this.ubigeo) {
-    //   for (const provincia of departamento.provincias) {
-    //     for (const distrito of provincia.distritos) {
-    //       if (
-    //         distrito.nombre.toLowerCase().includes(filter) ||
-    //         departamento.nombre.toLowerCase().includes(filter) ||
-    //         provincia.nombre.toLowerCase().includes(filter)
-    //       ) {
-    //         for (const property of this.properties_filter) {
-    //           if (property.id_ubigeo === distrito.ubigeo) {
-    //             filteredProperties.push(property);
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
     filteredProperties = this.properties_filter.filter((prop)=>{
-      //console.log(prop.district)
       return prop.department.toLowerCase().includes(filter)||prop.province.toLowerCase().includes(filter)||prop.district.toLowerCase().includes(filter)
     })
-    // for(const prop of this.properties_filter){
-    //   if(prop.department.toLowerCase().includes(filter)||prop.province.toLowerCase().includes(filter)||prop.district.toLowerCase().includes(filter)){
-    //     filteredProperties.push(prop);
-    //   }
-    //}
+
 
     console.log(this.properties_filter);
     this.filtradosearch = filteredProperties;
     this.sebusco = true;
     this.properties_filter = filteredProperties;
   }
-  definefiltersvalue() {
-    // let uniqueTypes: string[] = [];
-    // this.properties.forEach((property) => {
-    //   if (!uniqueTypes.includes(property.tipo_inmueble)) {
-    //     uniqueTypes.push(property.tipo_inmueble);
-    //   }
-    // });
-    // this.properties_array = uniqueTypes;
-    // uniqueTypes = [];
-    // this.properties.forEach((property) => {
-    //   if (!uniqueTypes.includes(property.tipo_alojamiento)) {
-    //     uniqueTypes.push(property.tipo_alojamiento);
-    //   }
-    // });
-    // this.accommodations_array = uniqueTypes;
-    // uniqueTypes = [];
-    // this.properties.forEach((property) => {
-    //   property.caracteristicas_inmueble.forEach((caracteristica) => {
-    //     const caracteristicaString = caracteristica.toString();
-    //     if (!uniqueTypes.includes(caracteristicaString)) {
-    //       uniqueTypes.push(caracteristicaString);
-    //     }
-    //   });
-    // });
-    // uniqueTypes.forEach((caracteristica_id) => {
-    //   for (let car of this.caracteristicas) {
-    //     if (caracteristica_id == car.id.toString()) {
-    //       if (car.tipo == 'Servicios') {
-    //         this.services_array.push(car.nombre);
-    //       } else if (car.tipo == 'Comodidades') {
-    //         this.modcons_array.push(car.nombre);
-    //       } else if (car.tipo == 'Caracteristicas del inmueble') {
-    //         this.features_array.push(car.nombre);
-    //       }
-    //     }
-    //   }
-    // });
-  }
+
   applyFilter() {
     console.log(this.sebusco);
     if (this.sebusco) {

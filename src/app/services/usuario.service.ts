@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
-import { usuario } from '../models/usuario.interface';
 import { loginDto, registerUserRequest, userInformation } from '../models/dto/usuario';
 import { environment } from 'src/environment/environment';
 import { tap } from 'rxjs';

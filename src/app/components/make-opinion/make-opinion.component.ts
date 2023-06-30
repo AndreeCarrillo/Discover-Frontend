@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, Validators,FormGroup, FormControl} from '@angular/forms';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { UsuarioService } from 'src/app/services/usuario.service';
-import { usuario } from 'src/app/models/usuario.interface';
-import { resena } from 'src/app/models/resena';
-import {MatSnackBar} from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { userInformation } from 'src/app/models/dto/usuario';
 import { OpinionService } from 'src/app/services/opinion.service';

@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { userInformation } from 'src/app/models/dto/usuario';
-import { usuario } from 'src/app/models/usuario.interface';
 
 @Component({
   selector: 'app-navbar',

@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { UsuarioService } from 'src/app/services/usuario.service';
-import { usuario } from 'src/app/models/usuario.interface';
 import { InmuebleService } from 'src/app/services/inmueble.service';
-import { inmueble } from 'src/app/models/inmuebles.interface';
 import { ActivatedRoute, Router } from '@angular/router';
 import { userInformation } from 'src/app/models/dto/usuario';
 import { getInmuebleId } from 'src/app/models/dto/inmueble';
@@ -19,7 +17,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class MakeAlquilerComponent {
   id!:number;
-  //alquiloInmueble:Boolean=false;
 
   usermain:userInformation = {
     id: 0,
