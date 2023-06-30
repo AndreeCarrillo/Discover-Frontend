@@ -9,6 +9,8 @@ import { getInmuebleId } from 'src/app/models/dto/inmueble';
 import { AlquilerService } from 'src/app/services/alquiler.service';
 import { alquilerRequest } from 'src/app/models/dto/alquiler';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-make-alquiler',
   templateUrl: './make-alquiler.component.html',
@@ -16,7 +18,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 })
 export class MakeAlquilerComponent {
   id!:number;
-
+  alquiloInmueble:Boolean=false;
 
   usermain:userInformation = {
     id: 0,
@@ -83,7 +85,7 @@ export class MakeAlquilerComponent {
       next:(data)=>{
         this.property=data;
         this.getIduser();
-        
+
         console.log(this.property)
       },
       error: (err)=>{
@@ -91,7 +93,7 @@ export class MakeAlquilerComponent {
       }
     })
   }
-  
+
   loadusersesion(){
     let userLocalStorage = this.userservice.getCurrentUserId();
 
@@ -120,7 +122,12 @@ export class MakeAlquilerComponent {
     }
     this.alquilerservice.postAlquiler(alquiler).subscribe({
       next: (data)  => {
-        this.snackBar.open("El alquiler se ha registrado correctamente","OK",{duration:3000});
+        this.alquiloInmueble=true;
+        Swal.fire({
+          icon: 'success',
+          title: 'Se alquilo exitosamente este inmueble',
+          text: 'Visita el menú para descubrir más inmuebles!'
+        })
       },
       error: (err) => {
         console.log(err);
