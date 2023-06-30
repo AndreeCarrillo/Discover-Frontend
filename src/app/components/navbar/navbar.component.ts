@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { userInformation } from 'src/app/models/dto/usuario';
 import { usuario } from 'src/app/models/usuario.interface';
 
 @Component({
@@ -8,5 +9,11 @@ import { usuario } from 'src/app/models/usuario.interface';
 })
 export class NavbarComponent {
   
-  @Input() usermain!:usuario;
+  @Input() usermain!:userInformation;
+
+  logout(){
+    localStorage.removeItem('token');
+    localStorage.removeItem('user_id');
+  }
 }
+

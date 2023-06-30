@@ -6,9 +6,10 @@ import { PublicarInmuebleComponent } from './components/publicar-inmueble/public
 import { VisualizeItemComponent } from './components/visualize-item/visualize-item.component';
 import { MakeOpinionComponent } from './components/make-opinion/make-opinion.component';
 import { LoginComponent } from './components/login/login.component';
-
-
-
+import { MakeAlquilerComponent } from './components/make-alquiler/make-alquiler.component';
+import { ViewProfileComponent } from './components/view-profile/view-profile.component';
+import { RegisterComponent } from './components/register/register.component';
+import { HistorialAlquilerComponent } from './components/historial-alquiler/historial-alquiler.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,9 @@ const routes: Routes = [
     path:"",
     component: LoginComponent
   },
-
+  {
+    path:"register", component:RegisterComponent
+  },
 
   {
     path:"visualizar/:id",
@@ -32,7 +35,10 @@ const routes: Routes = [
   path: "resena/:id",
   component:MakeOpinionComponent
   },
-  { path: 'resena', component:MakeOpinionComponent }
+  { path: 'resena', component:MakeOpinionComponent },
+  {path: "alquiler/:id", component: MakeAlquilerComponent},
+  {path: "view-profile/:id", component: ViewProfileComponent},
+  {path: "historial-alquiler/:id", component:HistorialAlquilerComponent}
 ];
 
 @NgModule({

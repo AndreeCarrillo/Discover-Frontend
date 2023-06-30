@@ -3,9 +3,11 @@ import {FormBuilder, Validators,FormGroup, FormControl} from '@angular/forms';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { usuario } from 'src/app/models/usuario.interface';
 import { resena } from 'src/app/models/resena';
-import { ResenaService } from 'src/app/services/reseña.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
+import { userInformation } from 'src/app/models/dto/usuario';
+import { OpinionService } from 'src/app/services/opinion.service';
+import { opinionRequest } from 'src/app/models/dto/opinion';
 @Component({
   selector: 'app-make-opinion',
   templateUrl: './make-opinion.component.html',
@@ -17,15 +19,14 @@ export class MakeOpinionComponent implements OnInit {
 
   id!:number;
   idinmueble!:number;
-  constructor(private _formBuilder: FormBuilder,private userservice:UsuarioService,private resenaservice:ResenaService,
+  constructor(private opinionService: OpinionService , private _formBuilder: FormBuilder,private userservice:UsuarioService,
     private router: Router, private activatedRouter: ActivatedRoute,
     private snackBar:MatSnackBar) {
   }
 
   getIdInmueble(){
     this.idinmueble = this.activatedRouter.snapshot.params["id"];
-    let inmuebleIDD = parseInt(this.idinmueble.toString())
-    return  inmuebleIDD;
+    //let inmuebleIDD = parseInt(this.idinmueble.toString())
   }
 
   ngOnInit(){
@@ -62,19 +63,6 @@ export class MakeOpinionComponent implements OnInit {
   url = "https://i.postimg.cc/k5mRVLnk/84459.png";
 
 
-  onselectFile(event: Event) {
-    const inputElement = event.target as HTMLInputElement;
-    if (inputElement.files && inputElement.files.length > 0) {
-      var reader = new FileReader();
-      reader.readAsDataURL(inputElement.files[0]);
-      reader.onload = (event: ProgressEvent<FileReader>) => {
-        const result = (event.target as FileReader).result;
-        if (typeof result === 'string') {
-          this.url = result;
-        }
-      }
-    }
-  }
 
   getRatingsAsJson() {
     const generalRating = +(this.secondFormGroup.get('generalRating')?.value || 0);
@@ -104,44 +92,33 @@ export class MakeOpinionComponent implements OnInit {
 
 
   isLinear = false;
-  usermain:usuario = {
-    "id": 0,
-    "nombre": "",
-    "apellido_paterno":  "",
-    "apellido_materno":  "",
-    "dni":  "",
-    "telefono":  "",
-    "correo":  "",
-    "password":  "",
-    "link_foto_dni":  "",
-    "link_foto_perfil":  "",
-    "fecha_nacimiento":  "",
-    "fecha_inscripcion":  ""
+  usermain:userInformation = {
+    id: 0,
+    name: "",
+    apellidoPaterno: "",
+    apellidoMaterno: "",
+    dni: "",
+    telephone: '',
+    email: '',
+    dateAfiiliation: '',
+    dateBirth: '',
+    linkFotoPerfil: ''
   }
   saveresena():void{
     const ratings= this.getRatingsAsJson();
     var average:number= this.calculateRatingAverage(ratings);
-    average = Math.ceil(average);
+    average = Math.round(average*10)/10;
     console.log(average)
     console.log(this.usermain)
     console.log(this.myForm.get("descripcion")!.value);
-    const resena:resena={
-      id: this.id,
-      id_inmueble:this.getIdInmueble(),
-      id_user: this.usermain.id,
-      calificacion:average ,
-      observaciones: this.myForm.get("descripcion")!.value,
-      link_foto: this.url
+    const resena:opinionRequest={
+      user_id: this.usermain.id,
+      property_id:this.idinmueble, 
+      observation:this.myForm.get("descripcion")!.value,
+      qualification:average
     }
-    console.log(this.id)
-    console.log(resena.id_inmueble)
-    console.log(resena.id_user)
-    console.log(resena.calificacion)
-    console.log(resena.observaciones)
-    console.log(resena.link_foto)
 
-
-    this.resenaservice.addresena(resena).subscribe({
+    this.opinionService.postOpinion(resena).subscribe({
       next: (data)  => {
         this.snackBar.open("La reseña se ha registrado correctamente","OK",{duration:3000});
       },
@@ -151,7 +128,10 @@ export class MakeOpinionComponent implements OnInit {
     })
   }
   loadusersesion(){
-    this.userservice.getUsuario(19).subscribe({
+    let userLocalStorage = this.userservice.getCurrentUserId();
+
+    let currentUserId = userLocalStorage != null ? userLocalStorage : 0;
+    this.userservice.getUsuario(currentUserId).subscribe({
     next: (data)=>{
       this.usermain=data;
     },
