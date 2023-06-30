@@ -5,7 +5,7 @@
   <h1>Mi historial de alquileres</h1>
 
   <div class="div-table">
-    <table mat-table [dataSource]="listAlquiler" class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
       <ng-container matColumnDef="location">
         <th mat-header-cell *matHeaderCellDef>Ubicación</th>
@@ -41,7 +41,10 @@
       </ng-container>
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
     </table>
-  </div>
+    <mat-paginator [pageSizeOptions]="[5, 10, 15, 20]" #paginator></mat-paginator>
+
+</div>
 
 </main>
