@@ -24,26 +24,29 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
+  height: 89.55vh;
 }
 
 .caract_text{
   color:black;
   font-weight: bold;
 }
+
 .section_compra{
   padding: 20px;
   border-radius: 50px;
   border: solid black 2px ;
   text-align: center;
   backdrop-filter: blur(15px);
-
 }
+
 .div_button{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
 }
+
 .div_button button{
   border-radius: 15px;
   padding: 10px 20px;
@@ -52,6 +55,7 @@ body{
   background-color:#BEED3B;
   transition: 0.5s all ease;
 }
+
 .div_button button:hover{
   transition: 0.5s all ease;
   border-color: #789626;

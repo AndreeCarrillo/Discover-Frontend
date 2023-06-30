@@ -1,31 +1,15 @@
 import { Component } from '@angular/core';
-import {MatTableModule} from '@angular/material/table';
 import { InmuebleService } from 'src/app/services/inmueble.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { usuario } from 'src/app/models/usuario.interface';
-
-
-export interface PeriodicElement {
-  name: string;
-  ubicacion: number;
-  precio: number;
-  date: string;
-  activate: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {ubicacion: 1, name: 'Hydrogen', precio: 1.0079, date: 'H', activate: 'Si'},
-  {ubicacion: 2, name: 'Helium', precio: 4.0026, date: 'He', activate: 'No'},
-  {ubicacion: 3, name: 'Lithium', precio: 6.941, date: 'Li', activate: 'No'},
-  {ubicacion: 4, name: 'Beryllium', precio: 9.0122, date: 'Be', activate: 'No'},
-  {ubicacion: 5, name: 'Boron', precio: 10.811, date: 'B', activate: 'No'},
-  {ubicacion: 6, name: 'Carbon', precio: 12.0107, date: 'C', activate: 'No'},
-  {ubicacion: 7, name: 'Nitrogen', precio: 14.0067, date: 'N', activate: 'No'},
-  {ubicacion: 8, name: 'Oxygen', precio: 15.9994, date: 'O', activate: 'No'},
-  {ubicacion: 9, name: 'Fluorine', precio: 18.9984, date: 'F', activate: 'No'},
-  {ubicacion: 10, name: 'Neon', precio: 20.1797, date: 'Ne', activate: 'No'},
-];
+import { userInformation } from 'src/app/models/dto/usuario';
+import { AlquilerService } from 'src/app/services/alquiler.service';
+import { alquilerResponse } from 'src/app/models/dto/alquiler';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import Swal from 'sweetalert2';
+import { MatPaginator } from '@angular/material/paginator';
+import{ ViewChild} from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-historial-alquiler',
@@ -34,46 +18,105 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 
 export class HistorialAlquilerComponent {
-  displayedColumns: string[] = ['ubicacion', 'name', 'precio', 'date', 'activate', 'acciones'];
-  dataSource = ELEMENT_DATA;
-  constructor(private userservice:UsuarioService, private inmuebleservices:InmuebleService, private activedrouter:ActivatedRoute,  private router: Router) {
+  displayedColumns: string[] = ['location', 'fullNameOwner', 'price', 'transactionDate', 'active', 'acciones'];
+  dataSource = new MatTableDataSource<alquilerResponse>();
+
+  @ViewChild('paginator')
+  paginator!: MatPaginator;
+  constructor(private userservice:UsuarioService, private inmuebleservices:InmuebleService, private activedrouter:ActivatedRoute,  private router: Router, private alquilerservice:AlquilerService, private snackbar:MatSnackBar) {
   }
 
   id!:number
-  usermain:usuario = {
-    "id": 0,
-    "nombre": "",
-    "apellido_paterno":  "",
-    "apellido_materno":  "",
-    "dni":  "",
-    "telefono":  "",
-    "correo":  "",
-    "password":  "",
-    "link_foto_dni":  "",
-    "link_foto_perfil":  "",
-    "fecha_nacimiento":  "",
-    "fecha_inscripcion":  ""
-  }
+  isActivate:Boolean = false;
 
+  usermain: userInformation = {
+    id: 0,
+    name: "",
+    apellidoPaterno: "",
+    apellidoMaterno: "",
+    dni: "",
+    telephone: '',
+    email: '',
+    dateAfiiliation: '',
+    dateBirth: '',
+    linkFotoPerfil: '',
+  };
+  listAlquiler!:alquilerResponse[];
   ngOnInit(){
     this.loadusersesion();
+    this.getId();
   }
+
   getId():number{
     this.id = this.activedrouter.snapshot.params["id"];
     return this.id;
   }
   nombrecompleto():string{
-    let nombre = this.usermain.nombre+" "+ this.usermain.apellido_paterno+" "+this.usermain.apellido_materno;
+    let nombre = 3;
     return nombre.toString();
   }
   loadusersesion(){
-  //   this.userservice.getUsuario(this.getId()).subscribe({
-  //   next: (data)=>{
-  //     this.usermain=data;
-  //   },
-  //   error: (err) => {
-  //     console.log(err);
-  //   },
-  // });
+    let userLocalStorage = this.userservice.getCurrentUserId();
+
+    let currentUserId = userLocalStorage != null ? userLocalStorage : 0;
+
+    this.userservice.getUsuario(currentUserId).subscribe({
+      next:(data)=>{
+        this.usermain=data;
+        this.load_alquileres();
+      },
+      error:(err)=>{
+        console.log(err);
+      }
+    })
   }
+  load_alquileres(){
+    this.alquilerservice.getAlquilerXUsuario(this.usermain.id).subscribe({
+      next:(data)=>{
+        console.log(data);
+        this.dataSource = new MatTableDataSource(data);
+        this.dataSource.paginator = this.paginator;
+
+      },
+      error: (err)=>{
+        console.log(err);
+      }
+    })
+  }
+
+  activateAlquiler(bool:Boolean):string{
+    let a="";
+    if(bool){
+      a="Activo";
+      this.isActivate=true;
+    }else{
+      a="Inactivo"
+      this.isActivate=false;
+    }
+    return a;
+  }
+  putActivateAlquiler( id:number){
+    Swal.fire({
+      title: '¿Estas seguro?',
+      text: "Es un cambio irreversible!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, estoy seguro!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.alquilerservice.putActivated(id).subscribe({
+          next:(data)=>{
+            this.load_alquileres();
+          }
+        })
+        Swal.fire(
+          'Alquiler eliminado!',
+          'El alquiler se ha vuelto inactivo satisfactoriamente',
+          'success'
+        )
+      }
+    })
+    }
 }

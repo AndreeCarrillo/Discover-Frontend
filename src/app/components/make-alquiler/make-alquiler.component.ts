@@ -4,6 +4,12 @@ import { usuario } from 'src/app/models/usuario.interface';
 import { InmuebleService } from 'src/app/services/inmueble.service';
 import { inmueble } from 'src/app/models/inmuebles.interface';
 import { ActivatedRoute, Router } from '@angular/router';
+import { userInformation } from 'src/app/models/dto/usuario';
+import { getInmuebleId } from 'src/app/models/dto/inmueble';
+import { AlquilerService } from 'src/app/services/alquiler.service';
+import { alquilerRequest } from 'src/app/models/dto/alquiler';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-make-alquiler',
@@ -12,50 +18,57 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class MakeAlquilerComponent {
   id!:number;
+  alquiloInmueble:Boolean=false;
 
-  constructor(private userservice:UsuarioService, private inmuebleservices:InmuebleService, private activedrouter:ActivatedRoute,  private router: Router) {
+  usermain:userInformation = {
+    id: 0,
+    name: "",
+    apellidoPaterno: "",
+    apellidoMaterno: "",
+    dni: "",
+    telephone: '',
+    email: '',
+    dateAfiiliation: '',
+    dateBirth: '',
+    linkFotoPerfil: '',
   }
 
-  user_property!:usuario;
-  usermain:usuario = {
+  property: getInmuebleId={
     "id": 0,
-    "nombre": "",
-    "apellido_paterno":  "",
-    "apellido_materno":  "",
-    "dni":  "",
-    "telefono":  "",
-    "correo":  "",
-    "password":  "",
-    "link_foto_dni":  "",
-    "link_foto_perfil":  "",
-    "fecha_nacimiento":  "",
-    "fecha_inscripcion":  ""
-  }
-  property: inmueble={
-    "id": 0,
-    "id_propietario": 0,
-    "id_ubigeo": 0,
-    "tipo_inmueble":"",
-    "tipo_alojamiento":"",
-    "direccion": "",
-    "precio": 0,
-    "n_dormitorios": 0,
-    "n_banios": 0,
-    "n_huespedes": 0,
-    "m2_cuadrados": 0,
-    "tiempo_antiguedad": "",
-    "link_fotos": [],
-    "descripcion": "",
-    "latitud": "",
-    "longitud": "",
-    "caracteristicas_inmueble": [],
-    "calificacion": 0
+    "address": "",
+    "timeAntiquity": "",
+    "inmuebleFotoList": [],
+    "typeProperty":"",
+    "price": 0,
+    "numGuests": 0,
+    "listCaracteristaInmuebleIcons": [],
+    "photoOwner": "",
+    "numBedrooms": 0,
+    "numBathrooms": 0,
+    "squareMeter": 0,
+    "description": "",
+    "listOpinions": [],
+    "userContact": {
+        "id": 0,
+        "name": "",
+        "apellidoPaterno":"",
+        "apellidoMaterno":"",
+        "telephone": "",
+        "email": "",
+        "dateAfiiliation": "",
+        "dateBirth": "",
+        "linkFotoPerfil": ""
+    }
   };
+  constructor(private userservice:UsuarioService, private inmuebleservices:InmuebleService,private alquilerservice:AlquilerService, private activedrouter:ActivatedRoute,  private router: Router,
+    private snackBar:MatSnackBar) {
+  }
   id_property:number=0;
   ngOnInit(){
 
     this.getId();
     this.load_property();
+    this.loadusersesion();
   }
   getId():number{
     this.id = this.activedrouter.snapshot.params["id"];
@@ -63,50 +76,62 @@ export class MakeAlquilerComponent {
   }
 
   getIduser():number{
-    this.id_property = this.property.id_propietario;
+    this.id_property = this.property.userContact.id;
     return  this.id_property;
   }
 
   load_property(){
-    // this.inmuebleservices.getInmueble(this.getId()).subscribe({
-    //   next:(data)=>{
-    //     this.property=data;
-    //     this.getIduser();
-    //     this.loaduser_property();
-    //     this.loadusersesion();
-    //     console.log(this.property)
-    //   },
-    //   error: (err)=>{
-    //     console.log(err);
-    //   }
-    // })
+    this.inmuebleservices.getInmueble(this.id).subscribe({
+      next:(data)=>{
+        this.property=data;
+        this.getIduser();
+
+        console.log(this.property)
+      },
+      error: (err)=>{
+        console.log(err);
+      }
+    })
   }
+
   loadusersesion(){
-  //   this.userservice.getUsuario(10).subscribe({
-  //   next: (data)=>{
-  //     this.usermain=data;
-  //   },
-  //   error: (err) => {
-  //     console.log(err);
-  //   },
-  // });
+    let userLocalStorage = this.userservice.getCurrentUserId();
+
+    let currentUserId = userLocalStorage != null ? userLocalStorage : 0;
+
+    this.userservice.getUsuario(currentUserId).subscribe({
+      next:(data)=>{
+        this.usermain=data;
+      },
+      error:(err)=>{
+        console.log(err);
+      }
+    })
   }
   nombrecompleto():string{
-    let nombre = this.user_property.nombre+" "+ this.user_property.apellido_paterno+" "+this.user_property.apellido_materno;
+    let nombre = this.property.userContact.name+" "+ this.property.userContact.apellidoPaterno+" "+this.property.userContact.apellidoMaterno;
     return nombre.toString();
   }
 
-  loaduser_property(){
-    // console.log(this.property);
-    // this.userservice.getUsuario(this.property.id_propietario).subscribe({
-    //   next: (data) => {
-
-    //     this.user_property=data;
-    //     console.log(this.user_property)
-    //   },
-    //   error: (err) => {
-    //     console.log(err);
-    //   }
-    // })
-  }
+  savealquiler():void{
+    const alquiler:alquilerRequest={
+      client_id:this.usermain.id,
+      inmueble_id:this.id_property,
+      price:this.property.price,
+      transactionDate:new Date(Date.now())
+    }
+    this.alquilerservice.postAlquiler(alquiler).subscribe({
+      next: (data)  => {
+        this.alquiloInmueble=true;
+        Swal.fire({
+          icon: 'success',
+          title: 'Se alquilo exitosamente este inmueble',
+          text: 'Visita el menú para descubrir más inmuebles!'
+        })
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
+  };
 }

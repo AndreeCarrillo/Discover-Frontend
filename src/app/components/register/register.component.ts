@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
-import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
+import { registerUserRequest } from './../../models/dto/usuario';
+import { Component, OnInit } from '@angular/core';
+import {FormControl, FormGroupDirective, NgForm, Validators, AbstractControl, ValidationErrors} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { usuario } from 'src/app/models/usuario.interface';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {MatSnackBar} from '@angular/material/snack-bar';
+
 
 
 
@@ -16,16 +18,31 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   }
 }
 
+export function validateAge(minAge: number) {
+  return (control: AbstractControl): ValidationErrors | null => {
+    const currentDate = new Date();
+    const selectedDate = new Date(control.value);
+    const timeDiff = currentDate.getTime() - selectedDate.getTime();
+    const ageInYears = Math.floor(timeDiff / (1000 * 3600 * 24 * 365.25));
+
+    if (ageInYears < minAge) {
+      return { underage: true }; 
+    }
+    return null; 
+  };
+}
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent {
+export class RegisterComponent implements OnInit{
   ngPassword:Boolean=false;
   myForm!:FormGroup;
   id!:number;
   currentDate: Date;
+  hide = true;
 
   constructor(private formBuilder:FormBuilder, private UsuarioService:UsuarioService,
     private router:Router, private activatedRoute:ActivatedRoute,
@@ -46,43 +63,54 @@ export class RegisterComponent {
         phone:["",[Validators.required, Validators.maxLength(9)]],
         dni:["",[Validators.required, Validators.maxLength(8)]],
         fecha_nacimiento:["", Validators.required],
-        linkFotoPerfil:["", Validators.required],
-        linkDNI:["", Validators.required]
+        linkPhotoProfile:["", Validators.required],
+        linkPhotoDni:["", Validators.required]
       });
-  }
-  saveUsuario():void{
-    const usuario:usuario ={
-      id: parseInt(this.myForm.get("id")!.value),
-      nombre: this.myForm.get("name")!.value,
-      apellido_paterno: this.myForm.get("apellidop")!.value,
-      apellido_materno: this.myForm.get("apellidom")!.value,
-      correo:this.myForm.get("email")!.value,
-      password: this.myForm.get("password")!.value,
-      telefono: this.myForm.get("phone")!.value,
-      dni: this.myForm.get("dni")!.value,
-      fecha_nacimiento: this.myForm.get("fecha_nacimiento")!.value,
-      fecha_inscripcion:(this.currentDate!.valueOf.toString()),
-      link_foto_dni: this.myForm.get("linkFotoPerfil")!.value,
-      link_foto_perfil:this.myForm.get("linkDNI")!.value,
     }
 
-    // this.UsuarioService.addUsuario(usuario).subscribe({
-    //   next: (data) =>{
-    //     this.router.navigate(["/register"]);
-    //     this.snackBar.open("El usuario se ingresó correctamente","OK",{duration:3000});
-    //   },
-    //   error: (err) => {
-    //     console.log(err);
-    //   }
-    // });
+    saveUsuario():void{
+      let registeruser: registerUserRequest = {
+        firstName: this.myForm.value.name,
+        lastNameDad: this.myForm.value.apellidop,
+        lastNameMom: this.myForm.value.apellidom,
+        email: this.myForm.value.email,
+        password: this.myForm.value.password,
+        numPhone: this.myForm.value.phone,
+        dni: this.myForm.value.dni,
+        linkPhotoDni: this.myForm.value.linkPhotoDni,
+        birthDate: this.myForm.value.fecha_nacimiento,
+        linkPhotoProfile: this.myForm.value.linkPhotoProfile,
+
+      /*const request: registerUserRequest = {
+        firstName: this.myForm.get("name")!.value,
+        lastNameDad: this.myForm.get("apellidop")!.value,
+        lastNameMom: this.myForm.get("apellidom")!.value,
+        email: this.myForm.get("email")!.value,
+        password: this.myForm.get("password")!.value,
+        numPhone: this.myForm.get("phone")!.value,
+        dni: this.myForm.get("dni")!.value,
+        linkPhotoDni: this.myForm.get("linkFotoPerfil")!.value,
+        birthDate: this.myForm.get("fecha_nacimiento")!.value,
+        linkPhotoProfile: this.myForm.get("linkDNI")!.value,*/
+      };
+      console.log(registeruser);
+        this.UsuarioService.addUsuario(registeruser).subscribe({
+          next: (data) =>{
+
+            this.router.navigate(['/']);
+            this.snackBar.open("El usuario se registró correctamente","OK",{duration:3000});
+          },
+          error: (err) => {
+            console.log(err);
+          }
+        });
+    }
+
+    volverLogin():void{
+      this.router.navigate(["/"]);
+    }
 
   }
-
-  volverLogin():void{
-    this.router.navigate(["/"]);
-  }
-
-}
 
 document.addEventListener("DOMContentLoaded", function() {
   const imageInput = document.getElementById("image-input") as HTMLInputElement;

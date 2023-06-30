@@ -6,6 +6,7 @@ export interface alquilerRequest {
 }
 
 export interface alquilerResponse {
+   id:number
     location:string
     fullNameOwner:string
     price:number
