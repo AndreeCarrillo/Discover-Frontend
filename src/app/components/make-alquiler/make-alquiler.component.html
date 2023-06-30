@@ -36,7 +36,7 @@
                 <span style="color: red;">Este campo es obligatorio</span>
             </div>
             <div *ngIf="formPublicar.get('precio')?.hasError('min')">
-              <span style="color: red;">Valor erroneo</span>
+              <span style="color: red;">Valor menor al 80% del valor del inmueble</span>
           </div>
         </mat-form-field>
       </form>

@@ -86,7 +86,7 @@
     <div class="comment-add">
       <h4>¿Has estado en este inmueble y quieres dar tu opinión sobre él?</h4>
       <div>
-        <button mat-raised-button color="primary" routerLink="/resena/{{property.id}}">AGREGAR RESEÑA</button>
+        <button *ngIf="!EsPropietario" mat-raised-button color="primary" routerLink="/resena/{{property.id}}">AGREGAR RESEÑA</button>
         <button *ngIf="EsPropietario" mat-raised-button color="warn" (click)="DeleteInmueble()">ELIMINAR INMUEBLE</button>
       </div>
     </div>
