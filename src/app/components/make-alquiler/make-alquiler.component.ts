@@ -10,6 +10,7 @@ import { AlquilerService } from 'src/app/services/alquiler.service';
 import { alquilerRequest } from 'src/app/models/dto/alquiler';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import Swal from 'sweetalert2';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-make-alquiler',
@@ -18,7 +19,7 @@ import Swal from 'sweetalert2';
 })
 export class MakeAlquilerComponent {
   id!:number;
-  alquiloInmueble:Boolean=false;
+  //alquiloInmueble:Boolean=false;
 
   usermain:userInformation = {
     id: 0,
@@ -32,7 +33,7 @@ export class MakeAlquilerComponent {
     dateBirth: '',
     linkFotoPerfil: '',
   }
-
+  formPublicar!: FormGroup;
   property: getInmuebleId={
     "id": 0,
     "address": "",
@@ -60,31 +61,26 @@ export class MakeAlquilerComponent {
         "linkFotoPerfil": ""
     }
   };
-  constructor(private userservice:UsuarioService, private inmuebleservices:InmuebleService,private alquilerservice:AlquilerService, private activedrouter:ActivatedRoute,  private router: Router,
+  constructor(private formBuilder:FormBuilder, private userservice:UsuarioService, private inmuebleservices:InmuebleService,private alquilerservice:AlquilerService, private activedrouter:ActivatedRoute,  private router: Router,
     private snackBar:MatSnackBar) {
   }
   id_property:number=0;
   ngOnInit(){
-
-    this.getId();
-    this.load_property();
+    this.getIdProperty();
     this.loadusersesion();
+    this.load_property();
+    this.formPublicar = this.formBuilder.group({
+      precio:["", [Validators.required, Validators.min(0)]]
+    })
   }
-  getId():number{
-    this.id = this.activedrouter.snapshot.params["id"];
-    return this.id;
-  }
-
-  getIduser():number{
-    this.id_property = this.property.userContact.id;
-    return  this.id_property;
+  getIdProperty(){
+    this.id_property = this.activedrouter.snapshot.params["id"];
   }
 
   load_property(){
-    this.inmuebleservices.getInmueble(this.id).subscribe({
+    this.inmuebleservices.getInmueble(this.id_property).subscribe({
       next:(data)=>{
         this.property=data;
-        this.getIduser();
 
         console.log(this.property)
       },
@@ -112,17 +108,16 @@ export class MakeAlquilerComponent {
     let nombre = this.property.userContact.name+" "+ this.property.userContact.apellidoPaterno+" "+this.property.userContact.apellidoMaterno;
     return nombre.toString();
   }
-
   savealquiler():void{
     const alquiler:alquilerRequest={
       client_id:this.usermain.id,
       inmueble_id:this.id_property,
-      price:this.property.price,
+      price: parseInt(this.formPublicar.value.precio),
       transactionDate:new Date(Date.now())
     }
+    console.log(alquiler)
     this.alquilerservice.postAlquiler(alquiler).subscribe({
       next: (data)  => {
-        this.alquiloInmueble=true;
         Swal.fire({
           icon: 'success',
           title: 'Se alquilo exitosamente este inmueble',
@@ -130,7 +125,11 @@ export class MakeAlquilerComponent {
         })
       },
       error: (err) => {
-        console.log(err);
+        Swal.fire({
+          icon: 'error',
+          title: 'No se pudo realizar la operacion',
+          text: 'Asegurese de cancelar sus alquileres previos en este inmueble',
+        })
       }
     })
   };

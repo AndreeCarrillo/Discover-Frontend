@@ -27,6 +27,15 @@ body{
   height: 89.55vh;
 }
 
+.input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #000;
+}
+
+
 .caract_text{
   color:black;
   font-weight: bold;

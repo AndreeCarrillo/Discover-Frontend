@@ -11,7 +11,7 @@
           <h3><span class="caract_text">Ubicación: </span><span>{{property.address}}</span></h3>
           <h3><span class="caract_text">Tipo de inmueble: </span> <span>{{property.typeProperty}}</span></h3>
           <h3><span class="caract_text">Tiempo de antiguedad: </span> <span>{{property.timeAntiquity}}</span></h3>
-          <h1><span style="font-weight: bold;" class="caract_text">Precio de alquiler: </span> S/.<span>{{property.price}}</span></h1>
+          <h1><span style="font-weight: bold;" class="caract_text">Precio del inmueble: </span> S/.<span>{{property.price}}</span></h1>
         </div>
       </div>
       <div>
@@ -23,7 +23,24 @@
           <h3><span class="caract_text">Fecha de registro en la web: </span><span>{{property.userContact.dateAfiiliation}}</span></h3>
         </div>
       </div>
+      
     </section>
+    <div class="input my-5">
+      <form class="formulario" [formGroup]="formPublicar">
+        <mat-form-field class="formField">
+            <mat-label>Precio de alquiler</mat-label>
+            <input matInput type="number" formControlName="precio" placeholder="Costo en soles">
+            <span matTextPrefix>S/.&nbsp;</span>
+            <span matTextSuffix>.00 al mes</span>
+            <div *ngIf="formPublicar.get('precio')?.hasError('required') && formPublicar.get('precio')?.touched">
+                <span style="color: red;">Este campo es obligatorio</span>
+            </div>
+            <div *ngIf="formPublicar.get('precio')?.hasError('min')">
+              <span style="color: red;">Valor erroneo</span>
+          </div>
+        </mat-form-field>
+      </form>
+    </div>
     <div class="div_button">
       <button (click)="savealquiler()" >Alquilar este inmueble</button>
     </div>
