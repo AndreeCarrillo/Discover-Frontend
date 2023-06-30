@@ -13,19 +13,6 @@
     </div>
 
     <div class="photos-property">
-      <!-- <mat-grid-list cols="4" rowHeight="100px">
-        <mat-grid-tile class="grid-phot"
-            *ngFor="let photo of photos"
-            [colspan]="photo.cols"
-            [rowspan]="photo.rows"
-            [style.background]="photo.color"
-            [style.background-image]="photo.image"
-            [style.background-size]="photo.size"
-            [style.background-repeat]="photo.repeat"
-            [style.background-position]="photo.position">
-          {{photo.text}}
-        </mat-grid-tile>
-      </mat-grid-list> -->
       <ng-container *ngFor="let item of property.inmuebleFotoList" >
         <div class="photos-container">
           <div style="background-image: url({{item}});" class="photo">
